@@ -36,7 +36,7 @@ Since authentication tokens are the only means of identifying a site, this token
 * the name that identifies **B**
 * the description of **B**
 
-**3.** Every HTTP request that **A** submits to **B** must contain the token that **B** told **A** to use in an URL parameter called key. For example:
+**3.** Every HTTP request that **A** submits to **B** must contain the token that **B** told **A** to use in HTTP header called 'X-Auth-Token'. For example:
 
     https://phenomecentral.org/rest/remoteMatcher/mmapi/v1/match?key=854a439d278df4283bf5498ab020336cdc416a7d
 
@@ -44,5 +44,6 @@ In this case:
 * `https://phenomecentral.org/rest/remoteMatcher` is the base URL
 * `/mmapi/v1/match` is the API method for submitting queries
 * `854a439d278df4283bf5498ab020336cdc416a7d` is the authentication token that **B** told **A** to use in all match requests
+* `X-Auth-Token: 854a439d278df4283bf5498ab020336cdc416a7d` would be in the Request Header sent to **B**
 
 If the token is missing from a request, or if the token is not recognized, then the query is refused and a `401 Unauthorized` response is given.
