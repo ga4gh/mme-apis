@@ -148,9 +148,9 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
     * `<ensembl gene ID>` OR
     * `<entrez gene ID>`
-  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`
-  * `start`: `<number>` (0-indexed)
-  * `end`: `<number>` (0-indexed exclusive)
+  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on
+  * `start`: `<number>`; the start position of the variant. (0-based)
+  * `end`: `<number>`; the end position of the variant. (0-based, exclusive)
       * **NOTE:** The location (`referenceName`, `start`, `end`) is *optional*
   * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
   * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
@@ -166,6 +166,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
   * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
     * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
     * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+* This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the location (`referenceName`, `start`, `end`), the assembly, and the reference and alternate bases
 
 ## Search Results Response
 Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<baseOriginURL>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
