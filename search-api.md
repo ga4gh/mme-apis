@@ -166,7 +166,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
   * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
     * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
     * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-* This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the location (`referenceName`, `start`, `end`), the assembly, and the reference and alternate bases
+* This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
 
 ## Search Results Response
 Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<baseOriginURL>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
