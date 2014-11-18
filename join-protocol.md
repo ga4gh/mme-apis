@@ -13,6 +13,22 @@ It is not mandatory for **A** to automatically also accept **B**’s requests, t
 * the preferred **response type** expected by **A**; if **B** does not support this type, then the two parties should negotiate what works best for them
   * the `responseType` is defined in the search response JSON  format, with the possible values of `"inline"`|`"asynchronous"`|`"email"`
 
+It is recommended to send this information in an encrypted email message, for example using PGP/GPG encryption with the recipient's public key. Plain text communication of the keys should be avoided as much as possible, and decrypted messages/keys should not be kept on personal computers.
+
+For example:
+
+```bash
+# Generating a random key on A's administrator computer:
+dd if=/dev/urandom count=1 2>/dev/null | sha1sum -b | cut '-d ' -f1 > key
+# Sign and encrypt the key file to key.gpg
+gpg --encrypt --sign --sign-with admin@a.org --recipient admin@b.org key
+# Send key.gpg by email to admin@b.org
+
+# Reading the key on B's administrator computer:
+gpg --decrypt --output key key.gpg
+# Now both systems have the same "key" file
+```
+
 **1.b.** Upon acceptance of **A** as a trusted source of queries, the administrators of **B** must respond with:
 * a suggested human readable **name** and **description** identifying **B**, to be presented to users of **A** as a possible remote site to search; **A** could ignore these and use their preferred name and description, but for consistency across systems **B**’s preference should be used
 * an **authentication token** that must be used by **A** in the search requests
