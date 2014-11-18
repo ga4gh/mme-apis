@@ -169,7 +169,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 * This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
 
 ## Search Results Response
-Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<baseOriginURL>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
+Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<base_origin_url>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
 
 The response to the search request looks like:
 
@@ -236,7 +236,7 @@ The response to the search request looks like:
 The format of email responses is not restricted, and is left up to each site to implement in a user-friendly way.
 
 ## Search Request Update
-`HTTP PUT` request to `<baseRemoteURL>/mmapi/v1/match/<queryID>`, with an `application/json` body with the same format as a search request:
+`HTTP PUT` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the same format as a search request:
 
 ### Example
 
@@ -257,7 +257,7 @@ A search request update is exactly the same as the search request with two diffe
 The search request update returns a search results response.
 
 ## Search Request Delete
-`HTTP DELETE` request to `<baseRemoteURL>/mmapi/v1/match/<queryID>`, with an `application/json` body with the following format:
+`HTTP DELETE` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the following format:
 
 ### Example
 
