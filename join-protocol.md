@@ -20,6 +20,7 @@ For example:
 ```bash
 # Generating a random key on A's administrator computer:
 dd if=/dev/urandom count=1 2>/dev/null | sha1sum -b | cut '-d ' -f1 > key
+# On osx, swap sha1sum for shasum.
 # Sign and encrypt the key file to key.gpg
 gpg --encrypt --sign --sign-with admin@a.org --recipient admin@b.org key
 # Send key.gpg by email to admin@b.org
