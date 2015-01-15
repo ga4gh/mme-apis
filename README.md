@@ -6,6 +6,7 @@ Below are a list of live implementations of the API, and the associated base URL
 | Matchmaker | description | base URL |
 | ---------- | ----------- | -------- |
 | DECIPHER | production server | https://decipher.sanger.ac.uk/
-| GeneMatcher | staging server | https://76.127.141.233
+| GeneMatcher | staging server | https://staging.phenodbmatcher.net/mmapi/
+| GeneMatcher | production server | https://genematcher.org/mmapi/
 | PhenomeCentral | production server | https://phenomecentral.org/rest/remoteMatcher/
 
