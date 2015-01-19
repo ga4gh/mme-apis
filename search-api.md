@@ -52,7 +52,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
     },
     …
   ],
-  "genes" : [
+  "genomicFeatures" : [
     {
       "gene" : <gene name>|<ensembl gene ID>|<entrez gene ID>,
       "referenceName" : "1"|"2"|…|"X"|"Y",
@@ -133,7 +133,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 * NOTE: we may want to support other sources later.
 
 #### Features
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
   * `id`: an ICHPT or HPO term identifier
   * `observed`: `"yes"`|`"no"`|`"unknown"`
@@ -141,8 +141,8 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 * More metadata can be later added to each feature if necessary.
 * By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
 
-#### Genes
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
+#### GenomicFeatures
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of possible causes** described by:
   * `gene`:
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
@@ -188,7 +188,7 @@ The response to the search request looks like:
       "inheritanceMode" : <inheritance code>,
       "disorders" : […],
       "features" : […],
-      "genes" : […]
+      "genomicFeatures" : […]
     },
     …
   ]
