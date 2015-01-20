@@ -9,7 +9,7 @@ It is not mandatory for **A** to automatically also accept **B**’s requests, t
 **1.a.** When requesting access to **B**, the administrators of **A** must send to the administrators of **B**:
 * a human readable **name** identifying **A**, to be presented to data owners on **B** when a search submitted by **A** matches patients in **B** and **B** wants to notify the data owners of a match (optional behavior that can be implemented by **B**)
 * an **authentication token** to be used by **B** in its requests to **A**, if any, to authenticate **B** to **A**, for example when sending back asynchronous match results; if the search agreement is mutual, this is also the token that **B** will use when submitting match requests to **A**
-* a **base URL** to be used for requests, including scheme (`https://`), domain, eventual port, and path prefix (trailing `/` is optional); **B** will append `/mmapi/v1/matchResults` to this path when sending back asynchronous results, or, if **B** is to also be allowed to send queries to **A**, `/mmapi/v1/match`
+* a **base URL** to be used for requests, including scheme (`https://`), domain, eventual port, and path prefix (trailing `/` is optional); **B** will append `/matchResults` to this path when sending back asynchronous results, or, if **B** is to also be allowed to send queries to **A**, `/match`
 * the preferred **response type** expected by **A**; if **B** does not support this type, then the two parties should negotiate what works best for them
   * the `responseType` is defined in the search response JSON  format, with the possible values of `"inline"`|`"asynchronous"`|`"email"`
 
@@ -32,7 +32,7 @@ gpg --decrypt --output key key.gpg
 **1.b.** Upon acceptance of **A** as a trusted source of queries, the administrators of **B** must respond with:
 * a suggested human readable **name** and **description** identifying **B**, to be presented to users of **A** as a possible remote site to search; **A** could ignore these and use their preferred name and description, but for consistency across systems **B**’s preference should be used
 * an **authentication token** that must be used by **A** in the search requests
-* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/mmapi/v1/match` to this path when sending queries
+* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/match` to this path when sending queries
 
 **For data security, HTTPS is mandatory, with a valid, globally acceptable certificate!**
 
@@ -54,9 +54,9 @@ Since authentication tokens are the only means of identifying a site, this token
 
 **3.** Every HTTP request that **A** submits to **B** must contain the token that **B** told **A** to use in HTTP header called 'X-Auth-Token'. For example:
 
-    https://phenomecentral.org/rest/remoteMatcher/mmapi/v1/match
+    https://phenomecentral.org/rest/remoteMatcher/match
     
-    POST /rest/remoteMatcher/mmapi/v1/match HTTP/1.1
+    POST /rest/remoteMatcher/match HTTP/1.1
 	Host: phenomecentral.org
 	Accept: application/json
 	Content-Type: application/json; charset=UTF-8
@@ -64,7 +64,7 @@ Since authentication tokens are the only means of identifying a site, this token
 
 In this case:
 * `https://phenomecentral.org/rest/remoteMatcher` is the base URL
-* `/mmapi/v1/match` is the API method for submitting queries
+* `/match` is the API method for submitting queries
 * `854a439d278df4283bf5498ab020336cdc416a7d` is the authentication token that **B** told **A** to use in all match requests
 * `X-Auth-Token: 854a439d278df4283bf5498ab020336cdc416a7d` would be in the Request Header sent to **B**
 
