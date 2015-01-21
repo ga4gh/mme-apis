@@ -8,10 +8,11 @@ It is not mandatory for **A** to automatically also accept **B**’s requests, t
 
 **1.a.** When requesting access to **B**, the administrators of **A** must send to the administrators of **B**:
 * a human readable **name** identifying **A**, to be presented to data owners on **B** when a search submitted by **A** matches patients in **B** and **B** wants to notify the data owners of a match (optional behavior that can be implemented by **B**)
-* an **authentication token** to be used by **B** in its requests to **A**, if any, to authenticate **B** to **A**, for example when sending back asynchronous match results; if the search agreement is mutual, this is also the token that **B** will use when submitting match requests to **A**
-* a **base URL** to be used for requests, including scheme (`https://`), domain, eventual port, and path prefix (trailing `/` is optional); **B** will append `/mmapi/v1/matchResults` to this path when sending back asynchronous results, or, if **B** is to also be allowed to send queries to **A**, `/mmapi/v1/match`
-* the preferred **response type** expected by **A**; if **B** does not support this type, then the two parties should negotiate what works best for them
-  * the `responseType` is defined in the search response JSON  format, with the possible values of `"inline"`|`"asynchronous"`|`"email"`
+
+**1.b.** Upon acceptance of **A** as a trusted source of queries, the administrators of **B** must respond with:
+* a suggested human readable **name** and **description** identifying **B**, to be presented to users of **A** as a possible remote site to search; **A** could ignore these and use their preferred name and description, but for consistency across systems **B**’s preference should be used
+* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/mmapi/v1/match` to this path when sending queries
+* an **authentication token** that must be used by **A** in the search requests
 
 It is recommended to send this information in an encrypted email message, for example using PGP/GPG encryption with the recipient's public key. Plain text communication of the keys should be avoided as much as possible, and decrypted messages/keys should not be kept on personal computers.
 
@@ -29,26 +30,18 @@ gpg --decrypt --output key key.gpg
 # Now both systems have the same "key" file
 ```
 
-**1.b.** Upon acceptance of **A** as a trusted source of queries, the administrators of **B** must respond with:
-* a suggested human readable **name** and **description** identifying **B**, to be presented to users of **A** as a possible remote site to search; **A** could ignore these and use their preferred name and description, but for consistency across systems **B**’s preference should be used
-* an **authentication token** that must be used by **A** in the search requests
-* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/mmapi/v1/match` to this path when sending queries
 
 **For data security, HTTPS is mandatory, with a valid, globally acceptable certificate!**
 
 Since authentication tokens are the only means of identifying a site, this token should be unique to each remote site accepted by **B** to correctly determine where a query comes from. There is no imposed format for the token, except that it must be less than 255 characters long. A random 40-chars SHA1 key is recommended.
 
 **2.a.** Configuring **B** to accept **A** as a trusted origin of remote searches requires that **B** stores somehow:
-* the URL prefix for HTTP requests sent to **A** (for asynchronous responses)
-* the token that **B** will send in its HTTP requests to **A**
 * the token that **B** expects in the requests from **A**
-* the response format preferred by **A**
 * the name that identifies **A**
 
 **2.b.** Configuring **A** to support **B** as a possible destination of remote searches requires that **A** stores somehow:
 * the URL prefix for HTTP requests sent to **B**
 * the token that must be sent to **B**
-* the token that **A** expects in the HTTP requests from **B**
 * the name that identifies **B**
 * the description of **B**
 
