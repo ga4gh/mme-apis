@@ -1,0 +1,16 @@
+title Matchmaker sequence
+
+participant Ada
+participant Bob
+participant A
+participant B
+
+
+Bob->B : Submits metadata plus patient data
+Ada->A : Submits metadata plus patient data
+A->B: API Match Request
+note right of B: B performs match, eg top 10
+B->A: API returns list of scored patients plus metadata
+A->Ada: Displays matching patients plus contactinfo
+Ada->Bob : emails
+note right of Bob: Ada asks Bob for more info
