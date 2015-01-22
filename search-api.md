@@ -1,24 +1,50 @@
 # OVERVIEW
 
 **Submit patient matching request:**
-`HTTP POST` to remote server: `<base_remote_url>/mmapi/v1/match`
-For example: `https://yourmatchmaker.org/mmapi/v1/match`
+`HTTP POST` to remote server: `<base_remote_url>/match`
+For example: `https://yourmatchmaker.org/match`
 
 **Receive asynchronous response:**
-`HTTP POST` from remote server to: `<base_origin_url>/mmapi/v1/matchResults`
-For example: `https://mymatchmaker.org/mmapi/v1/matchResults`
+`HTTP POST` from remote server to: `<base_origin_url>/matchResults`
+For example: `https://mymatchmaker.org/matchResults`
 
 **Update previous request:**
-`HTTP PUT` to remote server: `<base_remote_url>/mmapi/v1/match/<queryID>`
-For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
+`HTTP PUT` to remote server: `<base_remote_url>/match/<queryID>`
+For example: `https://yourmatchmaker.org/match/a32fa90vd`
 
 **Delete previous request:**
-`HTTP DELETE` to remote server: `<base_remote_url>/mmapi/v1/match/<queryID>`
-For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
+`HTTP DELETE` to remote server: `<base_remote_url>/match/<queryID>`
+For example: `https://yourmatchmaker.org/match/a32fa90vd`
+
+
+## Versioning
+
+A particular API version can be specified using the HTTP `Accept` header.
+
+`Accept: application/vnd.ga4gh.matchmaker[.version]+json`
+
+Where version takes the form `vX.Y`. For example:
+
+`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
+
+If no version is specified, the remote server should respond in whatever is the latest version. The remote server should always provide the API version in the `Content-Type` header of every response:
+
+`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+
+After receiving a request, the remote server can respond in one of two ways:
+  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. All responses, including this one, should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+
+```json
+{
+  "message" : "unsupported version number"
+}
+```
+
 
 ## Search Request
 
-`HTTP POST` request to `<base_remote_url>/mmapi/v1/match`, with an `application/json` body with the following format:
+`HTTP POST` request to `<base_remote_url>/match`, with an `application/json` body with the following format:
 
 ### Example
 
@@ -169,7 +195,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 * This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
 
 ## Search Results Response
-Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<base_origin_url>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
+Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<base_origin_url>/matchResults`, or a human-readable email sent to the user’s email address.
 
 The response to the search request looks like:
 
@@ -236,7 +262,7 @@ The response to the search request looks like:
 The format of email responses is not restricted, and is left up to each site to implement in a user-friendly way.
 
 ## Search Request Update
-`HTTP PUT` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the same format as a search request:
+`HTTP PUT` request to `<base_remote_url>/match/<queryID>`, with an `application/json` body with the same format as a search request:
 
 ### Example
 
@@ -257,7 +283,7 @@ A search request update is exactly the same as the search request with two diffe
 The search request update returns a search results response.
 
 ## Search Request Delete
-`HTTP DELETE` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the following format:
+`HTTP DELETE` request to `<base_remote_url>/match/<queryID>`, with an `application/json` body with the following format:
 
 ### Example
 
