@@ -1,12 +1,38 @@
 # OVERVIEW
 
 **Submit patient matching request:**
-`HTTP POST` to remote server: `<base_remote_url>/mmapi/v1/match`
-For example: `https://yourmatchmaker.org/mmapi/v1/match`
+`HTTP POST` to remote server: `<base_remote_url>/match`
+For example: `https://yourmatchmaker.org/match`
+
+
+## Versioning
+
+A particular API version can be specified using the HTTP `Accept` header.
+
+`Accept: application/vnd.ga4gh.matchmaker[.version]+json`
+
+Where version takes the form `vX.Y`. For example:
+
+`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
+
+If no version is specified, the remote server should respond in the latest version supported by the remote server. The remote server should always provide the API version in the `Content-Type` header of every response:
+
+`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+
+After receiving a request, the remote server can respond in one of two ways:
+  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. All responses, including this one, should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+
+```json
+{
+  "message" : "unsupported version number"
+}
+```
+
 
 ## Search Request
 
-`HTTP POST` request to `<base_remote_url>/mmapi/v1/match`, with an `application/json` body with the following format:
+`HTTP POST` request to `<base_remote_url>/match`, with an `application/json` body with the following format:
 
 ### Example
 
@@ -146,7 +172,6 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match`
     * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
     * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
 * This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
-
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:

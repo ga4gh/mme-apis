@@ -30,7 +30,6 @@ gpg --decrypt --output key key.gpg
 # Now both systems have the same "key" file
 ```
 
-
 **For data security, HTTPS is mandatory, with a valid, globally acceptable certificate!**
 
 Since authentication tokens are the only means of identifying a site, this token should be unique to each remote site accepted by **B** to correctly determine where a query comes from. There is no imposed format for the token, except that it must be less than 255 characters long. A random 40-chars SHA1 key is recommended.
@@ -47,9 +46,9 @@ Since authentication tokens are the only means of identifying a site, this token
 
 **3.** Every HTTP request that **A** submits to **B** must contain the token that **B** told **A** to use in HTTP header called 'X-Auth-Token'. For example:
 
-    https://phenomecentral.org/rest/remoteMatcher/mmapi/v1/match
+    https://phenomecentral.org/rest/remoteMatcher/match
     
-    POST /rest/remoteMatcher/mmapi/v1/match HTTP/1.1
+    POST /rest/remoteMatcher/match HTTP/1.1
 	Host: phenomecentral.org
 	Accept: application/json
 	Content-Type: application/json; charset=UTF-8
@@ -57,7 +56,7 @@ Since authentication tokens are the only means of identifying a site, this token
 
 In this case:
 * `https://phenomecentral.org/rest/remoteMatcher` is the base URL
-* `/mmapi/v1/match` is the API method for submitting queries
+* `/match` is the API method for submitting queries
 * `854a439d278df4283bf5498ab020336cdc416a7d` is the authentication token that **B** told **A** to use in all match requests
 * `X-Auth-Token: 854a439d278df4283bf5498ab020336cdc416a7d` would be in the Request Header sent to **B**
 
