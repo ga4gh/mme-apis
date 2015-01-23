@@ -40,14 +40,11 @@ After receiving a request, the remote server can respond in one of two ways:
 {
   "id" : <identifier>,
 
-  "label" : <identifier>,
-
-  "submitter" : {
-     "name" : "First Last",
-     "email" : <email address>,
-     "institution" : "Some Hospital"
+  "contact": {
+    "name": "Full Name",
+    "href": <URL>
   },
-
+  "label" : <identifier>,
   "gender" : "M"|"F",
   "ageOfOnset" : <HPO code>,
   "inheritanceMode" : <inheritance code>,
@@ -87,18 +84,18 @@ After receiving a request, the remote server can respond in one of two ways:
 * The internal identifier (obfuscated or not) that can be used by the originating system to reference the patient data.
 * Transparent string, limited to 255 characters in utf-8.
 
+#### Contact
+* ***Mandatory***
+* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match. It contains two components, both required:
+  1. A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms:
+    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
+    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
+  1. The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8.
+
 #### Label
 * *Optional*
 * A name/identifier assigned by the user which can be used to reference the patient in a recognizable manner (in an email for example); it should not contain any *personally identifiable information*.
 * Transparent string, limited to 255 characters in utf-8.
-
-#### Submitter
-* *Optional*
-* Consists of contact information of the person that submitted the search:
-  * `email`: the email address where matches can be sent (***mandatory***); the values must conform to the [RFC 2822 address specification](http://tools.ietf.org/html/rfc2822#section-3.4) mailbox format (no group)
-  * `name`: the first and last name (*optional*)
-  * `institution`: human-readable institution name (*optional*)
-* **The contact information is for transmitting match results only, and may not be collected and/or used for any other purposes**
 
 #### Gender
 * *Optional*
@@ -182,8 +179,11 @@ A synchronous `application/json` response, of the following form:
 {
   "results" : [
     {
+      "contact": {
+        "name": "Full Name",
+        "href": <URL>
+      },
       "label" : <identifier>,
-      "submitter" : {…},
       "gender" : "M"|"F",
       "ageOfOnset" : <HPO code>,
       "inheritanceMode" : <inheritance code>,
