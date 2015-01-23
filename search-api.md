@@ -38,13 +38,13 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```json
 {
-  "patient": {
+  "patient" : {
     "id" : <identifier>,
     "label" : <identifier>,
 
-    "contact": {
-      "name": "Full Name",
-      "href": <URL>
+    "contact" : {
+      "name" : "Full Name",
+      "href" : <URL>
     },
 
 	"gender" : "M"|"F",
@@ -53,7 +53,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
 	"disorders" : [
 	  {
-        "id" : "MIM:######"|"Orphanet:#####"|…,
+        "id" : "MIM:######"|"Orphanet:#####"|…
       },
 	  …
 	],
@@ -67,7 +67,12 @@ After receiving a request, the remote server can respond in one of two ways:
 	],
 	"genes" : [
 	  {
-		"gene" : <gene name>|<ensembl gene ID>|<entrez gene ID>,
+		"id" : <gene name>|<ensembl gene ID>|<entrez gene ID>
+	  },
+	  …
+	],
+	"variants" : [
+	  {
 		"referenceName" : "1"|"2"|…|"X"|"Y",
 		"start" : <number>,
 		"end" : <number>,
@@ -139,7 +144,7 @@ After receiving a request, the remote server can respond in one of two ways:
 * NOTE: we may want to support other sources later.
 
 #### Features
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
 * Is a **list of features** described by:
   * `id`: an ICHPT or HPO term identifier
   * `observed`: `"yes"`|`"no"`|`"unknown"`
@@ -148,16 +153,22 @@ After receiving a request, the remote server can respond in one of two ways:
 * By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
 
 #### Genes
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
-* Is a **list of possible causes** described by:
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
+* Is a **list of candidate causal genes** described by:
   * `gene`:
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
     * `<ensembl gene ID>` OR
     * `<entrez gene ID>`
-  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on
+
+#### Variants
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
+* Is a **list of candidate genomic variants** described by:
+  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
+    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
+    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on (***mandatory***)
   * `start`: `<number>`; the start position of the variant. (0-based)
   * `end`: `<number>`; the end position of the variant. (0-based, exclusive)
-      * **NOTE:** The location (`referenceName`, `start`, `end`) is *optional*
   * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
   * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
   * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous; *optional*)
@@ -169,10 +180,6 @@ After receiving a request, the remote server can respond in one of two ways:
     * `INTRONIC`
     * `PROXIMAL` (e.g. upstream, downstream)
     * `OTHER` (e.g. motif disruption, synonymous)
-  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
-    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
-    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-* This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
