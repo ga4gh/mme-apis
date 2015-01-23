@@ -38,44 +38,48 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```json
 {
-  "id" : <identifier>,
+  "patient": {
+    "id" : <identifier>,
+    "label" : <identifier>,
 
-  "contact": {
-    "name": "Full Name",
-    "href": <URL>
-  },
-  "label" : <identifier>,
-  "gender" : "M"|"F",
-  "ageOfOnset" : <HPO code>,
-  "inheritanceMode" : <inheritance code>,
+    "contact": {
+      "name": "Full Name",
+      "href": <URL>
+    },
 
-  "disorders" : [
-    "MIM:######",
-    "Orphanet:#####",
-    …
-  ],
-  "features" : [
-    {
-      "id" : <ICHPT or HPO code>,
-      "observed" : "yes"|"no"|"unknown",
-      "ageOfOnset" : "…"
-    },
-    …
-  ],
-  "genes" : [
-    {
-      "gene" : <gene name>|<ensembl gene ID>|<entrez gene ID>,
-      "referenceName" : "1"|"2"|…|"X"|"Y",
-      "start" : <number>,
-      "end" : <number>,
-      "referenceBases" : "A"|"ACG"|…,
-      "alternateBases" : "A"|"ACG"|…,
-      "zygosity" : <number>,
-      "type" : <mutation type>,
-      "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…
-    },
-    …
-  ]
+	"gender" : "M"|"F",
+	"ageOfOnset" : <HPO code>,
+	"inheritanceMode" : <inheritance code>,
+
+	"disorders" : [
+	  {
+        "id" : "MIM:######"|"Orphanet:#####"|…,
+      },
+	  …
+	],
+	"features" : [
+	  {
+		"id" : <ICHPT or HPO code>,
+		"observed" : "yes"|"no"|"unknown",
+		"ageOfOnset" : "…"
+	  },
+	  …
+	],
+	"genes" : [
+	  {
+		"gene" : <gene name>|<ensembl gene ID>|<entrez gene ID>,
+		"referenceName" : "1"|"2"|…|"X"|"Y",
+		"start" : <number>,
+		"end" : <number>,
+		"referenceBases" : "A"|"ACG"|…,
+		"alternateBases" : "A"|"ACG"|…,
+		"zygosity" : <number>,
+		"type" : <mutation type>,
+		"assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…
+	  },
+	  …
+	]
+  }
 }
 ```
 
