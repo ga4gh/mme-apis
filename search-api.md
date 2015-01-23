@@ -28,7 +28,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match`
 
   "disorders" : [
     "MIM:######",
-    "ORPHA#####",
+    "Orphanet:#####",
     …
   ],
   "features" : [
@@ -108,7 +108,7 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match`
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`ORPHA#####`) identifiers, can be empty
+* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`, where the fragment is either numeric or `C####`) identifiers, can be empty
 * NOTE: we may want to support other sources later.
 
 #### Features
