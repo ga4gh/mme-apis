@@ -11,7 +11,7 @@ It is not mandatory for **A** to automatically also accept **B**’s requests, t
 
 **1.b.** Upon acceptance of **A** as a trusted source of queries, the administrators of **B** must respond with:
 * a suggested human readable **name** and **description** identifying **B**, to be presented to users of **A** as a possible remote site to search; **A** could ignore these and use their preferred name and description, but for consistency across systems **B**’s preference should be used
-* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/mmapi/v1/match` to this path when sending queries
+* a **base URL** to be used for requests, including scheme (`https://`), hostname, eventual port, and path prefix (trailing `/` is optional); **A** will append `/match` to this path when sending queries
 * an **authentication token** that must be used by **A** in the search requests
 
 It is recommended to send this information in an encrypted email message, for example using PGP/GPG encryption with the recipient's public key. Plain text communication of the keys should be avoided as much as possible, and decrypted messages/keys should not be kept on personal computers.
