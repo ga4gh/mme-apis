@@ -50,7 +50,7 @@ Since authentication tokens are the only means of identifying a site, this token
     
     POST /rest/remoteMatcher/match HTTP/1.1
 	Host: phenomecentral.org
-	Accept: application/json
+	Accept: application/vnd.ga4gh.matchmaker+json
 	Content-Type: application/json; charset=UTF-8
 	X-Auth-Token: 854a439d278df4283bf5498ab020336cdc416a7d
 
