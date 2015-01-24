@@ -49,7 +49,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
     "ageOfOnset" : <HPO code>,
-    "inheritanceMode" : <inheritance code>,
+    "inheritanceMode" : <HPO code>,
 
     "disorders" : [
       {
@@ -133,15 +133,37 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Inheritance Mode
 * *Optional*
+* HPO term ID for the mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`).
 * Accepted values:
-  * `ad` - Autosomal dominant
-  * `ar` - Autosomal recessive
-  * `xd` - X-linked dominant
-  * `xr` - X-linked recessive
-  * `yl` - Y-linked
-  * `mi` - Mitochondrial
-  * `ic` - Isolated cases
-  * `un` - Uncertain
+  * Mode of inheritance - HP:0000005
+	  * Autosomal dominant inheritance - HP:0000006
+		  * Sex-limited autosomal dominant - HP:0001470
+			  * Male-limited autosomal dominant - HP:0001475
+		  * Autosomal dominant somatic cell mutation - HP:0001444
+		  * Autosomal dominant contiguous gene syndrome - HP:0001452
+		  * Autosomal dominant inheritance with paternal imprinting - HP:0012274
+		  * Autosomal dominant inheritance with maternal imprinting - HP:0012275
+	  * Autosomal recessive inheritance - HP:0000007
+	  * Familial predisposition - HP:0001472
+	  * Multifactorial inheritance - HP:0001426
+		  * Digenic inheritance - HP:0010984
+		  * Oligogenic inheritance - HP:0010983
+		  * Polygenic inheritance - HP:0010982
+	  * Mitochondrial inheritance - HP:0001427
+	  * Heterogeneous - HP:0001425
+	  * Somatic mutation - HP:0001428
+		  * Somatic mosaicism - HP:0001442
+	  * Contiguous gene syndrome - HP:0001466
+		  * Autosomal dominant contiguous gene syndrome - HP:0001452
+	  * Sporadic - HP:0003745
+	  * Genetic anticipation - HP:0003743
+		  * Genetic anticipation with paternal anticipation bias - HP:0003744
+	  * Gonosomal inheritance - HP:0010985
+		  * X-linked inheritance - HP:0001417
+			  * X-linked recessive inheritance - HP:0001419
+			  * X-linked dominant inheritance - HP:0001423
+		  * Y-linked inheritance - HP:0001450
+
 
 #### Disorders
 * *Optional*
