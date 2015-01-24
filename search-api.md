@@ -119,7 +119,6 @@ After receiving a request, the remote server can respond in one of two ways:
   * `OTHER`: sex information ambiguous, e.g. not clear XX/XY/ZZ...
   * `MIXED_SAMPLE`: Multiple samples, e.g. pooled, environmental
   * `NOT_APPLICABLE`: Used for prokaryotes, snails, etc. Not used for humans.
-*/
 
 #### Age of onset
 * *Optional*
@@ -138,37 +137,34 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Inheritance Mode
 * *Optional*
-* HPO term ID for the mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`).
-* Accepted values:
-  * Mode of inheritance - HP:0000005
-	  * Autosomal dominant inheritance - HP:0000006
-		  * Sex-limited autosomal dominant - HP:0001470
-			  * Male-limited autosomal dominant - HP:0001475
-		  * Autosomal dominant somatic cell mutation - HP:0001444
-		  * Autosomal dominant contiguous gene syndrome - HP:0001452
-		  * Autosomal dominant inheritance with paternal imprinting - HP:0012274
-		  * Autosomal dominant inheritance with maternal imprinting - HP:0012275
-	  * Autosomal recessive inheritance - HP:0000007
-	  * Familial predisposition - HP:0001472
-	  * Multifactorial inheritance - HP:0001426
-		  * Digenic inheritance - HP:0010984
-		  * Oligogenic inheritance - HP:0010983
-		  * Polygenic inheritance - HP:0010982
-	  * Mitochondrial inheritance - HP:0001427
-	  * Heterogeneous - HP:0001425
-	  * Somatic mutation - HP:0001428
-		  * Somatic mosaicism - HP:0001442
-	  * Contiguous gene syndrome - HP:0001466
-		  * Autosomal dominant contiguous gene syndrome - HP:0001452
-	  * Sporadic - HP:0003745
-	  * Genetic anticipation - HP:0003743
-		  * Genetic anticipation with paternal anticipation bias - HP:0003744
-	  * Gonosomal inheritance - HP:0010985
-		  * X-linked inheritance - HP:0001417
-			  * X-linked recessive inheritance - HP:0001419
-			  * X-linked dominant inheritance - HP:0001423
-		  * Y-linked inheritance - HP:0001450
-
+* An HPO term identifier (HP:#######) for a mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`).
+  * `"HP:0000006"` (Autosomal dominant inheritance)
+      * `"HP:0001470"` (Sex-limited autosomal dominant)
+          * `"HP:0001475"` (Male-limited autosomal dominant)
+      * `"HP:0001444"` (Autosomal dominant somatic cell mutation)
+      * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+      * `"HP:0012274"` (Autosomal dominant inheritance with paternal imprinting)
+      * `"HP:0012275"` (Autosomal dominant inheritance with maternal imprinting)
+  * `"HP:0000007"` (Autosomal recessive inheritance)
+  * `"HP:0001472"` (Familial predisposition)
+  * `"HP:0001426"` (Multifactorial inheritance)
+      * `"HP:0010984"` (Digenic inheritance)
+      * `"HP:0010983"` (Oligogenic inheritance)
+      * `"HP:0010982"` (Polygenic inheritance)
+  * `"HP:0001427"` (Mitochondrial inheritance)
+  * `"HP:0001425"` (Heterogeneous)
+  * `"HP:0001428"` (Somatic mutation)
+      * `"HP:0001442"` (Somatic mosaicism)
+  * `"HP:0001466"` (Contiguous gene syndrome)
+      * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+  * `"HP:0003745"` (Sporadic)
+  * `"HP:0003743"` (Genetic anticipation)
+      * `"HP:0003744"` (Genetic anticipation with paternal anticipation bias)
+  * `"HP:0010985"` (Gonosomal inheritance)
+      * `"HP:0001417"` (X-linked inheritance)
+          * `"HP:0001419"` (X-linked recessive inheritance)
+          * `"HP:0001423"` (X-linked dominant inheritance)
+      * `"HP:0001450"` (Y-linked inheritance)
 
 #### Disorders
 * *Optional*
