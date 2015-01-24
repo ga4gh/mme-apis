@@ -47,43 +47,43 @@ After receiving a request, the remote server can respond in one of two ways:
       "href" : <URL>
     },
 
-	"gender" : "M"|"F",
-	"ageOfOnset" : <HPO code>,
-	"inheritanceMode" : <inheritance code>,
+    "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
+    "ageOfOnset" : <HPO code>,
+    "inheritanceMode" : <inheritance code>,
 
-	"disorders" : [
-	  {
+    "disorders" : [
+      {
         "id" : "MIM:######"|"Orphanet:#####"|…
       },
-	  …
-	],
-	"features" : [
-	  {
-		"id" : <ICHPT or HPO code>,
-		"observed" : "yes"|"no"|"unknown",
-		"ageOfOnset" : "…"
-	  },
-	  …
-	],
-	"genes" : [
-	  {
-		"id" : <gene name>|<ensembl gene ID>|<entrez gene ID>
-	  },
-	  …
-	],
-	"variants" : [
-	  {
-		"referenceName" : "1"|"2"|…|"X"|"Y",
-		"start" : <number>,
-		"end" : <number>,
-		"referenceBases" : "A"|"ACG"|…,
-		"alternateBases" : "A"|"ACG"|…,
-		"zygosity" : <number>,
-		"type" : <mutation type>,
-		"assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…
-	  },
-	  …
-	]
+      …
+    ],
+    "features" : [
+      {
+        "id" : <ICHPT or HPO code>,
+        "observed" : "yes"|"no"|"unknown",
+        "ageOfOnset" : "…"
+      },
+      …
+    ],
+    "genes" : [
+      {
+        "id" : <gene name>|<ensembl gene ID>|<entrez gene ID>
+      },
+      …
+    ],
+    "variants" : [
+      {
+        "referenceName" : "1"|"2"|…|"X"|"Y",
+        "start" : <number>,
+        "end" : <number>,
+        "referenceBases" : "A"|"ACG"|…,
+        "alternateBases" : "A"|"ACG"|…,
+        "zygosity" : <number>,
+        "type" : <mutation type>,
+        "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…
+      },
+      …
+    ]
   }
 }
 ```
@@ -91,6 +91,11 @@ After receiving a request, the remote server can respond in one of two ways:
 #### ID
 * ***Mandatory***
 * The internal identifier (obfuscated or not) that can be used by the originating system to reference the patient data.
+* Transparent string, limited to 255 characters in utf-8.
+
+#### Label
+* *Optional*
+* A name/identifier assigned by the user which can be used to reference the patient in a recognizable manner (in an email for example); it should not contain any *personally identifiable information*.
 * Transparent string, limited to 255 characters in utf-8.
 
 #### Contact
@@ -101,15 +106,15 @@ After receiving a request, the remote server can respond in one of two ways:
     * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
   1. The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8.
 
-#### Label
+#### Sex
 * *Optional*
-* A name/identifier assigned by the user which can be used to reference the patient in a recognizable manner (in an email for example); it should not contain any *personally identifiable information*.
-* Transparent string, limited to 255 characters in utf-8.
-
-#### Gender
-* *Optional*
-* Accepted values: `"M"`, `"F"`
-* Any other value is treated as `"unknown"`
+* This follows the [GA4GH `geneticSex` specification](https://github.com/ga4gh/schemas/blob/master/src/main/resources/avro/metadata.avdl), with the following options:
+  * `FEMALE`: Genetic/chromosomal female
+  * `MALE`: Genetic/chromosomal male
+  * `OTHER`: sex information ambiguous, e.g. not clear XX/XY/ZZ...
+  * `MIXED_SAMPLE`: Multiple samples, e.g. pooled, environmental
+  * `NOT_APPLICABLE`: Used for prokaryotes, snails, etc. Not used for humans.
+*/
 
 #### Age of onset
 * *Optional*
@@ -144,7 +149,7 @@ After receiving a request, the remote server can respond in one of two ways:
 * NOTE: we may want to support other sources later.
 
 #### Features
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of features** described by:
   * `id`: an ICHPT or HPO term identifier
   * `observed`: `"yes"`|`"no"`|`"unknown"`
@@ -153,7 +158,7 @@ After receiving a request, the remote server can respond in one of two ways:
 * By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
 
 #### Genes
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of candidate causal genes** described by:
   * `gene`:
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
@@ -161,7 +166,7 @@ After receiving a request, the remote server can respond in one of two ways:
     * `<entrez gene ID>`
 
 #### Variants
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having both is preferred)
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of candidate genomic variants** described by:
   * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
     * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
@@ -190,17 +195,7 @@ A synchronous `application/json` response, of the following form:
 {
   "results" : [
     {
-      "contact": {
-        "name": "Full Name",
-        "href": <URL>
-      },
-      "label" : <identifier>,
-      "gender" : "M"|"F",
-      "ageOfOnset" : <HPO code>,
-      "inheritanceMode" : <inheritance code>,
-      "disorders" : […],
-      "features" : […],
-      "genes" : […]
+      "patient" : {…},
     },
     …
   ]
@@ -209,4 +204,4 @@ A synchronous `application/json` response, of the following form:
 
 #### Results
 * ***Mandatory***, but can be empty
-* Is a **list of matches**, where each match has the same format as the one described above for the query
+* Is a **list of matches**, where each match has a `patient` object of the same format as the one described above for the query
