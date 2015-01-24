@@ -47,6 +47,7 @@ After receiving a request, the remote server can respond in one of two ways:
       "href" : <URL>
     },
 
+    "species" : <NCBI species code>,
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
     "ageOfOnset" : <HPO code>,
     "inheritanceMode" : <HPO code>,
@@ -105,6 +106,10 @@ After receiving a request, the remote server can respond in one of two ways:
     * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
     * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
   1. The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8.
+
+#### Species
+* *Optional*
+* A taxon identifier from the NCBI nomenclature. The default is `9606 (Human)`
 
 #### Sex
 * *Optional*
