@@ -68,7 +68,7 @@ After receiving a request, the remote server can respond in one of two ways:
     ],
     "genes" : [
       {
-        "id" : <gene name>|<ensembl gene ID>|<entrez gene ID>
+        "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
       },
       …
     ],
