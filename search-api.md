@@ -44,6 +44,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "contact" : {
       "name" : "Full Name",
+      "institution" : "Contact Institution",
       "href" : <URL>
     },
 
@@ -101,11 +102,12 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Contact
 * ***Mandatory***
-* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match. It contains two components, both required:
-  1. A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms:
+* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
+  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
     * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
     * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
-  1. The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8.
 
 #### Species
 * *Optional*
