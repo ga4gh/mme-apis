@@ -60,7 +60,7 @@ After receiving a request, the remote server can respond in one of two ways:
     ],
     "features" : [
       {
-        "id" : <ICHPT or HPO code>,
+        "id" : <HPO code>,
         "observed" : "yes"|"no"|"unknown",
         "ageOfOnset" : "…"
       },
@@ -174,7 +174,7 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Features
 * It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of features** described by:
-  * `id`: an ICHPT or HPO term identifier
+  * `id`: an  HPO term identifier of the form: `HP:#######`
   * `observed`: `"yes"`|`"no"`|`"unknown"`
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
