@@ -48,7 +48,7 @@ After receiving a request, the remote server can respond in one of two ways:
       "href" : <URL>
     },
 
-    "species" : <NCBI species code>,
+    "species" : <NCBI taxon identifier>,
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
     "ageOfOnset" : <HPO code>,
     "inheritanceMode" : <HPO code>,
@@ -111,7 +111,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Species
 * *Optional*
-* A taxon identifier from the NCBI nomenclature. The default is `9606 (Human)`
+* A taxon identifier from the NCBI nomenclature, for the form: `"NCBITaxon:<ID>"`. The default is human: `"NCBITaxon:9606"`
 
 #### Sex
 * *Optional*
