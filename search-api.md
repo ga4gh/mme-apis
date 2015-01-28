@@ -7,7 +7,7 @@ For example: `https://yourmatchmaker.org/match`
 
 ## Versioning
 
-A particular API version can be specified using the HTTP `Accept` header.
+Every request must specify the API version within the HTTP `Accept` header.
 
 `Accept: application/vnd.ga4gh.matchmaker.<version>+json`
 
@@ -15,7 +15,7 @@ Where `<version>` takes the form `vX.Y`. For example:
 
 `Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
 
-The remote server should always provide the API version in the `Content-Type` header of every response:
+The remote server must provide the API version of the response in the `Content-Type` header of every response:
 
 `Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
 
