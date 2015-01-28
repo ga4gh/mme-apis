@@ -92,7 +92,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### ID
 * ***Mandatory***
-* The internal identifier (obfuscated or not) that can be used by the originating system to reference the patient data.
+* An identifier for the patient record, unique within the matchmaker where the patient data is stored. This identifier should be unchanged by modifications to the patient record over time (e.g. adding phenotypes). It may become invalid (e.g. if the record is deleted), but it should never be "replaced" and refer to a different patient.
 * Transparent string, limited to 255 characters in utf-8.
 
 #### Label
