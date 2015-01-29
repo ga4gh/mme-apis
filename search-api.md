@@ -36,7 +36,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ### Example
 
-```json
+```
 {
   "patient" : {
     "id" : <identifier>,
@@ -216,7 +216,7 @@ A synchronous `application/json` response, of the following form:
 
 ### Example
 
-```json
+```
 {
   "results" : [
     {
