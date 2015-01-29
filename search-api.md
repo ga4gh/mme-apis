@@ -189,18 +189,6 @@ After receiving a request, the remote server can respond in one of two ways:
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
     * `<ensembl gene ID>` OR
     * `<entrez gene ID>`
-
-#### Variants
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
-* Is a **list of candidate genomic variants** described by:
-  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
-    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
-    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on (***mandatory***)
-  * `start`: `<number>`; the start position of the variant. (0-based) (*optional*)
-  * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
-  * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
-  * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
   * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
   * `type`: the (*optional*) type of mutation, as a means to describe the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation:
     * `TRUNCATING` (e.g. stopgain, stoploss, startloss, frameshift indel)
@@ -210,6 +198,20 @@ After receiving a request, the remote server can respond in one of two ways:
     * `INTRONIC`
     * `PROXIMAL` (e.g. upstream, downstream)
     * `OTHER` (e.g. motif disruption, synonymous)
+
+#### Variants
+* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
+* Is a **list of candidate genomic variants** described by:
+  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
+    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
+    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on (***mandatory***)
+  * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory***)
+  * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
+  * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
+  * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
+  * `zygosity`: same meaning as in `genes` (*optional*)
+  * `type`: same meaning as in `genes` (*optional*)
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
