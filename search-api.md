@@ -82,7 +82,7 @@ After receiving a request, the remote server can respond in one of two ways:
         "referenceBases" : "A"|"ACG"|…,
         "alternateBases" : "A"|"ACG"|…,
         "zygosity" : <number>,
-        "type" : <mutation type>
+        "type" : <SO code>
       },
       …
     ]
@@ -202,14 +202,7 @@ After receiving a request, the remote server can respond in one of two ways:
   * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
   * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
   * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
-  * `type`: the (*optional*) type of mutation, as a means to describe the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation:
-    * `TRUNCATING` (e.g. stopgain, stoploss, startloss, frameshift indel)
-    * `ALTERING` (e.g. missense, non-frameshift indel)
-    * `SPLICING`
-    * `UTR` (UTR3, UTR5)
-    * `INTRONIC`
-    * `PROXIMAL` (e.g. upstream, downstream)
-    * `OTHER` (e.g. motif disruption, synonymous)
+  * `type`:  the effect of the mutation, expressed as a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation. (*optional*)
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
