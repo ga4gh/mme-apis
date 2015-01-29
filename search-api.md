@@ -59,7 +59,7 @@ After receiving a request, the remote server can respond in one of two ways:
       },
       …
     ],
-    "features" : [
+    "phenotypes" : [
       {
         "id" : <HPO code>,
         "observed" : "yes"|"no"|"unknown",
@@ -173,17 +173,17 @@ After receiving a request, the remote server can respond in one of two ways:
 * Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`, where the fragment is either numeric or `C####`) identifiers, can be empty
 * NOTE: we may want to support other sources later.
 
-#### Features
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
-* Is a **list of features** described by:
+#### Phenotypes
+* It is ***mandatory*** to have at least one of these three: `phenotypes`, `genes`, `variants` (having all is preferred)
+* Is a **list of phenotypes** described by:
   * `id`: an  HPO term identifier of the form: `HP:#######`
   * `observed`: `"yes"`|`"no"`|`"unknown"`
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
-* More metadata can be later added to each feature if necessary.
-* By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
+* More metadata can be later added to each phenotype if necessary.
+* By default we shouldn’t sent any phenotypes with the `observed` status (or value) `"unknown"`
 
 #### Genes
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
+* It is ***mandatory*** to have at least one of these three: `phenotypes`, `genes`, `variants` (having all is preferred)
 * Is a **list of candidate causal genes** described by:
   * `gene`:
     * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
@@ -191,7 +191,7 @@ After receiving a request, the remote server can respond in one of two ways:
     * `<entrez gene ID>`
 
 #### Variants
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
+* It is ***mandatory*** to have at least one of these three: `phenotypes`, `genes`, `variants` (having all is preferred)
 * Is a **list of candidate genomic variants** described by:
   * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
     * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
