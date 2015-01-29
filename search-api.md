@@ -38,15 +38,17 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```
 {
-  "patient" : {
-    "id" : <identifier>,
-    "label" : <identifier>,
-
+  "metadata" : {
     "contact" : {
       "name" : "Full Name",
       "institution" : "Contact Institution",
       "href" : <URL>
-    },
+    }
+  },
+
+  "patient" : {
+    "id" : <identifier>,
+    "label" : <identifier>,
 
     "species" : <NCBI taxon identifier>,
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
@@ -90,6 +92,15 @@ After receiving a request, the remote server can respond in one of two ways:
 }
 ```
 
+#### Contact
+* ***Mandatory***
+* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
+  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
+    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
+    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
+
 #### ID
 * ***Mandatory***
 * An identifier for the patient record, unique within the matchmaker where the patient data is stored. This identifier should be unchanged by modifications to the patient record over time (e.g. adding phenotypes). It may become invalid (e.g. if the record is deleted), but it should never be "replaced" and refer to a different patient.
@@ -99,15 +110,6 @@ After receiving a request, the remote server can respond in one of two ways:
 * *Optional*
 * A name/identifier assigned by the user which can be used to reference the patient in a recognizable manner (in an email for example); it should not contain any *personally identifiable information*.
 * Transparent string, limited to 255 characters in utf-8.
-
-#### Contact
-* ***Mandatory***
-* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
-  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
-  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
-  1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
-    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
-    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
 
 #### Species
 * *Optional*
@@ -220,7 +222,8 @@ A synchronous `application/json` response, of the following form:
 {
   "results" : [
     {
-      "patient" : {…},
+      "metadata" : {…},
+      "patient" : {…}
     },
     …
   ]
@@ -229,4 +232,4 @@ A synchronous `application/json` response, of the following form:
 
 #### Results
 * ***Mandatory***, but can be empty
-* Is a **list of matches**, where each match has a `patient` object of the same format as the one described above for the query
+* Is a **list of matches**, where each match has a `metadata` object and a `patient` object of the same format as the ones described above for the query.
