@@ -23,12 +23,6 @@ After receiving a request, the remote server can respond in one of two ways:
   * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
   * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. All responses, including this one, should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
 
-```json
-{
-  "message" : "unsupported version number"
-}
-```
-
 
 ## Search Request
 
@@ -230,3 +224,26 @@ A synchronous `application/json` response, of the following form:
 #### Results
 * ***Mandatory***, but can be empty
 * Is a **list of matches**, where each match has a `patient` object of the same format as the one described above for the query
+
+
+### Error handling
+The remote server should use HTTP status codes to report any errors encoundered processing the match request. Here are a list of status codes and their meanings with regards to this API:
+
+| HTTP Status Code | Constant | Description
+| ---------------- | -------- | -----------
+| 200 | httplib.OK | no error |
+| 400 | httplib.BAD_REQUEST | missing/invalid data
+| 401 | httplib.UNAUTHORIZED | invalid API key
+| 405 | httplib.METHOD_NOT_ALLOWED | invalid method (GET)
+| 406 | httplib.NOT_ACCEPTABLE | unsupported API version
+| 415 | httplib.UNSUPPORTED_MEDIA_TYPE | missing/invalid content type
+| 422 | httplib.UNPROCESSABLE_ENTITY | missing/invalid request body
+| 500 | httplib.INTERNAL_SERVER_ERROR | default error
+
+The error response should include a json-formatted body with a human-readable `"message"` providing details the error. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and content such as:
+
+```
+{
+  "message" : "unsupported version number"
+}
+```
