@@ -62,7 +62,7 @@ After receiving a request, the remote server can respond in one of two ways:
     "features" : [
       {
         "id" : <HPO code>,
-        "observed" : true|false,
+        "observed" : "yes"|"no",
         "ageOfOnset" : "…"
       },
       …
@@ -177,7 +177,7 @@ After receiving a request, the remote server can respond in one of two ways:
 * It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of features** described by:
   * `id`: an  HPO term identifier of the form: `HP:#######`
-  * `observed`: a boolean value, `true` if the feature is present in the patient (default), `false` if the feature is explicitly not present in the patient. (*optional*)
+  * `observed`: `"yes"` if the feature is present in the patient (default), `"no"` if the feature is explicitly not present in the patient. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
 
