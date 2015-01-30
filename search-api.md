@@ -229,18 +229,18 @@ A synchronous `application/json` response, of the following form:
 ### Error handling
 The remote server should use HTTP status codes to report any errors encoundered processing the match request. Here are a list of status codes and their meanings with regards to this API:
 
-| HTTP Status Code | Constant | Description
+| HTTP Status Code | Reason Phrase | Description
 | ---------------- | -------- | -----------
-| 200 | httplib.OK | no error |
-| 400 | httplib.BAD_REQUEST | missing/invalid data
-| 401 | httplib.UNAUTHORIZED | invalid API key
-| 405 | httplib.METHOD_NOT_ALLOWED | invalid method (GET)
-| 406 | httplib.NOT_ACCEPTABLE | unsupported API version
-| 415 | httplib.UNSUPPORTED_MEDIA_TYPE | missing/invalid content type
-| 422 | httplib.UNPROCESSABLE_ENTITY | missing/invalid request body
-| 500 | httplib.INTERNAL_SERVER_ERROR | default error
+| 200 | OK | no error |
+| 400 | Bad Request | missing/invalid data
+| 401 | Unauthorized | invalid API key
+| 405 | Method Not Allowed | invalid method (GET)
+| 406 | Not Acceptable | unsupported API version
+| 415 | Unsupported Media Type | missing/invalid content type
+| 422 | Unprocessable Entity | missing/invalid request body
+| 500 | Internal Server Error | default error
 
-The error response should include a json-formatted body with a human-readable `"message"` providing details the error. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and content such as:
+The error response should include a json-formatted body with a human-readable `"message"`, containing further details about the error. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and a content body such as:
 
 ```
 {
