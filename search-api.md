@@ -21,7 +21,7 @@ The remote server must provide the API version of the response in the `Content-T
 
 After receiving a request, the remote server can respond in one of two ways:
   * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
-  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. All responses, including this one, should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
 
 
 ## Search Request
@@ -240,10 +240,11 @@ The remote server should use HTTP status codes to report any errors encoundered 
 | 422 | Unprocessable Entity | missing/invalid request body
 | 500 | Internal Server Error | default error
 
-The error response should include a json-formatted body with a human-readable `"message"`, containing further details about the error. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and a content body such as:
+The error response should include a json-formatted body with a human-readable `"message"` containing further details about the error. The exact error message is up to the implementer, and additional fields can be provided with further information. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and a content body such as:
 
 ```
 {
-  "message" : "unsupported version number"
+  "message" : "unsupported API version",
+  "supportedVersions" : [ "0.1", "1.0", "1.1" ]
 }
 ```
