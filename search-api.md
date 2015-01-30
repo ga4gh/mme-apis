@@ -177,7 +177,7 @@ After receiving a request, the remote server can respond in one of two ways:
 * It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
 * Is a **list of features** described by:
   * `id`: an  HPO term identifier of the form: `HP:#######`
-  * `observed`: `"yes"`|`"no"`|`"unknown"` (*optional*; default: "yes")
+  * `observed`: `"yes"`|`"no"`|`"unknown"` (*optional*; default: `"yes"`)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
 * By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
