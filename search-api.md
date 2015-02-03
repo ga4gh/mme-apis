@@ -164,7 +164,7 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`, where the fragment is either numeric or `C####`) identifiers, can be empty
+* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifiers, can be empty
 * NOTE: we may want to support other sources later.
 
 #### Features
