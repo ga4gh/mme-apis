@@ -1,0 +1,143 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "title": "MatchMakerExchange Search Request",
+  "name": "MatchMakerExchangeSearchRequest",
+  "required":true,
+  "properties": {
+    "patient": {
+      "id": {
+        "description":"An identifier for the patient record, unique within the matchmaker where the patient data is stored",
+        "type":"string",
+        "maxLength":255,
+        "required":true
+      },
+      "label": {
+        "type":"string",
+        "maxLength":255
+      },
+      "contact": {
+        "type":"object",
+        "required":true,
+        "properties": {
+          "name": {
+            "description": "The human-readable name of the clinician or organization that the user is contacting with the provided URL",
+            "type":"string",
+            "required":true
+          },
+          "institution": {
+            "type":"string"
+          },
+          "href" : {
+            "description" : "A public (no login required) URL for contacting the owner of the patient record to follow up with a match",
+            "type":"string",
+            "required":true,
+            "pattern": "^(https?|mailto):\\S+$"
+          }
+        }
+      },
+      "species": {
+        "description":"A taxon identifier from the NCBI nomenclature, for the form: 'NCBITaxon:<ID>'. NCBITaxon:9606 (human) is assumed in case of omission",
+        "type":"string",
+        "pattern":"^NCBITaxon:\\d+$"
+      },
+      "sex": {
+        "description":"geneticSex as defined by GA4GH's metadata schema",
+        "enum": ["FEMALE", "MALE", "OTHER", "MIXED_SAMPLE", "NOT_APPLICABLE"]
+      },
+      "ageOfOnset": {
+        "description":"An HPO id term assocaited with an age interval http://www.human-phenotype-ontology.org/hpoweb/showterm?id=HP:0011007",
+        "enum": ["HP:0003577","HP:0011460","HP:0011461","HP:0003623","HP:0003593","HP:0011463","HP:0003621","HP:0003581","HP:0011462","HP:0003596","HP:0003584"]
+      },
+      "inheritanceMode": {
+        "description":"An HPO term identifier for a mode of inheritance (a descendant of HP:0000005 (Mode of inheritance))",
+        "enum": ["HP:0000006","HP:0001470","HP:0001475","HP:0001444","HP:0001452","HP:0012274","HP:0012275","HP:0000007","HP:0001472","HP:0001426","HP:0010984","HP:0010983","HP:0010982","HP:0001427","HP:0001425","HP:0001428","HP:0001442","HP:0001466","HP:0001452","HP:0003745","HP:0003743","HP:0003744","HP:0010985","HP:0001417","HP:0001419","HP:0001423","HP:0001450"]
+      },
+      "disorders": {
+        "description":"A list of OMIM or Orphanet identifiers",
+        "type":"array",
+        "items":
+          {
+            "type":"string",
+            "pattern":"^(MIM|Orphanet):\\d{1,6}$"
+          }
+      },
+      "features": {
+        "description":"List of phenotypes",
+        "type":"array",
+        "minItems": 1,
+        "items":
+          {
+            "type":"object",
+            "properties":{
+              "id": {
+                "description":"An HPO term identfier",
+                "type":"string",
+                "required":true,
+                "pattern":"^HP:\\d{1,6}$"
+              },
+              "observed": {
+                "description":"Defines if the feature has been explicitly observed (`yes`) or explicitly not observed (`no`). Omission of this optional field assumes the feature has been explicitly observed",
+                "enum": ["yes", "no", "unknown"]
+              },
+              "ageOfOnset": {
+                "description": "An HPO id term assocaited with an age interval HP:0011007",
+                "enum": ["HP:0003577","HP:0011460","HP:0011461","HP:0003623","HP:0003593","HP:0011463","HP:0003621","HP:0003581","HP:0011462","HP:0003596","HP:0003584"]
+              }
+            }
+          }
+      },
+      "genes": {
+        "description":"A list of candidate genes",
+        "type":"array",
+        "minItems": 1,
+        "items":
+          {
+            "description":"A gene symbol from the HGNC database, or an ensembl gene ID, or an entrez gene ID",
+            "type":"string",
+            "required":true
+          }
+      },
+      "variants": {
+        "description":"A list of candidate genomic variants",
+        "type":"array",
+        "minItems": 1,
+        "items":
+          {
+            "type":"object",
+            "properties":{
+              "referenceName": {
+                "description":"Chromosone of the variant",
+                "pattern":"^(([1-9]|1[1-9]|2[1-2])|[XY])$"
+              },
+              "start": {
+                "type":"number",
+                "required":true
+              },
+              "end": {
+                "type":"number"
+              },
+              "referenceBase": {
+                "pattern":"^([ATCG]+)$"
+              },
+              "alternativeBase": {
+                "pattern":"^([ATCG]+)$"
+              },
+              "zygosity": {
+                "pattern":"^[12]$"
+              },
+              "type": {
+                "description":"Effect of the mutation, expressed as a Sequence Ontology term identifier, usually (but not necessarily) be a descendant of SO:0001576 [transcript variant]",
+                "type":"string",
+                "pattern":"SO:d{7}"
+              },
+              "assembly": {
+                "pattern":"^NCBI36|GRCh\\d{2}(\\.p\\d{1,2})*?$",
+                "required":true
+              }
+            }
+          }
+      }
+    }
+  }
+}
