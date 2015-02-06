@@ -206,6 +206,9 @@ A synchronous `application/json` response, of the following form:
 {
   "results" : [
     {
+	  "score" : {
+        "patient" : <number>
+      }
       "patient" : {…},
     },
     …
@@ -214,9 +217,17 @@ A synchronous `application/json` response, of the following form:
 ```
 
 #### Results
-* ***Mandatory***, but can be empty
-* Is a **list of matches**, where each match has a `patient` object of the same format as the one described above for the query
+* ***Mandatory***, but can be empty.
+* Is a **list of matches**, where each match has a `patient` object, and a `score` object with information about how well the `patient` object matched.
 
+##### Score
+* ***Mandatory***
+* Information about how well this results patient matched the query patient.
+* Currently, this has a single ***mandatory*** field, `patient`, with a numerical value corresponding to the overall score of the match. This score must be in the range [0, 1], where 0.0 is a poor match and 1.0 is a perfect match.
+
+##### Patient
+* ***Mandatory***
+* A `patient` object of the same form as the one described above for the query.
 
 ### Error handling
 The remote server should use HTTP status codes to report any errors encoundered processing the match request. Here are a list of status codes and their meanings with regards to this API:
