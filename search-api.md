@@ -208,7 +208,7 @@ A synchronous `application/json` response, of the following form:
     {
 	  "score" : {
         "patient" : <number>
-      }
+      },
       "patient" : {…},
     },
     …
