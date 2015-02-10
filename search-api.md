@@ -251,3 +251,7 @@ The error response should include a json-formatted body with a human-readable `"
   "supportedVersions" : [ "0.1", "1.0", "1.1" ]
 }
 ```
+
+### Testing
+Any query with a valid json structure should return a HTTP Status Code of 200, however you may wish to test how you display data returned. One option is to send the request to your own system, making an internal query. A second option is to query test data (still to be formalised). If you are running a test query and expect to be returned test data, append to your query URL `?test=1`. This will tell the system you are querying that including test patients in their response is OK.
+In addition, a test patient should include the property `"test":"true"`.
