@@ -75,7 +75,10 @@ After receiving a request, the remote server can respond in one of two ways:
           "alternateBases" : "A"|"ACG"|…,
         },
         "zygosity" : <number>,
-        "type" : <SO code>
+        "type" : {
+          "id" : <SO code>,
+          "label" : "STOPGAIN"
+        }
       },
       …
     ]
@@ -192,7 +195,9 @@ After receiving a request, the remote server can respond in one of two ways:
     * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
     * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
   * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
-  * `type`:  the effect of the mutation, expressed as a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation. (*optional*)
+  * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
+    * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
+    * `label`: a human-readable description of the effect. For example, the JANNOVAR effect annotation. (*optional*)
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
