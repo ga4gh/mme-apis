@@ -108,20 +108,23 @@
         "observed": "yes"
       }
     ],
-    "genes": [
+    "genomicFeatures": [
       {
-        "id": "SRCAP"
-      }
-    ],
-    "variants": [
-      {
-        "assembly": "GRCh37",
-        "referenceName": "16",
-        "start": 30748691,
-        "referenceBases": "C",
-        "alternateBases": "T",
+        "gene": {
+          "id": "SRCAP"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "referenceName": "16",
+          "start": 30748691,
+          "referenceBases": "C",
+          "alternateBases": "T"
+        },
         "zygosity": 1,
-        "type": "SO:0001587"
+        "type": {
+          "id": "SO:0001587",
+          "label": "STOPGAIN"
+        }
       }
     ]
   },
@@ -229,20 +232,23 @@
         "observed": "yes"
       }
     ],
-    "genes": [
+    "genomicFeatures": [
       {
-        "id": "SRCAP"
-      }
-    ],
-    "variants": [
-      {
-        "assembly": "GRCh37",
-        "referenceName": "16",
-        "start": 30748691,
-        "referenceBases": "C",
-        "alternateBases": "T",
+        "gene": {
+          "id": "SRCAP"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "referenceName": "16",
+          "start": 30748691,
+          "referenceBases": "C",
+          "alternateBases": "T"
+        },
         "zygosity": 1,
-        "type": "SO:0001587"
+        "type": {
+          "id": "SO:0001587",
+          "label": "STOPGAIN"
+        }
       }
     ]
   },
@@ -365,20 +371,23 @@
         "observed": "yes"
       }
     ],
-    "genes": [
+    "genomicFeatures": [
       {
-        "id": "SRCAP"
-      }
-    ],
-    "variants": [
-      {
-        "assembly": "GRCh37",
-        "referenceName": "16",
-        "start": 30748691,
-        "referenceBases": "C",
-        "alternateBases": "T",
+        "gene": {
+          "id": "SRCAP"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "referenceName": "16",
+          "start": 30748691,
+          "referenceBases": "C",
+          "alternateBases": "T"
+        },
         "zygosity": 1,
-        "type": "SO:0001587"
+        "type": {
+          "id": "SO:0001587",
+          "label": "STOPGAIN"
+        }
       }
     ]
   },
@@ -506,20 +515,23 @@
         "observed": "yes"
       }
     ],
-    "genes": [
+    "genomicFeatures": [
       {
-        "id": "SRCAP"
-      }
-    ],
-    "variants": [
-      {
-        "assembly": "GRCh37",
-        "referenceName": "16",
-        "start": 30748664,
-        "referenceBases": "C",
-        "alternateBases": "T",
+        "gene": {
+          "id": "SRCAP"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "referenceName": "16",
+          "start": 30748664,
+          "referenceBases": "C",
+          "alternateBases": "T"
+        },
         "zygosity": 1,
-        "type": "SO:0001587"
+        "type": {
+          "id": "SO:0001587",
+          "label": "STOPGAIN"
+        }
       }
     ]
   },
@@ -617,20 +629,23 @@
         "observed": "yes"
       }
     ],
-    "genes": [
+    "genomicFeatures": [
       {
-        "id": "SRCAP"
-      }
-    ],
-    "variants": [
-      {
-        "assembly": "GRCh37",
-        "referenceName": "16",
-        "start": 30748909,
-        "referenceBases": "CC",
-        "alternateBases": "C",
+        "gene": {
+          "id": "SRCAP"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "referenceName": "16",
+          "start": 30748909,
+          "referenceBases": "CC",
+          "alternateBases": "C"
+        },
         "zygosity": 1,
-        "type": "SO:0001910"
+        "type": {
+          "id": "SO:0001910",
+          "label": "FS_DELETION"
+        }
       }
     ]
   }
