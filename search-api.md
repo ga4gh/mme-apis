@@ -72,7 +72,7 @@ After receiving a request, the remote server can respond in one of two ways:
           "start" : <number>,
           "end" : <number>,
           "referenceBases" : "A"|"ACG"|…,
-          "alternateBases" : "A"|"ACG"|…,
+          "alternateBases" : "A"|"ACG"|…
         },
         "zygosity" : <number>,
         "type" : {
