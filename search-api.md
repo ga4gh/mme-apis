@@ -253,5 +253,6 @@ The error response should include a json-formatted body with a human-readable `"
 ```
 
 ### Testing
-Any query with a valid json structure should return a HTTP Status Code of 200, however you may wish to test how you display data returned. One option is to send the request to your own system, making an internal query. A second option is to query test data (still to be formalised). If you are running a test query and expect to be returned test data, append to your query URL `?test=1`. This will tell the system you are querying that including test patients in their response is OK.
-In addition, a test patient should include the property `"test":true`.
+Matchmakers are strongly encouraged to test the ability of their systems to query, match, and respond to requests. Standardized test data is provided to simplify this process. There are several ways to test the API:
+  * Internal queries: One option is to send the request to your own system and verify that the query and response are formatted correctly and the match is accurate.
+  * External queries: A second option is to query another matchmaker with [test data](testing/). In these cases, an additional property of the `"patient"` object should be specified: `"test" : true`. This informs the system being queried that the query is a test, allowing it to respond according. Specifically, the system being queried should suppress any automatic email notifications and include test data in the response (if it is normally hidden).
