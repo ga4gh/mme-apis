@@ -61,22 +61,24 @@ After receiving a request, the remote server can respond in one of two ways:
       },
       …
     ],
-    "genes" : [
+    "genomicFeatures" : [
       {
-        "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
-      },
-      …
-    ],
-    "variants" : [
-      {
-        "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
-        "referenceName" : "1"|"2"|…|"X"|"Y",
-        "start" : <number>,
-        "end" : <number>,
-        "referenceBases" : "A"|"ACG"|…,
-        "alternateBases" : "A"|"ACG"|…,
+        "gene" : {
+          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+        },
+        "variant" : {
+          "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
+          "referenceName" : "1"|"2"|…|"X"|"Y",
+          "start" : <number>,
+          "end" : <number>,
+          "referenceBases" : "A"|"ACG"|…,
+          "alternateBases" : "A"|"ACG"|…
+        },
         "zygosity" : <number>,
-        "type" : <SO code>
+        "type" : {
+          "id" : <SO code>,
+          "label" : "STOPGAIN"
+        }
       },
       …
     ]
@@ -168,34 +170,34 @@ After receiving a request, the remote server can respond in one of two ways:
 * NOTE: we may want to support other sources later.
 
 #### Features
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
   * `id`: an  HPO term identifier of the form: `HP:#######`
   * `observed`: `"yes"`|`"no"` defines if the feature has been _explicitly observed_ (`yes`) or _explicitly not observed_ (`no`). Omission of this optional field assumes the feature has been _explicitly observed_. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
 
-#### Genes
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
-* Is a **list of candidate causal genes** described by:
-  * `gene`:
-    * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
-    * `<ensembl gene ID>` OR
-    * `<entrez gene ID>`
-
-#### Variants
-* It is ***mandatory*** to have at least one of these three: `features`, `genes`, `variants` (having all is preferred)
-* Is a **list of candidate genomic variants** described by:
-  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
-    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
-    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant is on (***mandatory***)
-  * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory***)
-  * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
-  * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
-  * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
+#### GenomicFeatures
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
+* Is a **list of candidate causal genes and variants** described by:
+  * `gene`: (***mandatory***)
+    * `id`: A gene symbol or identifier (***mandatory***):
+      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
+      * `<ensembl gene ID>` OR
+      * `<entrez gene ID>`
+  * `variant` (*optional*): the specific variant
+    * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
+      * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
+      * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+    * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant is on (***mandatory*** if `variant` is provided)
+    * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory*** if `variant` is provided)
+    * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
+    * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
+    * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
   * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
-  * `type`:  the effect of the mutation, expressed as a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation. (*optional*)
+  * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
+    * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
+    * `label`: a human-readable description of the effect. For example, the JANNOVAR effect annotation. (*optional*)
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
