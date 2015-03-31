@@ -232,7 +232,7 @@ A synchronous `application/json` response, of the following form:
 * A `patient` object of the same form as the one described above for the query.
 
 ### Error handling
-The remote server should use HTTP status codes to report any errors encoundered processing the match request. Here are a list of status codes and their meanings with regards to this API:
+The remote server should use HTTP status codes to report any errors encountered processing the match request. Here are a list of status codes and their meanings with regards to this API:
 
 | HTTP Status Code | Reason Phrase | Description
 | ---------------- | -------- | -----------
