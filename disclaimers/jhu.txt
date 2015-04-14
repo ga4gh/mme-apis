@@ -1,0 +1,9 @@
+People proposing to publish material that makes use of matches achieved through the GeneMatcher database agree to:
+
+Acknowledge GeneMatcher and the grant that supports it: 1U54HG006542; and 
+
+Notify the systems administrator of a published paper (so that we can track our results), by sending an email through the "Contact Us" tab on GeneMatcher.
+
+No one is authorized to attempt to identify patients whose results are in GeneMatcher by any means.  This applies to matches made within GeneMatcher or with any other database included in the Matchmaker Exchange.  
+
+GeneMatcher provides these data in good faith as a research tool, but without verifying the accuracy, clinical validity or utility of the data. GeneMatcher. Johns Hopkins University makes no warranty, express or implied, nor assumes any legal liability or responsibility for any purpose for which the data are used.
