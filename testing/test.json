@@ -1,6 +1,115 @@
 [
   {
     "contact": {
+      "href": "http://www.ncbi.nlm.nih.gov/pubmed/22305528",
+      "name": "Lijia Huang",
+      "organization": "Children's Hospital of Eastern Ontario"
+    },
+    "disorders": [
+      {
+        "id": "MIM:610536",
+        "label": "#610536 MANDIBULOFACIAL DYSOSTOSIS, GUION-ALMEIDA TYPE; MFDGA ;;MANDIBULOFACIAL DYSOSTOSIS WITH MICROCEPHALY; MFDM;; GROWTH AND MENTAL RETARDATION, MANDIBULOFACIAL DYSOSTOSIS, MICROCEPHALY, AND CLEFT PALATE"
+      }
+    ],
+    "features": [
+      {
+        "id": "HP:0008773",
+        "label": "Aplasia/Hypoplasia of the middle ear",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000413",
+        "label": "Atresia of the external auditory canal",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000453",
+        "label": "Choanal atresia",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000405",
+        "label": "Conductive hearing impairment",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0011451",
+        "label": "Congenital microcephaly",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0011471",
+        "label": "Gastrostomy tube feeding in infancy",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0010880",
+        "label": "Increased nuchal translucency",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000272",
+        "label": "Malar flattening",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000347",
+        "label": "Micrognathia",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0008551",
+        "label": "Microtia",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0011342",
+        "label": "Mild global developmental delay",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000545",
+        "label": "Myopia",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0000384",
+        "label": "Preauricular skin tag",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0001622",
+        "label": "Premature birth",
+        "observed": "no"
+      },
+      {
+        "id": "HP:0009623",
+        "label": "Proximal placement of thumb",
+        "observed": "yes"
+      }
+    ],
+    "genomicFeatures": [
+      {
+        "gene": {
+          "id": "EFTUD2"
+        },
+        "type": {
+          "id": "SO:0001587",
+          "label": "STOPGAIN"
+        },
+        "variant": {
+          "assembly": "GRCh37",
+          "hgvs": "NM_004247.3(EFTUD2):c.2770C>T",
+          "referenceName": "chr17",
+          "start": 42929131
+        }
+      }
+    ],
+    "id": "P0000079",
+    "test": true
+  },
+  {
+    "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23542699",
       "name": "Lijia Huang",
       "organization": "Children's Hospital of Eastern Ontario"
@@ -1098,7 +1207,7 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.346-?_1563+?del",
+          "hgvs": "NM_005559.3(LAMA1):c.exon4-11del",
           "referenceName": "chr18",
           "start": 7038809
         }
@@ -4723,110 +4832,6 @@
   },
   {
     "contact": {
-      "href": "http://www.ncbi.nlm.nih.gov/pubmed/22305528",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
-    },
-    "disorders": [
-      {
-        "id": "MIM:610536",
-        "label": "#610536 MANDIBULOFACIAL DYSOSTOSIS, GUION-ALMEIDA TYPE; MFDGA ;;MANDIBULOFACIAL DYSOSTOSIS WITH MICROCEPHALY; MFDM;; GROWTH AND MENTAL RETARDATION, MANDIBULOFACIAL DYSOSTOSIS, MICROCEPHALY, AND CLEFT PALATE"
-      }
-    ],
-    "features": [
-      {
-        "id": "HP:0008773",
-        "label": "Aplasia/Hypoplasia of the middle ear",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000413",
-        "label": "Atresia of the external auditory canal",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000453",
-        "label": "Choanal atresia",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000405",
-        "label": "Conductive hearing impairment",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0011451",
-        "label": "Congenital microcephaly",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0011471",
-        "label": "Gastrostomy tube feeding in infancy",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0010880",
-        "label": "Increased nuchal translucency",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000272",
-        "label": "Malar flattening",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000347",
-        "label": "Micrognathia",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0008551",
-        "label": "Microtia",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0011342",
-        "label": "Mild global developmental delay",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000545",
-        "label": "Myopia",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0000384",
-        "label": "Preauricular skin tag",
-        "observed": "yes"
-      },
-      {
-        "id": "HP:0009623",
-        "label": "Proximal placement of thumb",
-        "observed": "yes"
-      }
-    ],
-    "genomicFeatures": [
-      {
-        "gene": {
-          "id": "EFTUD2"
-        },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_004247.3(EFTUD2):c.2770C>T",
-          "referenceName": "chr17",
-          "start": 42929131
-        }
-      }
-    ],
-    "id": "P0001109",
-    "test": true
-  },
-  {
-    "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
       "name": "Lijia Huang",
       "organization": "Children's Hospital of Eastern Ontario"
@@ -4839,18 +4844,23 @@
     ],
     "features": [
       {
+        "id": "HP:0006958",
+        "label": "Abnormal auditory evoked potentials",
+        "observed": "yes"
+      },
+      {
         "id": "HP:0100022",
         "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
-        "id": "HP:0030301",
-        "label": "Abnormality of the anterior commissure",
+        "id": "HP:0000522",
+        "label": "Alacrima",
         "observed": "yes"
       },
       {
-        "id": "HP:0000522",
-        "label": "Alacrima",
+        "id": "HP:0002059",
+        "label": "Cerebral atrophy",
         "observed": "yes"
       },
       {
@@ -4889,6 +4899,11 @@
         "observed": "yes"
       },
       {
+        "id": "HP:0030303",
+        "label": "Hypoplastic anterior commissure",
+        "observed": "yes"
+      },
+      {
         "id": "HP:0002151",
         "label": "Increased serum lactate",
         "observed": "yes"
@@ -4916,6 +4931,11 @@
       {
         "id": "HP:0001773",
         "label": "Short foot",
+        "observed": "yes"
+      },
+      {
+        "id": "HP:0002472",
+        "label": "Small cerebral cortex",
         "observed": "yes"
       },
       {
