@@ -1,77 +1,94 @@
 # OVERVIEW
 
 **Submit patient matching request:**
-`HTTP POST` to remote server: `<base_remote_url>/mmapi/v1/match`
-For example: `https://yourmatchmaker.org/mmapi/v1/match`
+`HTTP POST` to remote server: `<base_remote_url>/match`
+For example: `https://yourmatchmaker.org/match`
 
-**Receive asynchronous response:**
-`HTTP POST` from remote server to: `<base_origin_url>/mmapi/v1/matchResults`
-For example: `https://mymatchmaker.org/mmapi/v1/matchResults`
 
-**Update previous request:**
-`HTTP PUT` to remote server: `<base_remote_url>/mmapi/v1/match/<queryID>`
-For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
+## Versioning
 
-**Delete previous request:**
-`HTTP DELETE` to remote server: `<base_remote_url>/mmapi/v1/match/<queryID>`
-For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
+Every request must specify the API version within the HTTP `Accept` header.
+
+`Accept: application/vnd.ga4gh.matchmaker.<version>+json`
+
+Where `<version>` takes the form `vX.Y`. For example:
+
+`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
+
+The remote server must provide the API version of the response in the `Content-Type` header of every response:
+
+`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+
+After receiving a request, the remote server can respond in one of two ways:
+  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+
 
 ## Search Request
 
-`HTTP POST` request to `<base_remote_url>/mmapi/v1/match`, with an `application/json` body with the following format:
+`HTTP POST` request to `<base_remote_url>/match`, with an `application/json` body with the following format:
 
 ### Example
 
-```json
+```
 {
-  "id" : <identifier>,
-  "queryType" : "once"|"periodic",
+  "patient" : {
+    "id" : <identifier>,
+    "label" : <identifier>,
 
-  "label" : <identifier>,
-
-  "submitter" : {
-     "name" : "First Last",
-     "email" : <email address>,
-     "institution" : "Some Hospital"
-  },
-
-  "gender" : "M"|"F",
-  "ageOfOnset" : <HPO code>,
-  "inheritanceMode" : <inheritance code>,
-
-  "disorders" : [
-    "MIM:######",
-    "ORPHA#####",
-    …
-  ],
-  "features" : [
-    {
-      "id" : <ICHPT or HPO code>,
-      "observed" : "yes"|"no"|"unknown",
-      "ageOfOnset" : "…"
+    "contact" : {
+      "name" : "Full Name",
+      "institution" : "Contact Institution",
+      "href" : <URL>
     },
-    …
-  ],
-  "genes" : [
-    {
-      "gene" : <gene name>|<ensembl gene ID>|<entrez gene ID>,
-      "referenceName" : "1"|"2"|…|"X"|"Y",
-      "start" : <number>,
-      "end" : <number>,
-      "referenceBases" : "A"|"ACG"|…,
-      "alternateBases" : "A"|"ACG"|…,
-      "zygosity" : <number>,
-      "type" : <mutation type>,
-      "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…
-    },
-    …
-  ]
+
+    "species" : <NCBI taxon identifier>,
+    "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
+    "ageOfOnset" : <HPO code>,
+    "inheritanceMode" : <HPO code>,
+
+    "disorders" : [
+      {
+        "id" : "MIM:######"|"Orphanet:#####"|…
+      },
+      …
+    ],
+    "features" : [
+      {
+        "id" : <HPO code>,
+        "observed" : "yes"|"no",
+        "ageOfOnset" : "…"
+      },
+      …
+    ],
+    "genomicFeatures" : [
+      {
+        "gene" : {
+          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+        },
+        "variant" : {
+          "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
+          "referenceName" : "1"|"2"|…|"X"|"Y",
+          "start" : <number>,
+          "end" : <number>,
+          "referenceBases" : "A"|"ACG"|…,
+          "alternateBases" : "A"|"ACG"|…
+        },
+        "zygosity" : <number>,
+        "type" : {
+          "id" : <SO code>,
+          "label" : "STOPGAIN"
+        }
+      },
+      …
+    ]
+  }
 }
 ```
 
 #### ID
 * ***Mandatory***
-* The internal identifier (obfuscated or not) that can be used by the originating system to reference the patient data.
+* An identifier for the patient record, unique within the matchmaker where the patient data is stored. This identifier should be unchanged by modifications to the patient record over time (e.g. adding phenotypes). It may become invalid (e.g. if the record is deleted), but it should never be "replaced" and refer to a different patient.
 * Transparent string, limited to 255 characters in utf-8.
 
 #### Label
@@ -79,26 +96,27 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 * A name/identifier assigned by the user which can be used to reference the patient in a recognizable manner (in an email for example); it should not contain any *personally identifiable information*.
 * Transparent string, limited to 255 characters in utf-8.
 
-#### Query type
-* *Optional*
-* Accepted values:
-  * `once`: only search once in the current database
-  * `periodic`: repeat the search monthly until canceled, reporting new and updated matches
-* The default value is `once`
-* If a system doesn’t support the requested type, the `once` behavior is used
+#### Contact
+* ***Mandatory***
+* The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
+  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
+    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
+    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
 
-#### Submitter
-* ***Mandatory*** if an email response is expected, *Optional* otherwise
-* Consists of contact information of the person that submitted the search:
-  * `email`: the email address where matches can be sent (***mandatory***); the values must conform to the [RFC 2822 address specification](http://tools.ietf.org/html/rfc2822#section-3.4) mailbox format (no group)
-  * `name`: the first and last name (*optional*)
-  * `institution`: human-readable institution name (*optional*)
-* **The contact information is for transmitting match results only, and may not be collected and/or used for any other purposes**
-
-#### Gender
+#### Species
 * *Optional*
-* Accepted values: `"M"`, `"F"`
-* Any other value is treated as `"unknown"`
+* A taxon identifier from the NCBI nomenclature, for the form: `"NCBITaxon:<ID>"`. The default is human: `"NCBITaxon:9606"`
+
+#### Sex
+* *Optional*
+* This follows the [GA4GH `geneticSex` specification](https://github.com/ga4gh/schemas/blob/master/src/main/resources/avro/metadata.avdl), with the following options:
+  * `FEMALE`: Genetic/chromosomal female
+  * `MALE`: Genetic/chromosomal male
+  * `OTHER`: sex information ambiguous, e.g. not clear XX/XY/ZZ...
+  * `MIXED_SAMPLE`: Multiple samples, e.g. pooled, environmental
+  * `NOT_APPLICABLE`: Used for prokaryotes, snails, etc. Not used for humans.
 
 #### Age of onset
 * *Optional*
@@ -117,160 +135,126 @@ For example: `https://yourmatchmaker.org/mmapi/v1/match/a32fa90vd`
 
 #### Inheritance Mode
 * *Optional*
-* Accepted values:
-  * `ad` - Autosomal dominant
-  * `ar` - Autosomal recessive
-  * `xd` - X-linked dominant
-  * `xr` - X-linked recessive
-  * `yl` - Y-linked
-  * `mi` - Mitochondrial
-  * `ic` - Isolated cases
-  * `un` - Uncertain
+* An HPO term identifier (HP:#######) for a mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`).
+  * `"HP:0000006"` (Autosomal dominant inheritance)
+    * `"HP:0001470"` (Sex-limited autosomal dominant)
+      * `"HP:0001475"` (Male-limited autosomal dominant)
+    * `"HP:0001444"` (Autosomal dominant somatic cell mutation)
+    * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+    * `"HP:0012274"` (Autosomal dominant inheritance with paternal imprinting)
+    * `"HP:0012275"` (Autosomal dominant inheritance with maternal imprinting)
+  * `"HP:0000007"` (Autosomal recessive inheritance)
+  * `"HP:0001472"` (Familial predisposition)
+  * `"HP:0001426"` (Multifactorial inheritance)
+    * `"HP:0010984"` (Digenic inheritance)
+    * `"HP:0010983"` (Oligogenic inheritance)
+    * `"HP:0010982"` (Polygenic inheritance)
+  * `"HP:0001427"` (Mitochondrial inheritance)
+  * `"HP:0001425"` (Heterogeneous)
+  * `"HP:0001428"` (Somatic mutation)
+    * `"HP:0001442"` (Somatic mosaicism)
+  * `"HP:0001466"` (Contiguous gene syndrome)
+    * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+  * `"HP:0003745"` (Sporadic)
+  * `"HP:0003743"` (Genetic anticipation)
+    * `"HP:0003744"` (Genetic anticipation with paternal anticipation bias)
+  * `"HP:0010985"` (Gonosomal inheritance)
+    * `"HP:0001417"` (X-linked inheritance)
+      * `"HP:0001419"` (X-linked recessive inheritance)
+      * `"HP:0001423"` (X-linked dominant inheritance)
+    * `"HP:0001450"` (Y-linked inheritance)
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`ORPHA#####`) identifiers, can be empty
+* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifiers, can be empty
 * NOTE: we may want to support other sources later.
 
 #### Features
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
-  * `id`: an ICHPT or HPO term identifier
-  * `observed`: `"yes"`|`"no"`|`"unknown"`
+  * `id`: an  HPO term identifier of the form: `HP:#######`
+  * `observed`: `"yes"`|`"no"` defines if the feature has been _explicitly observed_ (`yes`) or _explicitly not observed_ (`no`). Omission of this optional field assumes the feature has been _explicitly observed_. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
-* By default we shouldn’t sent any features with the `observed` status (or value) `"unknown"`
 
-#### Genes
-* It is ***mandatory*** to have at least one of these two: `features`, `genes` (having both is preferred)
-* Is a **list of possible causes** described by:
-  * `gene`:
-    * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
-    * `<ensembl gene ID>` OR
-    * `<entrez gene ID>`
-  * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant or gene is on
-  * `start`: `<number>`; the start position of the variant. (0-based)
-  * `end`: `<number>`; the end position of the variant. (0-based, exclusive)
-      * **NOTE:** The location (`referenceName`, `start`, `end`) is *optional*
-  * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
-  * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
-  * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous; *optional*)
-  * `type`: the (*optional*) type of mutation, as a means to describe the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without disclosing the actual mutation:
-    * `TRUNCATING` (e.g. stopgain, stoploss, startloss, frameshift indel)
-    * `ALTERING` (e.g. missense, non-frameshift indel)
-    * `SPLICING`
-    * `UTR` (UTR3, UTR5)
-    * `INTRONIC`
-    * `PROXIMAL` (e.g. upstream, downstream)
-    * `OTHER` (e.g. motif disruption, synonymous)
-  * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory***)
-    * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
-    * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-* This should list either *candidate genes*, using the `gene` field with optionally other more specific fields, or precise *genomic variants*, specifying the assembly, the location (`referenceName`, `start`, `end`), and the reference and alternate bases
+#### GenomicFeatures
+* It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
+* Is a **list of candidate causal genes and variants** described by:
+  * `gene`: (***mandatory***)
+    * `id`: A gene symbol or identifier (***mandatory***):
+      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
+      * `<ensembl gene ID>` OR
+      * `<entrez gene ID>`
+  * `variant` (*optional*): the specific variant
+    * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
+      * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
+      * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+    * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant is on (***mandatory*** if `variant` is provided)
+    * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory*** if `variant` is provided)
+    * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
+    * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
+    * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
+  * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
+  * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
+    * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
+    * `label`: a human-readable description of the effect. For example, the JANNOVAR effect annotation. (*optional*)
 
 ## Search Results Response
-Either a synchronous `application/json` response to a `/match` request, an asynchronous `application/json` `HTTP POST` request to `<base_origin_url>/mmapi/v1/matchResults`, or a human-readable email sent to the user’s email address.
-
-The response to the search request looks like:
+A synchronous `application/json` response, of the following form:
 
 ### Example
 
-```json
+```
 {
-  "queryID" : <identifier>,
-  "responseType" : "inline"|"asynchronous"|"email",
   "results" : [
     {
-      "label" : <identifier>,
-      "submitter" : {…},
-      "gender" : "M"|"F",
-      "ageOfOnset" : <HPO code>,
-      "inheritanceMode" : <inheritance code>,
-      "disorders" : […],
-      "features" : […],
-      "genes" : […]
+	  "score" : {
+        "patient" : <number>
+      },
+      "patient" : {…},
     },
     …
   ]
 }
 ```
-
-#### Query identifier
-* ***Mandatory***
-* Helps match the results to the original query for asynchronous results, and allows the submitter to manage the search submission
-* This does not have to be the same as the id sent in the request since it represents how the remote host stores queries
-* Transparent string, limited to 255 characters in utf-8.
-
-#### Response type
-* *Optional*
-* `inline` responses are sent in the same response (the default value if the results property exists)
-* `asynchronous` responses will be sent by the remote server at a later time, in a separate request to the origin server (the default value if the results property is missing)
-* `email` responses will be sent by email directly to the contact email, in a human readable format
 
 #### Results
-* *Absent* for asynchronous results
-* ***Mandatory*** for inline results, but can be empty
-* Is a **list of matches**, where each match has the same format as the one described above for the query
+* ***Mandatory***, but can be empty.
+* Is a **list of matches**, where each match has a `patient` object, and a `score` object with information about how well the `patient` object matched.
 
-### Asynchronous responses
-* Are sent through a HTTPS request to the originating server
-* Same format as the synchronous response, but placed in an array and wrapped in an object, so that multiple responses can be sent at the same time
+##### Score
+* ***Mandatory***
+* Information about how well this results patient matched the query patient.
+* Currently, this has a single ***mandatory*** field, `patient`, with a numerical value corresponding to the overall score of the match. This score must be in the range [0, 1], where 0.0 is a poor match and 1.0 is a perfect match.
 
-```json
-{"responses":
-  [
-    {
-      "queryID" : <identifier>,
-      "results" : […]
-    },
-    {
-      "queryID" : <identifier>,
-      "results" : […]
-    },
-    …
-  ]
-}
+##### Patient
+* ***Mandatory***
+* A `patient` object of the same form as the one described above for the query.
+
+### Error handling
+The remote server should use HTTP status codes to report any errors encountered processing the match request. Here are a list of status codes and their meanings with regards to this API:
+
+| HTTP Status Code | Reason Phrase | Description
+| ---------------- | -------- | -----------
+| 200 | OK | no error |
+| 400 | Bad Request | missing/invalid data
+| 401 | Unauthorized | invalid API key
+| 405 | Method Not Allowed | invalid method (GET)
+| 406 | Not Acceptable | unsupported API version
+| 415 | Unsupported Media Type | missing/invalid content type
+| 422 | Unprocessable Entity | missing/invalid request body
+| 500 | Internal Server Error | default error
+
+The error response should include a json-formatted body with a human-readable `"message"` containing further details about the error. The exact error message is up to the implementer, and additional fields can be provided with further information. For example, if the match request specifies an unsupported API version, the server should respond with `Not Acceptable (406)` and a content body such as:
+
 ```
-
-### Email responses
-The format of email responses is not restricted, and is left up to each site to implement in a user-friendly way.
-
-## Search Request Update
-`HTTP PUT` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the same format as a search request:
-
-### Example
-
-```json
 {
-  "id" : <identifier>,
-  …
+  "message" : "unsupported API version",
+  "supportedVersions" : [ "0.1", "1.0", "1.1" ]
 }
 ```
 
-A search request update is exactly the same as the search request with two differences:
-
-* The HTTP method used is a `PUT` (as opposed to a `POST`).
-* The URL includes the `queryID` that was returned in the search result response when the search was originally submitted is required.
-* The `id` has to match the original `id` in the search request.
-* All other information in the search request is replaced with a search request update.
-
-The search request update returns a search results response.
-
-## Search Request Delete
-`HTTP DELETE` request to `<base_remote_url>/mmapi/v1/match/<queryID>`, with an `application/json` body with the following format:
-
-### Example
-
-```json
-{
-  "id" : <identifier>
-}
-```
-
-A search request delete:
-
-* The HTTP method used is a `DELETE`.
-* The URL includes the `queryID` that was returned in the search result response when the search was originally submitted is required.
-* The `id` has to match the original `id` in the search request.
-
-The search request delete returns an `OK (200)` status to indicate that the search was deleted, nothing more.
+### Testing
+Matchmakers are strongly encouraged to test the ability of their systems to query, match, and respond to requests. Standardized test data is provided to simplify this process. There are several ways to test the API:
+  * Internal queries: One option is to send the request to your own system and verify that the query and response are formatted correctly and the match is accurate.
+  * External queries: A second option is to query another matchmaker with [test data](testing/). In these cases, an additional property of the `"patient"` object should be specified: `"test" : true`. This informs the system being queried that the query is a test, allowing it to respond according. Specifically, the system being queried should suppress any automatic email notifications and include test data in the response (if it is normally hidden).
