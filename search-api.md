@@ -44,8 +44,14 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "species" : <NCBI taxon identifier>,
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
-    "ageOfOnset" : <HPO code>,
-    "inheritanceMode" : <HPO code>,
+    "ageOfOnset" : {
+      "id" : <HPO code>,
+      "label" : "Description"
+    },
+    "inheritanceMode" : {
+      "id" : <HPO code>,
+      "label" : "Description"
+    },
 
     "disorders" : [
       {
@@ -57,7 +63,7 @@ After receiving a request, the remote server can respond in one of two ways:
       {
         "id" : <HPO code>,
         "observed" : "yes"|"no",
-        "ageOfOnset" : "…"
+        "ageOfOnset" : {…}
       },
       …
     ],
@@ -120,49 +126,53 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Age of onset
 * *Optional*
-* An [HPO](http://www.human-phenotype-ontology.org/) term identifier (HP:#######) associated with an age interval [as defined by the HPO](http://www.human-phenotype-ontology.org/hpoweb/showterm?id=HP:0011007)
-  * `"HP:0003577"` (Congenital onset)
-    * `"HP:0011460"` (Embryonal onset)
-    * `"HP:0011461"` (Fetal onset)
-  * `"HP:0003623"` (Neonatal onset)
-  * `"HP:0003593"` (Infantile onset)
-  * `"HP:0011463"` (Childhood onset)
-  * `"HP:0003621"` (Juvenile onset)
-  * `"HP:0003581"` (Adult onset)
-    * `"HP:0011462"` (Young adult onset)
-    * `"HP:0003596"` (Middle age onset)
-    * `"HP:0003584"` (Late onset)
+* An age interval, described by:
+  * `id`: an [HPO](http://www.human-phenotype-ontology.org/) term identifier (HP:#######) associated with an [age interval](http://www.human-phenotype-ontology.org/hpoweb/showterm?id=HP:0011007) (***mandatory***)
+    * `"HP:0003577"` (Congenital onset)
+      * `"HP:0011460"` (Embryonal onset)
+      * `"HP:0011461"` (Fetal onset)
+    * `"HP:0003623"` (Neonatal onset)
+    * `"HP:0003593"` (Infantile onset)
+    * `"HP:0011463"` (Childhood onset)
+    * `"HP:0003621"` (Juvenile onset)
+    * `"HP:0003581"` (Adult onset)
+      * `"HP:0011462"` (Young adult onset)
+      * `"HP:0003596"` (Middle age onset)
+      * `"HP:0003584"` (Late onset)
+  * `label`: a human readable description (*optional*)
 
 #### Inheritance Mode
 * *Optional*
-* An HPO term identifier (HP:#######) for a mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`).
-  * `"HP:0000006"` (Autosomal dominant inheritance)
-    * `"HP:0001470"` (Sex-limited autosomal dominant)
-      * `"HP:0001475"` (Male-limited autosomal dominant)
-    * `"HP:0001444"` (Autosomal dominant somatic cell mutation)
-    * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
-    * `"HP:0012274"` (Autosomal dominant inheritance with paternal imprinting)
-    * `"HP:0012275"` (Autosomal dominant inheritance with maternal imprinting)
-  * `"HP:0000007"` (Autosomal recessive inheritance)
-  * `"HP:0001472"` (Familial predisposition)
-  * `"HP:0001426"` (Multifactorial inheritance)
-    * `"HP:0010984"` (Digenic inheritance)
-    * `"HP:0010983"` (Oligogenic inheritance)
-    * `"HP:0010982"` (Polygenic inheritance)
-  * `"HP:0001427"` (Mitochondrial inheritance)
-  * `"HP:0001425"` (Heterogeneous)
-  * `"HP:0001428"` (Somatic mutation)
-    * `"HP:0001442"` (Somatic mosaicism)
-  * `"HP:0001466"` (Contiguous gene syndrome)
-    * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
-  * `"HP:0003745"` (Sporadic)
-  * `"HP:0003743"` (Genetic anticipation)
-    * `"HP:0003744"` (Genetic anticipation with paternal anticipation bias)
-  * `"HP:0010985"` (Gonosomal inheritance)
-    * `"HP:0001417"` (X-linked inheritance)
-      * `"HP:0001419"` (X-linked recessive inheritance)
-      * `"HP:0001423"` (X-linked dominant inheritance)
-    * `"HP:0001450"` (Y-linked inheritance)
+* A mode of inheritance, described by:
+  * `id`: an HPO term identifier (HP:#######) for a mode of inheritance (a descendant of `HP:0000005 (Mode of inheritance)`) (***mandatory***)
+    * `"HP:0000006"` (Autosomal dominant inheritance)
+      * `"HP:0001470"` (Sex-limited autosomal dominant)
+        * `"HP:0001475"` (Male-limited autosomal dominant)
+      * `"HP:0001444"` (Autosomal dominant somatic cell mutation)
+      * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+      * `"HP:0012274"` (Autosomal dominant inheritance with paternal imprinting)
+      * `"HP:0012275"` (Autosomal dominant inheritance with maternal imprinting)
+    * `"HP:0000007"` (Autosomal recessive inheritance)
+    * `"HP:0001472"` (Familial predisposition)
+    * `"HP:0001426"` (Multifactorial inheritance)
+      * `"HP:0010984"` (Digenic inheritance)
+      * `"HP:0010983"` (Oligogenic inheritance)
+      * `"HP:0010982"` (Polygenic inheritance)
+    * `"HP:0001427"` (Mitochondrial inheritance)
+    * `"HP:0001425"` (Heterogeneous)
+    * `"HP:0001428"` (Somatic mutation)
+      * `"HP:0001442"` (Somatic mosaicism)
+    * `"HP:0001466"` (Contiguous gene syndrome)
+      * `"HP:0001452"` (Autosomal dominant contiguous gene syndrome)
+    * `"HP:0003745"` (Sporadic)
+    * `"HP:0003743"` (Genetic anticipation)
+      * `"HP:0003744"` (Genetic anticipation with paternal anticipation bias)
+    * `"HP:0010985"` (Gonosomal inheritance)
+      * `"HP:0001417"` (X-linked inheritance)
+        * `"HP:0001419"` (X-linked recessive inheritance)
+        * `"HP:0001423"` (X-linked dominant inheritance)
+      * `"HP:0001450"` (Y-linked inheritance)
+  * `label`: a human readable description (*optional*)
 
 #### Disorders
 * *Optional*
