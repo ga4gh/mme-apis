@@ -139,7 +139,7 @@ After receiving a request, the remote server can respond in one of two ways:
       * `"HP:0011462"` (Young adult onset)
       * `"HP:0003596"` (Middle age onset)
       * `"HP:0003584"` (Late onset)
-  * `label`: a human readable description (*optional*)
+  * `label`: a human readable description, such as the HPO term name (*optional*)
 
 #### Inheritance Mode
 * *Optional*
@@ -172,7 +172,7 @@ After receiving a request, the remote server can respond in one of two ways:
         * `"HP:0001419"` (X-linked recessive inheritance)
         * `"HP:0001423"` (X-linked dominant inheritance)
       * `"HP:0001450"` (Y-linked inheritance)
-  * `label`: a human readable description (*optional*)
+  * `label`: a human readable description, such as the HPO term name (*optional*)
 
 #### Disorders
 * *Optional*
