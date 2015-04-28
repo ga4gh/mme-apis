@@ -2,8 +2,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/22305528",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -100,7 +100,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_004247.3(EFTUD2):c.2770C>T",
-          "referenceName": "chr17",
+          "referenceName": "17",
           "start": 42929131
         }
       }
@@ -112,8 +112,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23542699",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -215,7 +215,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_006463.4(STAMBP):c.125A>G",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 74058108
         }
       },
@@ -230,7 +230,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_006463.4(STAMBP):c.532C>T",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 74074670
         }
       }
@@ -242,8 +242,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23181892",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -335,7 +335,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_000414.3(HSD17B4):c.1547T>C",
-          "referenceName": "chr5",
+          "referenceName": "5",
           "start": 118860954
         }
       },
@@ -350,7 +350,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_000414.3(HSD17B4):c.101C>T",
-          "referenceName": "chr5",
+          "referenceName": "5",
           "start": 118792052
         }
       }
@@ -362,8 +362,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -405,7 +405,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7050691
         }
       },
@@ -420,7 +420,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7050691
         }
       }
@@ -432,8 +432,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25589244",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -480,7 +480,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128412081
         }
       },
@@ -495,7 +495,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128412067
         }
       },
@@ -510,7 +510,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128396914
         }
       }
@@ -522,8 +522,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25589244",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -565,7 +565,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128412081
         }
       },
@@ -580,7 +580,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128412067
         }
       },
@@ -595,7 +595,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 128396914
         }
       }
@@ -607,8 +607,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25370039",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -640,7 +640,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "chr12",
+          "referenceName": "12",
           "start": 14794076
         }
       },
@@ -655,7 +655,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "chr12",
+          "referenceName": "12",
           "start": 14794076
         }
       }
@@ -667,8 +667,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25370039",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -700,7 +700,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "chr12",
+          "referenceName": "12",
           "start": 14794076
         }
       },
@@ -715,7 +715,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "chr12",
+          "referenceName": "12",
           "start": 14794076
         }
       }
@@ -727,8 +727,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25330800",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -800,7 +800,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005548.2(KARS):c.1312C>T",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 75665092
         }
       },
@@ -815,7 +815,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005548.2(KARS):c.1573G>A",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 75662589
         }
       }
@@ -827,8 +827,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25330800",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -885,7 +885,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005548.2(KARS):c.1312C>T",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 75665092
         }
       },
@@ -900,7 +900,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005548.2(KARS):c.1573G>A",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 75662589
         }
       }
@@ -912,8 +912,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25316601",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -970,7 +970,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
-          "referenceName": "chr21",
+          "referenceName": "21",
           "start": 34072338
         }
       },
@@ -985,7 +985,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
-          "referenceName": "chr21",
+          "referenceName": "21",
           "start": 34072338
         }
       }
@@ -997,8 +997,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25130867",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1080,7 +1080,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018060.3(IARS2):c.2726C>T",
-          "referenceName": "chr1",
+          "referenceName": "1",
           "start": 220316451
         }
       },
@@ -1095,7 +1095,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018060.3(IARS2):c.2726C>T",
-          "referenceName": "chr1",
+          "referenceName": "1",
           "start": 220316451
         }
       }
@@ -1107,8 +1107,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1205,7 +1205,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.6345+3G>C",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 6977723
         }
       },
@@ -1220,7 +1220,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.exon4-11del",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7038809
         }
       }
@@ -1232,8 +1232,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1305,7 +1305,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.7965-15_7965-3del",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 6956767
         }
       },
@@ -1320,7 +1320,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.2988_2989delA",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7016490
         }
       }
@@ -1332,8 +1332,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1440,7 +1440,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.6701delC",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 6973129
         }
       },
@@ -1455,7 +1455,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.8557-1G>C",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 6948556
         }
       },
@@ -1470,7 +1470,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.768+1G>A",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7049076
         }
       }
@@ -1482,8 +1482,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1555,7 +1555,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7016662
         }
       },
@@ -1570,7 +1570,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.555T>G",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7050726
         }
       }
@@ -1582,8 +1582,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25105227",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1665,7 +1665,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7016662
         }
       },
@@ -1680,7 +1680,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005559.3(LAMA1):c.555T>G",
-          "referenceName": "chr18",
+          "referenceName": "18",
           "start": 7050726
         }
       }
@@ -1692,8 +1692,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1725,7 +1725,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -1737,8 +1737,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1790,7 +1790,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -1802,8 +1802,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1870,7 +1870,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -1882,8 +1882,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -1950,7 +1950,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+406C>A",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447847
         }
       }
@@ -1962,8 +1962,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2030,7 +2030,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.-72G>A",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2451408
         }
       }
@@ -2042,8 +2042,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2080,7 +2080,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -2092,8 +2092,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2145,7 +2145,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -2157,8 +2157,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2210,7 +2210,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447953
         }
       }
@@ -2222,8 +2222,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2285,7 +2285,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447953
         }
       }
@@ -2297,8 +2297,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2355,7 +2355,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447952
         }
       }
@@ -2367,8 +2367,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2435,7 +2435,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447953
         }
       }
@@ -2447,8 +2447,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25047197",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2505,7 +2505,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003091.3(SNRPB):c.155+407C>T",
-          "referenceName": "chr20",
+          "referenceName": "20",
           "start": 2447846
         }
       }
@@ -2517,8 +2517,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24903190",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2590,7 +2590,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001134407.1(GRIN2A):c.2449A>G",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 9862854
         }
       }
@@ -2602,8 +2602,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24706940",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2695,7 +2695,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001039848.1(GPX4):c.587+5G>A",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 1105813
         }
       },
@@ -2710,7 +2710,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001039848.1(GPX4):c.588-8_588-4del",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 1106233
         }
       }
@@ -2722,8 +2722,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24706940",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -2820,7 +2820,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001039848.1(GPX4):c.381C>A",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 1105455
         }
       },
@@ -2835,7 +2835,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001039848.1(GPX4):c.381C>A",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 1105455
         }
       }
@@ -2847,8 +2847,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24669931",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -2900,7 +2900,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_002047.2(GARS):c.1904C>T",
-          "referenceName": "chr7",
+          "referenceName": "7",
           "start": 30671863
         }
       },
@@ -2915,7 +2915,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_002047.2(GARS):c.1787G>A",
-          "referenceName": "chr7",
+          "referenceName": "7",
           "start": 30668263
         }
       }
@@ -2927,8 +2927,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3045,7 +3045,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1891delC",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25761025
         }
       },
@@ -3060,7 +3060,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3072,8 +3072,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3165,7 +3165,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25773865
         }
       },
@@ -3180,7 +3180,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25773865
         }
       }
@@ -3192,8 +3192,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3335,7 +3335,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       },
@@ -3350,7 +3350,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3362,8 +3362,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3515,7 +3515,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       },
@@ -3530,7 +3530,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3542,8 +3542,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3620,7 +3620,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       },
@@ -3635,7 +3635,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3647,8 +3647,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3770,7 +3770,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       },
@@ -3785,7 +3785,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3797,8 +3797,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3925,7 +3925,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       },
@@ -3940,7 +3940,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775422
         }
       }
@@ -3952,8 +3952,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24479948",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -3995,7 +3995,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 36579992
         }
       },
@@ -4010,7 +4010,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 36579992
         }
       }
@@ -4022,8 +4022,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24468074",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4095,7 +4095,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_152296(ATP1A3):c.2452G>A",
-          "referenceName": "chr19",
+          "referenceName": "19",
           "start": 42474427
         }
       }
@@ -4107,8 +4107,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24357594",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4265,7 +4265,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_003036.3(SKI):c.347G>A",
-          "referenceName": "chr1",
+          "referenceName": "1",
           "start": 2160552
         }
       }
@@ -4277,8 +4277,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23835272",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4420,7 +4420,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005589(ALDH6A1):c.514T>C",
-          "referenceName": "chr14",
+          "referenceName": "14",
           "start": 74538114
         }
       },
@@ -4435,7 +4435,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_005589(ALDH6A1):c.1603C>T",
-          "referenceName": "chr14",
+          "referenceName": "14",
           "start": 74527350
         }
       }
@@ -4447,8 +4447,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23810382",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4510,7 +4510,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_181523.2(PIK3R1):c.1906_1907insC",
-          "referenceName": "chr5",
+          "referenceName": "5",
           "start": 67592090
         }
       }
@@ -4522,8 +4522,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23621916",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4625,7 +4625,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_024339.3(THOC6):c.136G>A",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 3075805
         }
       },
@@ -4640,7 +4640,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_024339.3(THOC6):c.136G>A",
-          "referenceName": "chr16",
+          "referenceName": "16",
           "start": 3075805
         }
       }
@@ -4652,8 +4652,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23171239",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4725,7 +4725,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_138387.3(G6PC3):c.829C>T",
-          "referenceName": "chr17",
+          "referenceName": "17",
           "start": 42153199
         }
       },
@@ -4740,7 +4740,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_138387.3(G6PC3):c.829C>T",
-          "referenceName": "chr17",
+          "referenceName": "17",
           "start": 42153199
         }
       }
@@ -4752,8 +4752,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/23423984",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -4790,7 +4790,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 47221656
         }
       },
@@ -4805,7 +4805,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
-          "referenceName": "chr2",
+          "referenceName": "2",
           "start": 47221656
         }
       }
@@ -4817,8 +4817,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/25282101",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [],
     "features": [
@@ -4855,7 +4855,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 20225453
         }
       },
@@ -4870,7 +4870,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 20225453
         }
       }
@@ -4882,8 +4882,8 @@
   {
     "contact": {
       "href": "http://www.ncbi.nlm.nih.gov/pubmed/24651605",
-      "name": "Lijia Huang",
-      "organization": "Children's Hospital of Eastern Ontario"
+      "institution": "Children's Hospital of Eastern Ontario",
+      "name": "Lijia Huang"
     },
     "disorders": [
       {
@@ -5010,7 +5010,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1205_1207del",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25775416
         }
       },
@@ -5025,7 +5025,7 @@
         "variant": {
           "assembly": "GRCh37",
           "hgvs": "NM_018297.3(NGLY1):c.1570C>T",
-          "referenceName": "chr3",
+          "referenceName": "3",
           "start": 25770665
         }
       }
