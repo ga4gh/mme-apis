@@ -84,7 +84,7 @@ After receiving a request, the remote server can respond in one of two ways:
             }
           },
           …
-        ],
+        ]
       },
       …
     ]
