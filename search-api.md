@@ -176,7 +176,7 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Features
 * It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
-  * `id`: an HPO term identifier of the form: `HP:#######`
+  * `id`: an HPO term identifier of the form: `HP:#######` (***mandatory***)
   * `label`: a human readable description of the phenotypic feature, such as the HPO term name (*optional*) (*since v1.1*)
   * `observed`: `"yes"`|`"no"` defines if the feature has been _explicitly observed_ (`yes`) or _explicitly not observed_ (`no`). Omission of this optional field assumes the feature has been _explicitly observed_. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
