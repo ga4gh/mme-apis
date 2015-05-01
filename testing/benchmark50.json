@@ -1319,7 +1319,7 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2988_2989delA",
+          "hgvs": "NM_005559.3(LAMA1):c.2986delA",
           "referenceName": "18",
           "start": 7016490
         }
