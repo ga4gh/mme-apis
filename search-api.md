@@ -74,19 +74,25 @@ After receiving a request, the remote server can respond in one of two ways:
         "gene" : {
           "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
         },
-        "variant" : {
-          "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
-          "referenceName" : "1"|"2"|…|"X"|"Y",
-          "start" : <number>,
-          "end" : <number>,
-          "referenceBases" : "A"|"ACG"|…,
-          "alternateBases" : "A"|"ACG"|…
-        },
-        "zygosity" : <number>,
-        "type" : {
-          "id" : <SO code>,
-          "label" : "STOPGAIN"
-        }
+        "variants" : [
+          {
+            "zygosity" : <number>,
+            "type" : {
+              "id" : <SO code>,
+              "label" : "STOPGAIN"
+            },
+            "alelle" : <number>,
+            "variant" : {
+              "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
+              "referenceName" : "1"|"2"|…|"X"|"Y",
+              "start" : <number>,
+              "end" : <number>,
+              "referenceBases" : "A"|"ACG"|…,
+              "alternateBases" : "A"|"ACG"|…
+            }
+          },
+          …
+        ]
       },
       …
     ]
@@ -200,19 +206,21 @@ After receiving a request, the remote server can respond in one of two ways:
       * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
       * `<ensembl gene ID>` OR
       * `<entrez gene ID>`
-  * `variant` (*optional*): the specific variant
-    * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
-      * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
-      * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
-    * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant is on (***mandatory*** if `variant` is provided)
-    * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory*** if `variant` is provided)
-    * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
-    * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
-    * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
-  * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
-  * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
-    * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
-    * `label`: a human-readable description of the effect. For example, the JANNOVAR effect annotation. (*optional*)
+  * `variants` (*optional*): the specific variants in, or proximal to, the gene, each described by:
+    * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
+    * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
+      * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
+      * `label`: a human-readable description of the effect. For example, the JANNOVAR effect annotation. (*optional*)
+    * `allele`: `<number>` an integer identifier for the allele this variant is phased to. Variants on the same reference contig with the same allele identifier occur on the same molecule of DNA. (*optional*)
+    * `variant`: (*optional*) a detailed specification of the chromosomal variant, described by:
+      * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
+        * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
+        * If the patch is not provided, the assembly is assumed to represent the initial (unpatched) release of that assembly.
+      * `referenceName`: `"1"`, `"2"`, …, `"22"`, `"X"`, `"Y"`; the chromosome this variant is on (***mandatory*** if `variant` is provided)
+      * `start`: `<number>`; the start position of the variant. (0-based) (***mandatory*** if `variant` is provided)
+      * `end`: `<number>`; the end position of the variant. (0-based, exclusive) (*optional*)
+      * `referenceBases`: `"A"`|`"ACG"`|…, VCF-style reference of at least one base (*optional*)
+      * `alternateBases`: `"A"`|`"ACG"`|…, VCF-style alternate allele of at least one base (*optional*)
 
 ## Search Results Response
 A synchronous `application/json` response, of the following form:
