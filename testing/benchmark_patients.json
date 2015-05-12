@@ -7,84 +7,68 @@
     },
     "disorders": [
       {
-        "id": "MIM:610536",
-        "label": "#610536 MANDIBULOFACIAL DYSOSTOSIS, GUION-ALMEIDA TYPE; MFDGA ;;MANDIBULOFACIAL DYSOSTOSIS WITH MICROCEPHALY; MFDM;; GROWTH AND MENTAL RETARDATION, MANDIBULOFACIAL DYSOSTOSIS, MICROCEPHALY, AND CLEFT PALATE"
+        "id": "MIM:610536"
       }
     ],
     "features": [
       {
         "id": "HP:0008773",
-        "label": "Aplasia/Hypoplasia of the middle ear",
         "observed": "yes"
       },
       {
         "id": "HP:0000413",
-        "label": "Atresia of the external auditory canal",
         "observed": "yes"
       },
       {
         "id": "HP:0000453",
-        "label": "Choanal atresia",
         "observed": "yes"
       },
       {
         "id": "HP:0000405",
-        "label": "Conductive hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0011451",
-        "label": "Congenital microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0011471",
-        "label": "Gastrostomy tube feeding in infancy",
         "observed": "yes"
       },
       {
         "id": "HP:0010880",
-        "label": "Increased nuchal translucency",
         "observed": "yes"
       },
       {
         "id": "HP:0000272",
-        "label": "Malar flattening",
         "observed": "yes"
       },
       {
         "id": "HP:0000347",
-        "label": "Micrognathia",
         "observed": "yes"
       },
       {
         "id": "HP:0008551",
-        "label": "Microtia",
         "observed": "yes"
       },
       {
         "id": "HP:0011342",
-        "label": "Mild global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000545",
-        "label": "Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000384",
-        "label": "Preauricular skin tag",
         "observed": "yes"
       },
       {
         "id": "HP:0001622",
-        "label": "Premature birth",
         "observed": "no"
       },
       {
         "id": "HP:0009623",
-        "label": "Proximal placement of thumb",
         "observed": "yes"
       }
     ],
@@ -98,11 +82,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_004247.3(EFTUD2):c.2770C>T",
+          "end": 42929131,
+          "referenceBases": "G",
           "referenceName": "17",
-          "start": 42929131
-        }
+          "start": 42929130
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000079",
@@ -117,89 +104,72 @@
     },
     "disorders": [
       {
-        "id": "MIM:614261",
-        "label": "#614261 MICROCEPHALY-CAPILLARY MALFORMATION SYNDROME; MICCAP"
+        "id": "MIM:614261"
       }
     ],
     "features": [
       {
         "id": "HP:0100026",
-        "label": "Arteriovenous malformation",
         "observed": "yes"
       },
       {
         "id": "HP:0003561",
-        "label": "Birth length less than 3rd percentile",
         "observed": "yes"
       },
       {
         "id": "HP:0011451",
-        "label": "Congenital microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0009879",
-        "label": "Cortical gyral simplification",
         "observed": "yes"
       },
       {
         "id": "HP:0011097",
-        "label": "Epileptic spasms",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0012469",
-        "label": "Infantile spasms",
         "observed": "yes"
       },
       {
         "id": "HP:0001336",
-        "label": "Myoclonus",
         "observed": "yes"
       },
       {
         "id": "HP:0000648",
-        "label": "Optic atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0001622",
-        "label": "Premature birth",
         "observed": "no"
       },
       {
         "id": "HP:0000253",
-        "label": "Progressive microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0009882",
-        "label": "Short distal phalanx of finger",
         "observed": "yes"
       },
       {
         "id": "HP:0001857",
-        "label": "Short distal phalanx of toe",
         "observed": "yes"
       },
       {
         "id": "HP:0001518",
-        "label": "Small for gestational age",
         "observed": "yes"
       },
       {
         "id": "HP:0001285",
-        "label": "Spastic tetraparesis",
         "observed": "yes"
       }
     ],
@@ -213,11 +183,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_006463.4(STAMBP):c.125A>G",
+          "end": 74058108,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 74058108
-        }
+          "start": 74058107
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -228,11 +201,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_006463.4(STAMBP):c.532C>T",
+          "end": 74074670,
+          "referenceBases": "C",
           "referenceName": "2",
-          "start": 74074670
-        }
+          "start": 74074669
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000083",
@@ -247,79 +223,64 @@
     },
     "disorders": [
       {
-        "id": "MIM:233400",
-        "label": "#233400 PERRAULT SYNDROME 1; PRLTS1 ;;OVARIAN DYSGENESIS WITH SENSORINEURAL DEAFNESS;; GONADAL DYSGENESIS, XX TYPE, WITH DEAFNESS"
+        "id": "MIM:233400"
       }
     ],
     "features": [
       {
         "id": "HP:0001284",
-        "label": "Areflexia",
         "observed": "yes"
       },
       {
         "id": "HP:0003447",
-        "label": "Axonal loss",
         "observed": "yes"
       },
       {
         "id": "HP:0001272",
-        "label": "Cerebellar atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0002474",
-        "label": "Expressive language delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001765",
-        "label": "Hammertoe",
         "observed": "yes"
       },
       {
         "id": "HP:0011096",
-        "label": "Peripheral demyelination",
         "observed": "yes"
       },
       {
         "id": "HP:0200070",
-        "label": "Peripheral retinal atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0001761",
-        "label": "Pes cavus",
         "observed": "yes"
       },
       {
         "id": "HP:0007240",
-        "label": "Progressive gait ataxia",
         "observed": "yes"
       },
       {
         "id": "HP:0000510",
-        "label": "Retinitis pigmentosa",
         "observed": "yes"
       },
       {
         "id": "HP:0007141",
-        "label": "Sensorimotor neuropathy",
         "observed": "yes"
       },
       {
         "id": "HP:0000407",
-        "label": "Sensorineural hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0003474",
-        "label": "Sensory impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0009088",
-        "label": "Speech articulation difficulties",
         "observed": "yes"
       }
     ],
@@ -333,11 +294,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_000414.3(HSD17B4):c.1547T>C",
+          "end": 118860954,
+          "referenceBases": "T",
           "referenceName": "5",
-          "start": 118860954
-        }
+          "start": 118860953
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -348,11 +312,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_000414.3(HSD17B4):c.101C>T",
+          "end": 118792052,
+          "referenceBases": "C",
           "referenceName": "5",
-          "start": 118792052
-        }
+          "start": 118792051
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000282",
@@ -367,29 +334,24 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0008058",
-        "label": "Aplasia/Hypoplasia of the optic nerve",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0002194",
-        "label": "Delayed gross motor development",
         "observed": "yes"
       },
       {
         "id": "HP:0002281",
-        "label": "Gray matter heterotopias",
         "observed": "yes"
       }
     ],
@@ -403,26 +365,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
+          "end": 7050691,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050691
-        }
-      },
-      {
-        "gene": {
-          "id": "LAMA1"
+          "start": 7050690
         },
-        "type": {
-          "id": "SO:0001630",
-          "label": "SPLICING"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
-          "referenceName": "18",
-          "start": 7050691
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0000333",
@@ -439,32 +389,26 @@
     "features": [
       {
         "id": "HP:0001644",
-        "label": "Dilated cardiomyopathy",
         "observed": "yes"
       },
       {
         "id": "HP:0003325",
-        "label": "Limb-girdle muscle weakness",
         "observed": "yes"
       },
       {
         "id": "HP:0000158",
-        "label": "Macroglossia",
         "observed": "yes"
       },
       {
         "id": "HP:0002093",
-        "label": "Respiratory insufficiency",
         "observed": "yes"
       },
       {
         "id": "HP:0002273",
-        "label": "Tetraparesis",
         "observed": "yes"
       },
       {
         "id": "HP:0030284",
-        "label": "Triangular tongue",
         "observed": "yes"
       }
     ],
@@ -478,11 +422,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
+          "end": 128412081,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412081
-        }
+          "start": 128412080
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -493,11 +440,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
+          "end": 128412067,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412067
-        }
+          "start": 128412066
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -508,11 +458,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
+          "end": 128396914,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 128396914
-        }
+          "start": 128396913
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001009",
@@ -529,27 +482,22 @@
     "features": [
       {
         "id": "HP:0008981",
-        "label": "Calf muscle hypertrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0001644",
-        "label": "Dilated cardiomyopathy",
         "observed": "yes"
       },
       {
         "id": "HP:0000158",
-        "label": "Macroglossia",
         "observed": "yes"
       },
       {
         "id": "HP:0003701",
-        "label": "Proximal muscle weakness",
         "observed": "yes"
       },
       {
         "id": "HP:0030284",
-        "label": "Triangular tongue",
         "observed": "yes"
       }
     ],
@@ -563,11 +511,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
+          "end": 128412081,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412081
-        }
+          "start": 128412080
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -578,11 +529,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
+          "end": 128412067,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412067
-        }
+          "start": 128412066
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -593,11 +547,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
+          "end": 128396914,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 128396914
-        }
+          "start": 128396913
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001010",
@@ -612,19 +569,16 @@
     },
     "disorders": [
       {
-        "id": "MIM:614665",
-        "label": "#614665 MECONIUM ILEUS"
+        "id": "MIM:614665"
       }
     ],
     "features": [
       {
         "id": "HP:0010943",
-        "label": "Echogenic fetal bowel",
         "observed": "yes"
       },
       {
         "id": "HP:0004401",
-        "label": "Meconium ileus",
         "observed": "yes"
       }
     ],
@@ -638,26 +592,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14794076,
+          "referenceBases": "C",
           "referenceName": "12",
-          "start": 14794076
-        }
-      },
-      {
-        "gene": {
-          "id": "GUCY2C"
+          "start": 14794075
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "12",
-          "start": 14794076
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001011",
@@ -672,19 +614,16 @@
     },
     "disorders": [
       {
-        "id": "MIM:614665",
-        "label": "#614665 MECONIUM ILEUS"
+        "id": "MIM:614665"
       }
     ],
     "features": [
       {
         "id": "HP:0010943",
-        "label": "Echogenic fetal bowel",
         "observed": "yes"
       },
       {
         "id": "HP:0004401",
-        "label": "Meconium ileus",
         "observed": "yes"
       }
     ],
@@ -698,11 +637,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14794076,
+          "referenceBases": "C",
           "referenceName": "12",
-          "start": 14794076
-        }
+          "start": 14794075
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -713,11 +655,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14772238,
+          "referenceBases": "A",
           "referenceName": "12",
-          "start": 14794076
-        }
+          "start": 14772237
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001012",
@@ -734,57 +679,46 @@
     "features": [
       {
         "id": "HP:0007965",
-        "label": "Absence of visual evoked potentials",
         "observed": "yes"
       },
       {
         "id": "HP:0012430",
-        "label": "Cerebral white matter hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0011185",
-        "label": "EEG with focal epileptiform discharges",
         "observed": "yes"
       },
       {
         "id": "HP:0011198",
-        "label": "EEG with generalized epileptiform discharges",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002079",
-        "label": "Hypoplasia of the corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0012043",
-        "label": "Pendular nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0000572",
-        "label": "Visual loss",
         "observed": "yes"
       }
     ],
@@ -798,11 +732,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1312C>T",
+          "end": 75665092,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 75665092
-        }
+          "start": 75665091
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -813,11 +750,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1573G>A",
+          "end": 75662589,
+          "referenceBases": "C",
           "referenceName": "16",
-          "start": 75662589
-        }
+          "start": 75662588
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001013",
@@ -834,42 +774,34 @@
     "features": [
       {
         "id": "HP:0001344",
-        "label": "Absent speech",
         "observed": "yes"
       },
       {
         "id": "HP:0012430",
-        "label": "Cerebral white matter hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0011198",
-        "label": "EEG with generalized epileptiform discharges",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002079",
-        "label": "Hypoplasia of the corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0000505",
-        "label": "Visual impairment",
         "observed": "yes"
       }
     ],
@@ -883,11 +815,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1312C>T",
+          "end": 75665092,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 75665092
-        }
+          "start": 75665091
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -898,11 +833,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1573G>A",
+          "end": 75662589,
+          "referenceBases": "C",
           "referenceName": "16",
-          "start": 75662589
-        }
+          "start": 75662588
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001014",
@@ -919,42 +857,34 @@
     "features": [
       {
         "id": "HP:0002059",
-        "label": "Cerebral atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0100704",
-        "label": "Cortical visual impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0011968",
-        "label": "Feeding difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0001290",
-        "label": "Generalized hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0002069",
-        "label": "Generalized tonic-clonic seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002180",
-        "label": "Neurodegeneration",
         "observed": "yes"
       },
       {
         "id": "HP:0002878",
-        "label": "Respiratory failure",
         "observed": "yes"
       }
     ],
@@ -968,26 +898,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
+          "end": 34072338,
+          "referenceBases": "G",
           "referenceName": "21",
-          "start": 34072338
-        }
-      },
-      {
-        "gene": {
-          "id": "SYNJ1"
+          "start": 34072337
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
-          "referenceName": "21",
-          "start": 34072338
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001015",
@@ -1002,69 +920,56 @@
     },
     "disorders": [
       {
-        "id": "MIM:616007",
-        "label": "#616007 CATARACTS, GROWTH HORMONE DEFICIENCY, SENSORY NEUROPATHY, SENSORINEURAL HEARING LOSS, AND SKELETAL DYSPLASIA; CAGSSS"
+        "id": "MIM:616007"
       }
     ],
     "features": [
       {
         "id": "HP:0008619",
-        "label": "Bilateral sensorineural hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0000518",
-        "label": "Cataract",
         "observed": "yes"
       },
       {
         "id": "HP:0002194",
-        "label": "Delayed gross motor development",
         "observed": "yes"
       },
       {
         "id": "HP:0007067",
-        "label": "Distal peripheral sensory neuropathy",
         "observed": "yes"
       },
       {
         "id": "HP:0002857",
-        "label": "Genu valgum",
         "observed": "yes"
       },
       {
         "id": "HP:0000824",
-        "label": "Growth hormone deficiency",
         "observed": "yes"
       },
       {
         "id": "HP:0005775",
-        "label": "Multiple skeletal anomalies",
         "observed": "yes"
       },
       {
         "id": "HP:0000160",
-        "label": "Narrow mouth",
         "observed": "yes"
       },
       {
         "id": "HP:0011220",
-        "label": "Prominent forehead",
         "observed": "yes"
       },
       {
         "id": "HP:0003510",
-        "label": "Severe short stature",
         "observed": "yes"
       },
       {
         "id": "HP:0000574",
-        "label": "Thick eyebrow",
         "observed": "yes"
       },
       {
         "id": "HP:0002943",
-        "label": "Thoracic scoliosis",
         "observed": "yes"
       }
     ],
@@ -1078,26 +983,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_018060.3(IARS2):c.2726C>T",
+          "end": 220316451,
+          "referenceBases": "C",
           "referenceName": "1",
-          "start": 220316451
-        }
-      },
-      {
-        "gene": {
-          "id": "IARS2"
+          "start": 220316450
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018060.3(IARS2):c.2726C>T",
-          "referenceName": "1",
-          "start": 220316451
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001016",
@@ -1112,84 +1005,68 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0002418",
-        "label": "Abnormality of midbrain morphology",
         "observed": "yes"
       },
       {
         "id": "HP:0011932",
-        "label": "Abnormality of the superior cerebellar peduncle",
         "observed": "yes"
       },
       {
         "id": "HP:0001274",
-        "label": "Agenesis of corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0002350",
-        "label": "Cerebellar cyst",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001320",
-        "label": "Cerebellar vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0000750",
-        "label": "Delayed speech and language development",
         "observed": "yes"
       },
       {
         "id": "HP:0002198",
-        "label": "Dilated fourth ventricle",
         "observed": "yes"
       },
       {
         "id": "HP:0001090",
-        "label": "Large eyes",
         "observed": "yes"
       },
       {
         "id": "HP:0001270",
-        "label": "Motor delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0030283",
-        "label": "Partial absence of the septum pellucidum",
         "observed": "yes"
       },
       {
         "id": "HP:0011003",
-        "label": "Severe Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       },
       {
         "id": "HP:0002119",
-        "label": "Ventriculomegaly",
         "observed": "yes"
       }
     ],
@@ -1203,11 +1080,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.6345+3G>C",
+          "end": 6977723,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 6977723
-        }
+          "start": 6977722
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1219,10 +1099,9 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.exon4-11del",
-          "referenceName": "18",
-          "start": 7038809
-        }
+          "referenceName": "18"
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001017",
@@ -1237,59 +1116,48 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0007980",
-        "label": "Absent retinal pigment epithelium",
         "observed": "yes"
       },
       {
         "id": "HP:0002350",
-        "label": "Cerebellar cyst",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001320",
-        "label": "Cerebellar vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0002198",
-        "label": "Dilated fourth ventricle",
         "observed": "yes"
       },
       {
         "id": "HP:0001090",
-        "label": "Large eyes",
         "observed": "yes"
       },
       {
         "id": "HP:0001270",
-        "label": "Motor delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000545",
-        "label": "Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -1304,10 +1172,9 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.7965-15_7965-3del",
-          "referenceName": "18",
-          "start": 6956767
-        }
+          "referenceName": "18"
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1318,11 +1185,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2988_2989delA",
+          "end": 7016493,
+          "referenceBases": "GT",
           "referenceName": "18",
-          "start": 7016490
-        }
+          "start": 7016491
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001018",
@@ -1337,94 +1207,76 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0004691",
-        "label": "2-3 toe syndactyly",
         "observed": "yes"
       },
       {
         "id": "HP:0002418",
-        "label": "Abnormality of midbrain morphology",
         "observed": "yes"
       },
       {
         "id": "HP:0007980",
-        "label": "Absent retinal pigment epithelium",
         "observed": "yes"
       },
       {
         "id": "HP:0000646",
-        "label": "Amblyopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000729",
-        "label": "Autistic behavior",
         "observed": "yes"
       },
       {
         "id": "HP:0000518",
-        "label": "Cataract",
         "observed": "yes"
       },
       {
         "id": "HP:0002350",
-        "label": "Cerebellar cyst",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001320",
-        "label": "Cerebellar vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0000750",
-        "label": "Delayed speech and language development",
         "observed": "yes"
       },
       {
         "id": "HP:0002198",
-        "label": "Dilated fourth ventricle",
         "observed": "yes"
       },
       {
         "id": "HP:0001090",
-        "label": "Large eyes",
         "observed": "yes"
       },
       {
         "id": "HP:0001270",
-        "label": "Motor delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001105",
-        "label": "Retinal atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0011003",
-        "label": "Severe Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0030285",
-        "label": "Splayed superior cerebellar peduncle",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -1438,11 +1290,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "AGGG",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.6701delC",
+          "end": 6973132,
+          "referenceBases": "AGGGG",
           "referenceName": "18",
-          "start": 6973129
-        }
+          "start": 6973127
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1453,11 +1308,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.8557-1G>C",
+          "end": 6948556,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 6948556
-        }
+          "start": 6948555
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1468,11 +1326,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.768+1G>A",
+          "end": 7049076,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 7049076
-        }
+          "start": 7049075
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001019",
@@ -1487,59 +1348,48 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0000479",
-        "label": "Abnormality of the retina",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001320",
-        "label": "Cerebellar vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0000750",
-        "label": "Delayed speech and language development",
         "observed": "yes"
       },
       {
         "id": "HP:0002198",
-        "label": "Dilated fourth ventricle",
         "observed": "yes"
       },
       {
         "id": "HP:0001290",
-        "label": "Generalized hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0007068",
-        "label": "Inferior vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001270",
-        "label": "Motor delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000545",
-        "label": "Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000657",
-        "label": "Oculomotor apraxia",
         "observed": "yes"
       }
     ],
@@ -1553,11 +1403,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
+          "end": 7016663,
+          "referenceBases": "AAT",
           "referenceName": "18",
-          "start": 7016662
-        }
+          "start": 7016660
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1568,11 +1421,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.555T>G",
+          "end": 7050726,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050726
-        }
+          "start": 7050725
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001022",
@@ -1587,69 +1443,56 @@
     },
     "disorders": [
       {
-        "id": "MIM:615960",
-        "label": "#615960 PORETTI-BOLTSHAUSER SYNDROME; PTBHS"
+        "id": "MIM:615960"
       }
     ],
     "features": [
       {
         "id": "HP:0000479",
-        "label": "Abnormality of the retina",
         "observed": "yes"
       },
       {
         "id": "HP:0007033",
-        "label": "Cerebellar dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0000533",
-        "label": "Chorioretinal atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0000750",
-        "label": "Delayed speech and language development",
         "observed": "yes"
       },
       {
         "id": "HP:0001290",
-        "label": "Generalized hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0007068",
-        "label": "Inferior vermis hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0001090",
-        "label": "Large eyes",
         "observed": "yes"
       },
       {
         "id": "HP:0001270",
-        "label": "Motor delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0000657",
-        "label": "Oculomotor apraxia",
         "observed": "yes"
       },
       {
         "id": "HP:0011003",
-        "label": "Severe Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -1663,11 +1506,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
+          "end": 7016663,
+          "referenceBases": "AAT",
           "referenceName": "18",
-          "start": 7016662
-        }
+          "start": 7016660
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1678,11 +1524,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.555T>G",
+          "end": 7050726,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050726
-        }
+          "start": 7050725
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001023",
@@ -1697,19 +1546,16 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0003002",
-        "label": "Breast carcinoma",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       }
     ],
@@ -1723,11 +1569,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001024",
@@ -1742,39 +1591,32 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0011968",
-        "label": "Feeding difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0012418",
-        "label": "Hypoxemia",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0001328",
-        "label": "Specific learning disability",
         "observed": "yes"
       }
     ],
@@ -1788,11 +1630,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001025",
@@ -1807,54 +1652,44 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000878",
-        "label": "11 pairs of ribs",
         "observed": "yes"
       },
       {
         "id": "HP:0000670",
-        "label": "Carious teeth",
         "observed": "yes"
       },
       {
         "id": "HP:0000494",
-        "label": "Downslanted palpebral fissures",
         "observed": "yes"
       },
       {
         "id": "HP:0011968",
-        "label": "Feeding difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       },
       {
         "id": "HP:0030279",
-        "label": "Hypoplastic L5 vertebral pedicle",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0001328",
-        "label": "Specific learning disability",
         "observed": "yes"
       }
     ],
@@ -1868,11 +1703,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001026",
@@ -1887,54 +1725,44 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0002072",
-        "label": "Chorea",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000494",
-        "label": "Downslanted palpebral fissures",
         "observed": "yes"
       },
       {
         "id": "HP:0000316",
-        "label": "Hypertelorism",
         "observed": "yes"
       },
       {
         "id": "HP:0002011",
-        "label": "Morphological abnormality of the central nervous system",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002091",
-        "label": "Restrictive lung disease",
         "observed": "yes"
       },
       {
         "id": "HP:0001257",
-        "label": "Spasticity",
         "observed": "yes"
       }
     ],
@@ -1948,11 +1776,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+406C>A",
+          "end": 2447847,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2447847
-        }
+          "start": 2447846
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001027",
@@ -1967,54 +1798,44 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0012306",
-        "label": "Abnormal rib ossification",
         "observed": "yes"
       },
       {
         "id": "HP:0000453",
-        "label": "Choanal atresia",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000476",
-        "label": "Cystic hygroma",
         "observed": "yes"
       },
       {
         "id": "HP:0001631",
-        "label": "Defect in the atrial septum",
         "observed": "yes"
       },
       {
         "id": "HP:0001040",
-        "label": "Multiple pterygia",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000465",
-        "label": "Webbed neck",
         "observed": "yes"
       }
     ],
@@ -2028,11 +1849,14 @@
           "label": "3'UTR"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.-72G>A",
+          "end": 2451408,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2451408
-        }
+          "start": 2451407
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001029",
@@ -2047,24 +1871,20 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000765",
-        "label": "Abnormality of the thorax",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       }
     ],
@@ -2078,11 +1898,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001030",
@@ -2097,39 +1920,32 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000405",
-        "label": "Conductive hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0000824",
-        "label": "Growth hormone deficiency",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       }
     ],
@@ -2143,11 +1959,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001049",
@@ -2162,39 +1981,32 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0002025",
-        "label": "Anal stenosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0100543",
-        "label": "Cognitive impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000883",
-        "label": "Thin ribs",
         "observed": "yes"
       }
     ],
@@ -2208,11 +2020,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001052",
@@ -2227,49 +2042,40 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0030300",
-        "label": "10 pairs of ribs",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0001631",
-        "label": "Defect in the atrial septum",
         "observed": "yes"
       },
       {
         "id": "HP:0011968",
-        "label": "Feeding difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0004719",
-        "label": "Hyperechogenic kidneys",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002093",
-        "label": "Respiratory insufficiency",
         "observed": "yes"
       }
     ],
@@ -2283,11 +2089,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001053",
@@ -2302,44 +2111,36 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0030300",
-        "label": "10 pairs of ribs",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000204",
-        "label": "Cleft upper lip",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002880",
-        "label": "Respiratory difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       }
     ],
@@ -2353,11 +2154,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001054",
@@ -2372,54 +2176,44 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000405",
-        "label": "Conductive hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0001631",
-        "label": "Defect in the atrial septum",
         "observed": "yes"
       },
       {
         "id": "HP:0011968",
-        "label": "Feeding difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0000540",
-        "label": "Hypermetropia",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002880",
-        "label": "Respiratory difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -2433,11 +2227,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001055",
@@ -2452,44 +2249,36 @@
     },
     "disorders": [
       {
-        "id": "MIM:117650",
-        "label": "117650 CEREBROCOSTOMANDIBULAR SYNDROME ;;CCM SYNDROME; CCMS;; RIB GAP DEFECTS WITH MICROGNATHIA"
+        "id": "MIM:117650"
       }
     ],
     "features": [
       {
         "id": "HP:0000878",
-        "label": "11 pairs of ribs",
         "observed": "yes"
       },
       {
         "id": "HP:0000175",
-        "label": "Cleft palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000405",
-        "label": "Conductive hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0000201",
-        "label": "Pierre-Robin sequence",
         "observed": "yes"
       },
       {
         "id": "HP:0030282",
-        "label": "Posterior rib gap",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000883",
-        "label": "Thin ribs",
         "observed": "yes"
       }
     ],
@@ -2503,11 +2292,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+407C>T",
+          "end": 2447846,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2447846
-        }
+          "start": 2447845
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001056",
@@ -2522,59 +2314,48 @@
     },
     "disorders": [
       {
-        "id": "MIM:245570",
-        "label": "#245570 EPILEPSY, FOCAL, WITH SPEECH DISORDER AND WITH OR WITHOUT MENTAL RETARDATION; FESD ;;APHASIA, ACQUIRED, WITH EPILEPSY LANDAU-KLEFFNER SYNDROME, INCLUDED; LKS, INCLUDED;; CONTINUOUS SPIKE AND WAVES DURING SLOW-WAVE SLEEP SYNDROME, INCLUDED; CSWS, INCLUDED; CSWSS, INCLUDED;; ROLANDIC EPILEPSY, MENTAL RETARDATION, AND SPEECH DYSPRAXIA, AUTOSOMAL DOMINANT, INCLUDED; RESDAD, INCLUDED; ADRESD, INCLUDED;; BENIGN EPILEPSY OF CHILDHOOD WITH CENTROTEMPORAL SPIKES, INCLUDED; BECTS, INCLUDED"
+        "id": "MIM:245570"
       }
     ],
     "features": [
       {
         "id": "HP:0011347",
-        "label": "Abnormality of ocular abduction",
         "observed": "yes"
       },
       {
         "id": "HP:0000337",
-        "label": "Broad forehead",
         "observed": "yes"
       },
       {
         "id": "HP:0009765",
-        "label": "Low hanging columella",
         "observed": "yes"
       },
       {
         "id": "HP:0000272",
-        "label": "Malar flattening",
         "observed": "yes"
       },
       {
         "id": "HP:0000160",
-        "label": "Narrow mouth",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0007930",
-        "label": "Prominent epicanthal folds",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0011344",
-        "label": "Severe global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0003196",
-        "label": "Short nose",
         "observed": "yes"
       }
     ],
@@ -2588,11 +2369,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001134407.1(GRIN2A):c.2449A>G",
+          "end": 9862854,
+          "referenceBases": "T",
           "referenceName": "16",
-          "start": 9862854
-        }
+          "start": 9862853
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001057",
@@ -2607,79 +2391,64 @@
     },
     "disorders": [
       {
-        "id": "MIM:250220",
-        "label": "#250220 SPONDYLOMETAPHYSEAL DYSPLASIA, SEDAGHATIAN TYPE; SMDS ;;SEDAGHATIAN CHONDRODYSPLASIA;; METAPHYSEAL CHONDRODYSPLASIA, CONGENITAL LETHAL"
+        "id": "MIM:250220"
       }
     ],
     "features": [
       {
         "id": "HP:0030306",
-        "label": "11 thoracic vertebrae",
         "observed": "yes"
       },
       {
         "id": "HP:0001999",
-        "label": "Abnormal facial shape",
         "observed": "yes"
       },
       {
         "id": "HP:0002104",
-        "label": "Apnea",
         "observed": "yes"
       },
       {
         "id": "HP:0011675",
-        "label": "Arrhythmia",
         "observed": "yes"
       },
       {
         "id": "HP:0001230",
-        "label": "Broad metacarpals",
         "observed": "yes"
       },
       {
         "id": "HP:0006009",
-        "label": "Broad phalanx",
         "observed": "yes"
       },
       {
         "id": "HP:0003180",
-        "label": "Flat acetabular roof",
         "observed": "yes"
       },
       {
         "id": "HP:0002866",
-        "label": "Hypoplastic iliac wing",
         "observed": "yes"
       },
       {
         "id": "HP:0003025",
-        "label": "Metaphyseal irregularity",
         "observed": "yes"
       },
       {
         "id": "HP:0000926",
-        "label": "Platyspondyly",
         "observed": "yes"
       },
       {
         "id": "HP:0008905",
-        "label": "Rhizomelia",
         "observed": "yes"
       },
       {
         "id": "HP:0010049",
-        "label": "Short metacarpal",
         "observed": "yes"
       },
       {
         "id": "HP:0008416",
-        "label": "Six lumbar vertebrae",
         "observed": "yes"
       },
       {
         "id": "HP:0005257",
-        "label": "Thoracic hypoplasia",
         "observed": "yes"
       }
     ],
@@ -2693,11 +2462,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.587+5G>A",
+          "end": 1105813,
+          "referenceBases": "G",
           "referenceName": "19",
-          "start": 1105813
-        }
+          "start": 1105812
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -2708,11 +2480,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.588-8_588-4del",
+          "end": 1106237,
+          "referenceBases": "CTTTTC",
           "referenceName": "19",
-          "start": 1106233
-        }
+          "start": 1106231
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001058",
@@ -2727,84 +2502,68 @@
     },
     "disorders": [
       {
-        "id": "MIM:250220",
-        "label": "#250220 SPONDYLOMETAPHYSEAL DYSPLASIA, SEDAGHATIAN TYPE; SMDS ;;SEDAGHATIAN CHONDRODYSPLASIA;; METAPHYSEAL CHONDRODYSPLASIA, CONGENITAL LETHAL"
+        "id": "MIM:250220"
       }
     ],
     "features": [
       {
         "id": "HP:0005108",
-        "label": "Abnormality of the intervertebral disk",
         "observed": "yes"
       },
       {
         "id": "HP:0001678",
-        "label": "Atrioventricular block",
         "observed": "yes"
       },
       {
         "id": "HP:0001321",
-        "label": "Cerebellar hypoplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0009879",
-        "label": "Cortical gyral simplification",
         "observed": "yes"
       },
       {
         "id": "HP:0004273",
-        "label": "Cupped metaphyses of hand bones",
         "observed": "yes"
       },
       {
         "id": "HP:0003180",
-        "label": "Flat acetabular roof",
         "observed": "yes"
       },
       {
         "id": "HP:0001290",
-        "label": "Generalized hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0002123",
-        "label": "Generalized myoclonic seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0002079",
-        "label": "Hypoplasia of the corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0000946",
-        "label": "Hypoplastic ilia",
         "observed": "yes"
       },
       {
         "id": "HP:0100255",
-        "label": "Metaphyseal dysplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0003375",
-        "label": "Narrow greater sacrosciatic notches",
         "observed": "yes"
       },
       {
         "id": "HP:0000926",
-        "label": "Platyspondyly",
         "observed": "yes"
       },
       {
         "id": "HP:0002880",
-        "label": "Respiratory difficulties",
         "observed": "yes"
       },
       {
         "id": "HP:0001248",
-        "label": "Short tubular bones (hand)",
         "observed": "yes"
       }
     ],
@@ -2818,26 +2577,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.381C>A",
+          "end": 1105455,
+          "referenceBases": "C",
           "referenceName": "19",
-          "start": 1105455
-        }
-      },
-      {
-        "gene": {
-          "id": "GPX4"
+          "start": 1105454
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.381C>A",
-          "referenceName": "19",
-          "start": 1105455
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001059",
@@ -2854,37 +2601,30 @@
     "features": [
       {
         "id": "HP:0200128",
-        "label": "Biventricular hypertrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0003546",
-        "label": "Exercise intolerance",
         "observed": "yes"
       },
       {
         "id": "HP:0003738",
-        "label": "Exercise-induced myalgia",
         "observed": "yes"
       },
       {
         "id": "HP:0003348",
-        "label": "Hyperalaninemia",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0011664",
-        "label": "Left ventricular noncompaction cardiomyopathy",
         "observed": "yes"
       },
       {
         "id": "HP:0006970",
-        "label": "Periventricular leukomalacia",
         "observed": "yes"
       }
     ],
@@ -2898,11 +2638,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_002047.2(GARS):c.1904C>T",
+          "end": 30671863,
+          "referenceBases": "C",
           "referenceName": "7",
-          "start": 30671863
-        }
+          "start": 30671862
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -2913,11 +2656,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_002047.2(GARS):c.1787G>A",
+          "end": 30668263,
+          "referenceBases": "G",
           "referenceName": "7",
-          "start": 30668263
-        }
+          "start": 30668262
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001060",
@@ -2932,104 +2678,84 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0010605",
-        "label": "Chalazion",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0006254",
-        "label": "Elevated alpha-fetoprotein",
         "observed": "yes"
       },
       {
         "id": "HP:0002910",
-        "label": "Elevated hepatic transaminases",
         "observed": "yes"
       },
       {
         "id": "HP:0002171",
-        "label": "Gliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001395",
-        "label": "Hepatic fibrosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0009830",
-        "label": "Peripheral neuropathy",
         "observed": "yes"
       },
       {
         "id": "HP:0012520",
-        "label": "Perivascular spaces",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0000495",
-        "label": "Recurrent corneal erosions",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0001773",
-        "label": "Short foot",
         "observed": "yes"
       },
       {
         "id": "HP:0200055",
-        "label": "Small hand",
         "observed": "yes"
       }
     ],
@@ -3043,11 +2769,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "TGG",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1891delC",
+          "end": 25761027,
+          "referenceBases": "TGGG",
           "referenceName": "3",
-          "start": 25761025
-        }
+          "start": 25761023
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -3058,11 +2787,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
+          "start": 25775421
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001069",
@@ -3077,79 +2809,64 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0002910",
-        "label": "Elevated hepatic transaminases",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0001511",
-        "label": "Intrauterine growth retardation",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0009830",
-        "label": "Peripheral neuropathy",
         "observed": "yes"
       },
       {
         "id": "HP:0000495",
-        "label": "Recurrent corneal erosions",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       }
     ],
@@ -3163,26 +2880,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "TCCCCCC",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
+          "end": 25773869,
+          "referenceBases": "TCCCCC",
           "referenceName": "3",
-          "start": 25773865
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25773863
         },
-        "type": {
-          "id": "SO:0001589",
-          "label": "FRAMESHIFT"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
-          "referenceName": "3",
-          "start": 25773865
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001070",
@@ -3197,129 +2902,104 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0006958",
-        "label": "Abnormal auditory evoked potentials",
         "observed": "yes"
       },
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0010605",
-        "label": "Chalazion",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0012448",
-        "label": "Delayed myelination",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0006254",
-        "label": "Elevated alpha-fetoprotein",
         "observed": "yes"
       },
       {
         "id": "HP:0002910",
-        "label": "Elevated hepatic transaminases",
         "observed": "yes"
       },
       {
         "id": "HP:0002171",
-        "label": "Gliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001395",
-        "label": "Hepatic fibrosis",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0001511",
-        "label": "Intrauterine growth retardation",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0012520",
-        "label": "Perivascular spaces",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0000495",
-        "label": "Recurrent corneal erosions",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0001773",
-        "label": "Short foot",
         "observed": "yes"
       },
       {
         "id": "HP:0200055",
-        "label": "Small hand",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -3333,26 +3013,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001071",
@@ -3367,139 +3035,112 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0002418",
-        "label": "Abnormality of midbrain morphology",
         "observed": "yes"
       },
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0009085",
-        "label": "Alveolar ridge overgrowth",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0006254",
-        "label": "Elevated alpha-fetoprotein",
         "observed": "yes"
       },
       {
         "id": "HP:0000286",
-        "label": "Epicanthus",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0001511",
-        "label": "Intrauterine growth retardation",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0000347",
-        "label": "Micrognathia",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0009830",
-        "label": "Peripheral neuropathy",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0000508",
-        "label": "Ptosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0001773",
-        "label": "Short foot",
         "observed": "yes"
       },
       {
         "id": "HP:0003196",
-        "label": "Short nose",
         "observed": "yes"
       },
       {
         "id": "HP:0200055",
-        "label": "Small hand",
         "observed": "yes"
       },
       {
         "id": "HP:0009891",
-        "label": "Underdeveloped supraorbital ridges",
         "observed": "yes"
       },
       {
         "id": "HP:0002119",
-        "label": "Ventriculomegaly",
         "observed": "yes"
       }
     ],
@@ -3513,26 +3154,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001076",
@@ -3547,64 +3176,52 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0006956",
-        "label": "Dilation of lateral ventricles",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0000286",
-        "label": "Epicanthus",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001395",
-        "label": "Hepatic fibrosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001511",
-        "label": "Intrauterine growth retardation",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0003196",
-        "label": "Short nose",
         "observed": "yes"
       }
     ],
@@ -3618,26 +3235,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001078",
@@ -3652,109 +3257,88 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0010605",
-        "label": "Chalazion",
         "observed": "yes"
       },
       {
         "id": "HP:0011918",
-        "label": "Clinodactyly of the 4th toe",
         "observed": "yes"
       },
       {
         "id": "HP:0001864",
-        "label": "Clinodactyly of the 5th toe",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0002910",
-        "label": "Elevated hepatic transaminases",
         "observed": "yes"
       },
       {
         "id": "HP:0000286",
-        "label": "Epicanthus",
         "observed": "yes"
       },
       {
         "id": "HP:0002007",
-        "label": "Frontal bossing",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002557",
-        "label": "Hypoplastic nipples",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0000657",
-        "label": "Oculomotor apraxia",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0005487",
-        "label": "Prominent metopic ridge",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       },
       {
         "id": "HP:0001182",
-        "label": "Tapered finger",
         "observed": "yes"
       },
       {
         "id": "HP:0010804",
-        "label": "Tented upper lip vermilion",
         "observed": "yes"
       }
     ],
@@ -3768,26 +3352,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001079",
@@ -3802,114 +3374,92 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0000678",
-        "label": "Dental crowding",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002553",
-        "label": "Highly arched eyebrow",
         "observed": "yes"
       },
       {
         "id": "HP:0001511",
-        "label": "Intrauterine growth retardation",
         "observed": "yes"
       },
       {
         "id": "HP:0005320",
-        "label": "Lack of facial subcutaneous fat",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0000657",
-        "label": "Oculomotor apraxia",
         "observed": "yes"
       },
       {
         "id": "HP:0000520",
-        "label": "Proptosis",
         "observed": "yes"
       },
       {
         "id": "HP:0000495",
-        "label": "Recurrent corneal erosions",
         "observed": "yes"
       },
       {
         "id": "HP:0001315",
-        "label": "Reduced tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0002650",
-        "label": "Scoliosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       },
       {
         "id": "HP:0001773",
-        "label": "Short foot",
         "observed": "yes"
       },
       {
         "id": "HP:0200055",
-        "label": "Small hand",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       },
       {
         "id": "HP:0000431",
-        "label": "Wide nasal bridge",
         "observed": "yes"
       }
     ],
@@ -3923,26 +3473,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001080",
@@ -3957,29 +3495,24 @@
     },
     "disorders": [
       {
-        "id": "MIM:604317",
-        "label": "#604317 MICROCEPHALY 2, PRIMARY, AUTOSOMAL RECESSIVE, WITH OR WITHOUT CORTICAL MALFORMATIONS; MCPH2"
+        "id": "MIM:604317"
       }
     ],
     "features": [
       {
         "id": "HP:0000718",
-        "label": "Aggressive behavior",
         "observed": "yes"
       },
       {
         "id": "HP:0010864",
-        "label": "Intellectual disability, severe",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001250",
-        "label": "Seizures",
         "observed": "yes"
       }
     ],
@@ -3993,26 +3526,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "CTTTT",
           "assembly": "GRCh37",
-          "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
+          "end": 36579992,
+          "referenceBases": "CTTT",
           "referenceName": "19",
-          "start": 36579992
-        }
-      },
-      {
-        "gene": {
-          "id": "WDR62"
+          "start": 36579988
         },
-        "type": {
-          "id": "SO:0001589",
-          "label": "FRAMESHIFT"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
-          "referenceName": "19",
-          "start": 36579992
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001081",
@@ -4027,59 +3548,48 @@
     },
     "disorders": [
       {
-        "id": "MIM:601338",
-        "label": "#601338 CEREBELLAR ATAXIA, AREFLEXIA, PES CAVUS, OPTIC ATROPHY, AND SENSORINEURAL HEARING LOSS; CAPOS"
+        "id": "MIM:601338"
       }
     ],
     "features": [
       {
         "id": "HP:0007965",
-        "label": "Absence of visual evoked potentials",
         "observed": "yes"
       },
       {
         "id": "HP:0001251",
-        "label": "Ataxia",
         "observed": "yes"
       },
       {
         "id": "HP:0008619",
-        "label": "Bilateral sensorineural hearing impairment",
         "observed": "yes"
       },
       {
         "id": "HP:0001260",
-        "label": "Dysarthria",
         "observed": "yes"
       },
       {
         "id": "HP:0002066",
-        "label": "Gait ataxia",
         "observed": "yes"
       },
       {
         "id": "HP:0001254",
-        "label": "Lethargy",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0000639",
-        "label": "Nystagmus",
         "observed": "yes"
       },
       {
         "id": "HP:0000648",
-        "label": "Optic atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0002370",
-        "label": "Poor coordination",
         "observed": "yes"
       }
     ],
@@ -4093,11 +3603,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_152296(ATP1A3):c.2452G>A",
+          "end": 42474427,
+          "referenceBases": "C",
           "referenceName": "19",
-          "start": 42474427
-        }
+          "start": 42474426
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001084",
@@ -4112,144 +3625,116 @@
     },
     "disorders": [
       {
-        "id": "MIM:182212",
-        "label": "#182212 SHPRINTZEN-GOLDBERG CRANIOSYNOSTOSIS SYNDROME; SGS ;;CRANIOSYNOSTOSIS WITH ARACHNODACTYLY AND ABDOMINAL HERNIAS;; MARFANOID DISORDER WITH CRANIOSYNOSTOSIS, TYPE I;; MARFANOID CRANIOSYNOSTOSIS SYNDROME"
+        "id": "MIM:182212"
       }
     ],
     "features": [
       {
         "id": "HP:0002410",
-        "label": "Aqueductal stenosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001166",
-        "label": "Arachnodactyly",
         "observed": "yes"
       },
       {
         "id": "HP:0010665",
-        "label": "Bilateral coxa valga",
         "observed": "yes"
       },
       {
         "id": "HP:0001363",
-        "label": "Craniosynostosis",
         "observed": "yes"
       },
       {
         "id": "HP:0001631",
-        "label": "Defect in the atrial septum",
         "observed": "yes"
       },
       {
         "id": "HP:0000494",
-        "label": "Downslanted palpebral fissures",
         "observed": "yes"
       },
       {
         "id": "HP:0002474",
-        "label": "Expressive language delay",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       },
       {
         "id": "HP:0006801",
-        "label": "Hyperactive deep tendon reflexes",
         "observed": "yes"
       },
       {
         "id": "HP:0000316",
-        "label": "Hypertelorism",
         "observed": "yes"
       },
       {
         "id": "HP:0001265",
-        "label": "Hyporeflexia",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0006889",
-        "label": "Intellectual disability, borderline",
         "observed": "yes"
       },
       {
         "id": "HP:0001388",
-        "label": "Joint laxity",
         "observed": "yes"
       },
       {
         "id": "HP:0000369",
-        "label": "Low-set ears",
         "observed": "yes"
       },
       {
         "id": "HP:0000347",
-        "label": "Micrognathia",
         "observed": "yes"
       },
       {
         "id": "HP:0002868",
-        "label": "Narrow iliac wings",
         "observed": "yes"
       },
       {
         "id": "HP:0001655",
-        "label": "Patent foramen ovale",
         "observed": "yes"
       },
       {
         "id": "HP:0000768",
-        "label": "Pectus carinatum",
         "observed": "yes"
       },
       {
         "id": "HP:0001763",
-        "label": "Pes planus",
         "observed": "yes"
       },
       {
         "id": "HP:0011220",
-        "label": "Prominent forehead",
         "observed": "yes"
       },
       {
         "id": "HP:0000278",
-        "label": "Retrognathia",
         "observed": "yes"
       },
       {
         "id": "HP:0000319",
-        "label": "Smooth philtrum",
         "observed": "yes"
       },
       {
         "id": "HP:0003298",
-        "label": "Spina bifida occulta",
         "observed": "yes"
       },
       {
         "id": "HP:0003396",
-        "label": "Syringomyelia",
         "observed": "yes"
       },
       {
         "id": "HP:0001762",
-        "label": "Talipes equinovarus",
         "observed": "yes"
       },
       {
         "id": "HP:0001537",
-        "label": "Umbilical hernia",
         "observed": "yes"
       }
     ],
@@ -4263,11 +3748,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003036.3(SKI):c.347G>A",
+          "end": 2160552,
+          "referenceBases": "G",
           "referenceName": "1",
-          "start": 2160552
-        }
+          "start": 2160551
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001085",
@@ -4282,129 +3770,104 @@
     },
     "disorders": [
       {
-        "id": "MIM:614105",
-        "label": "#614105 METHYLMALONATE SEMIALDEHYDE DEHYDROGENASE DEFICIENCY; MMSDHD ;;MMSDH DEFICIENCY"
+        "id": "MIM:614105"
       }
     ],
     "features": [
       {
         "id": "HP:0001344",
-        "label": "Absent speech",
         "observed": "yes"
       },
       {
         "id": "HP:0000463",
-        "label": "Anteverted nares",
         "observed": "yes"
       },
       {
         "id": "HP:0010055",
-        "label": "Broad hallux",
         "observed": "yes"
       },
       {
         "id": "HP:0012448",
-        "label": "Delayed myelination",
         "observed": "yes"
       },
       {
         "id": "HP:0006956",
-        "label": "Dilation of lateral ventricles",
         "observed": "yes"
       },
       {
         "id": "HP:0040155",
-        "label": "Elevated urinary 3-hydroxybutyric acid",
         "observed": "yes"
       },
       {
         "id": "HP:0045034",
-        "label": "Elevated urinary aminoisobutyric acid",
         "observed": "yes"
       },
       {
         "id": "HP:0000286",
-        "label": "Epicanthus",
         "observed": "yes"
       },
       {
         "id": "HP:0002007",
-        "label": "Frontal bossing",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0002281",
-        "label": "Gray matter heterotopias",
         "observed": "yes"
       },
       {
         "id": "HP:0000348",
-        "label": "High forehead",
         "observed": "yes"
       },
       {
         "id": "HP:0000218",
-        "label": "High palate",
         "observed": "yes"
       },
       {
         "id": "HP:0000316",
-        "label": "Hypertelorism",
         "observed": "yes"
       },
       {
         "id": "HP:0002079",
-        "label": "Hypoplasia of the corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0007793",
-        "label": "Macular retinal pigment epithelial mottling",
         "observed": "yes"
       },
       {
         "id": "HP:0002912",
-        "label": "Methylmalonic acidemia",
         "observed": "yes"
       },
       {
         "id": "HP:0012120",
-        "label": "Methylmalonic aciduria",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0003196",
-        "label": "Short nose",
         "observed": "yes"
       },
       {
         "id": "HP:0000322",
-        "label": "Short philtrum",
         "observed": "yes"
       },
       {
         "id": "HP:0000954",
-        "label": "Single transverse palmar crease",
         "observed": "yes"
       },
       {
         "id": "HP:0008070",
-        "label": "Sparse hair",
         "observed": "yes"
       },
       {
         "id": "HP:0010804",
-        "label": "Tented upper lip vermilion",
         "observed": "yes"
       }
     ],
@@ -4418,11 +3881,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005589(ALDH6A1):c.514T>C",
+          "end": 74538114,
+          "referenceBases": "A",
           "referenceName": "14",
-          "start": 74538114
-        }
+          "start": 74538113
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -4433,11 +3899,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005589(ALDH6A1):c.1603C>T",
+          "end": 74527350,
+          "referenceBases": "G",
           "referenceName": "14",
-          "start": 74527350
-        }
+          "start": 74527349
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001086",
@@ -4452,49 +3921,40 @@
     },
     "disorders": [
       {
-        "id": "MIM:269880",
-        "label": "#269880 SHORT SYNDROME ;;SHORT STATURE, HYPEREXTENSIBILITY, HERNIA, OCULAR DEPRESSION, RIEGER ANOMALY, AND TEETHING DELAY;; LIPODYSTROPHY, PARTIAL, WITH RIEGER ANOMALY AND SHORT STATURE"
+        "id": "MIM:269880"
       }
     ],
     "features": [
       {
         "id": "HP:0000490",
-        "label": "Deeply set eye",
         "observed": "yes"
       },
       {
         "id": "HP:0000684",
-        "label": "Delayed eruption of teeth",
         "observed": "yes"
       },
       {
         "id": "HP:0009125",
-        "label": "Lipodystrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0007495",
-        "label": "Prematurely aged appearance",
         "observed": "yes"
       },
       {
         "id": "HP:0000558",
-        "label": "Rieger anomaly",
         "observed": "yes"
       },
       {
         "id": "HP:0004322",
-        "label": "Short stature",
         "observed": "yes"
       },
       {
         "id": "HP:0000325",
-        "label": "Triangular face",
         "observed": "yes"
       },
       {
         "id": "HP:0000430",
-        "label": "Underdeveloped nasal alae",
         "observed": "yes"
       }
     ],
@@ -4508,11 +3968,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "AC",
           "assembly": "GRCh37",
-          "hgvs": "NM_181523.2(PIK3R1):c.1906_1907insC",
+          "end": 67592090,
+          "referenceBases": "A",
           "referenceName": "5",
-          "start": 67592090
-        }
+          "start": 67592089
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001091",
@@ -4527,89 +3990,72 @@
     },
     "disorders": [
       {
-        "id": "MIM:613680",
-        "label": "#613680 BEAULIEU-BOYCOTT-INNES SYNDROME; BBIS ;;MICROCEPHALY, MENTAL RETARDATION, AND DISTINCTIVE FACIES, WITH CARDIAC AND GENITOURINARY MALFORMATIONS"
+        "id": "MIM:613680"
       }
     ],
     "features": [
       {
         "id": "HP:0000670",
-        "label": "Carious teeth",
         "observed": "yes"
       },
       {
         "id": "HP:0000490",
-        "label": "Deeply set eye",
         "observed": "yes"
       },
       {
         "id": "HP:0000689",
-        "label": "Dental malocclusion",
         "observed": "yes"
       },
       {
         "id": "HP:0009890",
-        "label": "High anterior hairline",
         "observed": "yes"
       },
       {
         "id": "HP:0000348",
-        "label": "High forehead",
         "observed": "yes"
       },
       {
         "id": "HP:0000085",
-        "label": "Horseshoe kidney",
         "observed": "yes"
       },
       {
         "id": "HP:0002342",
-        "label": "Intellectual disability, moderate",
         "observed": "yes"
       },
       {
         "id": "HP:0003189",
-        "label": "Long nose",
         "observed": "yes"
       },
       {
         "id": "HP:0009765",
-        "label": "Low hanging columella",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0000545",
-        "label": "Myopia",
         "observed": "yes"
       },
       {
         "id": "HP:0001643",
-        "label": "Patent ductus arteriosus",
         "observed": "yes"
       },
       {
         "id": "HP:0012745",
-        "label": "Short palpebral fissure",
         "observed": "yes"
       },
       {
         "id": "HP:0000179",
-        "label": "Thick lower lip vermilion",
         "observed": "yes"
       },
       {
         "id": "HP:0000215",
-        "label": "Thick upper lip vermilion",
         "observed": "yes"
       },
       {
         "id": "HP:0000582",
-        "label": "Upslanted palpebral fissure",
         "observed": "yes"
       }
     ],
@@ -4623,26 +4069,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_024339.3(THOC6):c.136G>A",
+          "end": 3075805,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 3075805
-        }
-      },
-      {
-        "gene": {
-          "id": "THOC6"
+          "start": 3075804
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_024339.3(THOC6):c.136G>A",
-          "referenceName": "16",
-          "start": 3075805
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001105",
@@ -4657,59 +4091,48 @@
     },
     "disorders": [
       {
-        "id": "MIM:612541",
-        "label": "#612541 NEUTROPENIA, SEVERE CONGENITAL, 4, AUTOSOMAL RECESSIVE; SCN4 DURSUN SYNDROME, INCLUDED;; PULMONARY ARTERIAL HYPERTENSION, LEUKOPENIA, AND ATRIAL SEPTAL DEFECT, INCLUDED"
+        "id": "MIM:612541"
       }
     ],
     "features": [
       {
         "id": "HP:0000230",
-        "label": "Gingivitis",
         "observed": "yes"
       },
       {
         "id": "HP:0012138",
-        "label": "Granulocytic hyperplasia",
         "observed": "yes"
       },
       {
         "id": "HP:0004866",
-        "label": "Impaired ADP-induced platelet aggregation",
         "observed": "yes"
       },
       {
         "id": "HP:0004854",
-        "label": "Intermittent thrombocytopenia",
         "observed": "yes"
       },
       {
         "id": "HP:0001888",
-        "label": "Lymphopenia",
         "observed": "yes"
       },
       {
         "id": "HP:0001875",
-        "label": "Neutropenia",
         "observed": "yes"
       },
       {
         "id": "HP:0005401",
-        "label": "Recurrent candida infections",
         "observed": "yes"
       },
       {
         "id": "HP:0000403",
-        "label": "Recurrent otitis media",
         "observed": "yes"
       },
       {
         "id": "HP:0000010",
-        "label": "Recurrent urinary tract infections",
         "observed": "yes"
       },
       {
         "id": "HP:0001744",
-        "label": "Splenomegaly",
         "observed": "yes"
       }
     ],
@@ -4723,26 +4146,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_138387.3(G6PC3):c.829C>T",
+          "end": 42153199,
+          "referenceBases": "C",
           "referenceName": "17",
-          "start": 42153199
-        }
-      },
-      {
-        "gene": {
-          "id": "G6PC3"
+          "start": 42153198
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_138387.3(G6PC3):c.829C>T",
-          "referenceName": "17",
-          "start": 42153199
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001106",
@@ -4757,24 +4168,20 @@
     },
     "disorders": [
       {
-        "id": "MIM:243150",
-        "label": "#243150 INTESTINAL ATRESIA, MULTIPLE; MINAT ;;FAMILIAL INTESTINAL POLYATRESIA SYNDROME; FIPA"
+        "id": "MIM:243150"
       }
     ],
     "features": [
       {
         "id": "HP:0011100",
-        "label": "Intestinal atresia",
         "observed": "yes"
       },
       {
         "id": "HP:0005214",
-        "label": "Intestinal obstruction",
         "observed": "yes"
       },
       {
         "id": "HP:0001539",
-        "label": "Omphalocele",
         "observed": "yes"
       }
     ],
@@ -4788,26 +4195,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
+          "end": 47221659,
+          "referenceBases": "TAAGT",
           "referenceName": "2",
-          "start": 47221656
-        }
-      },
-      {
-        "gene": {
-          "id": "TTC7A"
+          "start": 47221654
         },
-        "type": {
-          "id": "SO:0001630",
-          "label": "SPLICING"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
-          "referenceName": "2",
-          "start": 47221656
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001107",
@@ -4824,22 +4219,18 @@
     "features": [
       {
         "id": "HP:0001662",
-        "label": "Bradycardia",
         "observed": "yes"
       },
       {
         "id": "HP:0001508",
-        "label": "Failure to thrive",
         "observed": "yes"
       },
       {
         "id": "HP:0005214",
-        "label": "Intestinal obstruction",
         "observed": "yes"
       },
       {
         "id": "HP:0001649",
-        "label": "Tachycardia",
         "observed": "yes"
       }
     ],
@@ -4853,26 +4244,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
+          "end": 20225453,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 20225453
-        }
-      },
-      {
-        "gene": {
-          "id": "SGOL1"
+          "start": 20225452
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
-          "referenceName": "3",
-          "start": 20225453
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001108",
@@ -4887,114 +4266,92 @@
     },
     "disorders": [
       {
-        "id": "MIM:615273",
-        "label": "#615273 CONGENITAL DISORDER OF DEGLYCOSYLATION; CDDG ;;CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iv; CDG1V;; CDG Iv; CDGIv"
+        "id": "MIM:615273"
       }
     ],
     "features": [
       {
         "id": "HP:0006958",
-        "label": "Abnormal auditory evoked potentials",
         "observed": "yes"
       },
       {
         "id": "HP:0100022",
-        "label": "Abnormality of movement",
         "observed": "yes"
       },
       {
         "id": "HP:0000522",
-        "label": "Alacrima",
         "observed": "yes"
       },
       {
         "id": "HP:0002059",
-        "label": "Cerebral atrophy",
         "observed": "yes"
       },
       {
         "id": "HP:0010605",
-        "label": "Chalazion",
         "observed": "yes"
       },
       {
         "id": "HP:0002019",
-        "label": "Constipation",
         "observed": "yes"
       },
       {
         "id": "HP:0002353",
-        "label": "EEG abnormality",
         "observed": "yes"
       },
       {
         "id": "HP:0002910",
-        "label": "Elevated hepatic transaminases",
         "observed": "yes"
       },
       {
         "id": "HP:0001263",
-        "label": "Global developmental delay",
         "observed": "yes"
       },
       {
         "id": "HP:0001395",
-        "label": "Hepatic fibrosis",
         "observed": "yes"
       },
       {
         "id": "HP:0002079",
-        "label": "Hypoplasia of the corpus callosum",
         "observed": "yes"
       },
       {
         "id": "HP:0030303",
-        "label": "Hypoplastic anterior commissure",
         "observed": "yes"
       },
       {
         "id": "HP:0002151",
-        "label": "Increased serum lactate",
         "observed": "yes"
       },
       {
         "id": "HP:0000252",
-        "label": "Microcephaly",
         "observed": "yes"
       },
       {
         "id": "HP:0001252",
-        "label": "Muscular hypotonia",
         "observed": "yes"
       },
       {
         "id": "HP:0000657",
-        "label": "Oculomotor apraxia",
         "observed": "yes"
       },
       {
         "id": "HP:0006579",
-        "label": "Prolonged neonatal jaundice",
         "observed": "yes"
       },
       {
         "id": "HP:0001773",
-        "label": "Short foot",
         "observed": "yes"
       },
       {
         "id": "HP:0002472",
-        "label": "Small cerebral cortex",
         "observed": "yes"
       },
       {
         "id": "HP:0200055",
-        "label": "Small hand",
         "observed": "yes"
       },
       {
         "id": "HP:0000486",
-        "label": "Strabismus",
         "observed": "yes"
       }
     ],
@@ -5008,11 +4365,14 @@
           "label": "INFRAME-DELETION"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1205_1207del",
+          "end": 25775418,
+          "referenceBases": "GTTC",
           "referenceName": "3",
-          "start": 25775416
-        }
+          "start": 25775414
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -5023,11 +4383,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1570C>T",
+          "end": 25761670,
+          "referenceBases": "G",
           "referenceName": "3",
-          "start": 25770665
-        }
+          "start": 25761669
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001135",
