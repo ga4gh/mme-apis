@@ -71,9 +71,11 @@ After receiving a request, the remote server can respond in one of two ways:
     ],
     "genomicFeatures" : [
       {
-        "gene" : {
-          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
-        },
+        "genes" : [
+          {
+            "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+          }
+        ],
         "variants" : [
           {
             "zygosity" : <number>,
@@ -201,12 +203,14 @@ After receiving a request, the remote server can respond in one of two ways:
 #### GenomicFeatures
 * It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of candidate causal genes and variants** described by:
-  * `gene`: (***mandatory***)
+  * `genes`:
+    * It is ***mandatory*** to have at least one of these two: `genes`, `variants` (having both is preferred)
     * `id`: A gene symbol or identifier (***mandatory***):
       * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
       * `<ensembl gene ID>` OR
       * `<entrez gene ID>`
-  * `variants` (*optional*): the specific variants in, or proximal to, the gene, each described by:
+  * `variants`: the specific variants in, or proximal to, the gene/s, each described by:
+    * It is ***mandatory*** to have at least one of these two: `genes`, `variants` (having both is preferred)
     * `zygosity`: `<number>` (`1` for heterozygous or hemizygous, `2` for homozygous) (*optional*)
     * `type`: the effect of the mutation. This enables describing the broad category of cDNA effect predicted to result from a mutation to improve matchmaking, without necessarily disclosing the actual mutation. (*optional*)
       * `id`: a Sequence Ontology term identifier (`"SO:#######"`). This will usually (but not necessarily) be a descendant of [SO:0001576 [transcript variant]](http://www.sequenceontology.org/browser/current_svn/term/SO:0001576). (***mandatory***, if `type` is provided)
