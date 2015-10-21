@@ -2,6 +2,7 @@
 This is a very rough mockup based on the discussions on the 20 Oct tech call.
 
 Here are the high-level goals:
+
 1. To make the API more extendable through versioned component/dimension handlers, each of which have relatively limited scope over the overall query (e.g. `sex`, `species`, `ageOfOnset`, `genes`, `features`, `variants`, `genome`). Currently, a handler `HANDLER` would read patient data from `.patient.HANDLER`, it would have metadata in `.meta.dimensions.HANDLER`, and it would read query parameters and constraints from `.query.dimensions.HANDLER`.
 
 2. To keep serialization and parsing simple. Only `.meta.dimensions` and `.query.dimensions.mandatory` need to be parsed in full to ensure all mandatory dimensions are handled. After that, those handlers and any others can read only their relevant portions of the overall data structure.
