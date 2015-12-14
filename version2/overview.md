@@ -1,4 +1,3 @@
-
 ## Current state ##
 Below is the current form of the API.
 
