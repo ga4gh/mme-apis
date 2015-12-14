@@ -49,11 +49,11 @@ To support the following forms of exome/genome queries:
 
 
 ## Data "components" ##
-Proposal: top-level data categories become "components", with their own versioning. This will allow backwards-incompable changes in a component to only affect those services that use that component, unlike if we did a full API version increment.
+Proposal: top-level data categories become "components", with their own versioning. This will allow backwards-incompatible changes in a component to only affect those services that use that component, unlike if we did a full API version increment.
 
 Proposal: the addition of a "meta" field on the query, to hold versions of components and any other query-level metadata. This seems to be the obvious place, since component versions are tied to the service not the patient data. Further, this allows specifying versions for "functional" components that impose constraints but don't match on specific data in the patient (such as the "genome" component in 1-sided matchmaking).
 
-Proposal: these versions be integer versions that are incremented when backwards imcompatible changes are made
+Proposal: these versions be integer versions that are incremented when backwards incompatible changes are made
 
 Proposed match query:
 <pre>
@@ -320,7 +320,7 @@ Example: Match with patients with congenital facial abnormalities
 
 
 Questions:
-* How to handle un-observed terms?
+* How to handle unobserved terms?
 * Do we have a use case for "ANY"?
 
 
