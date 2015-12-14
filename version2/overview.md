@@ -1,278 +1,460 @@
-# Overview #
-This is a very rough mockup based on the discussions on the 20 Oct tech call.
 
-Here are the high-level goals:
-1. To make the API more extendable through versioned component/dimension handlers, each of which have relatively limited scope over the overall query (e.g. `sex`, `species`, `ageOfOnset`, `genes`, `features`, `variants`, `genome`). Currently, a handler `HANDLER` would read patient data from `.patient.HANDLER`, it would have metadata in `.meta.dimensions.HANDLER`, and it would read query parameters and constraints from `.query.dimensions.HANDLER`.
-2. To keep serialization and parsing simple. Only `.meta.dimensions` and `.query.dimensions.mandatory` need to be parsed in full to ensure all mandatory dimensions are handled. After that, those handlers and any others can read only their relevant portions of the overall data structure.
-3. To support 3 basic levels of constraint:
-  1. Optional: the default for all data in the `.patient` object.
-  2. Match or NULL: E.g., "if the case has gene data, TTN must be one of the listed genes." This is specified by providing filter/constraint/weighting information to the particular handler at `.query.dimensions.HANDLER`. If the handler is not supported by the endpoint, this information will be silently ignored.
-  3. Match: E.g. "only show me cases with TTN listed". The handler must be present, the data must not be NULL, and data must match. This is implemented by listing the handler in `.query.dimensions.mandatory` and providing the constraints as in the "Match or NULL" case. This has a clear interpretation for handlers that perform discrete filtering, such as `genes`, but `features` may work best in a fuzzy sense and then we need to settle on what mandatory means there.
+## Current state ##
+Below is the current form of the API.
 
-Design decisions:
-* Keep the core of the API a case being matched-by-example
-* Avoid mini-languages wherever possible (simply repeating data in `.patient` and `.query` as necessary to avoid needing something like jsonpath cross-references)
-* Single `id` fields were almost always replaced by an `ids` list of objects with `id` fields to allow multiple IDs to be specified. An alternative approach would be to specify a primary ID and a list of aliases.
-* Components plug into the data model in a standard way and are independently versioned, allowing their formats and semantics to evolve independent of the backbone of the API. For example, the `genes` and `sex` components likely would perform discrete filtering, whereas the `features` component would likely perform some sort of weighted boosting, and the `genome` component would apply a set of variant filters.
+The data in the patient object serves two purposes:
+* To specify a query that the service will try to match
+* To accurately describe the patient, so that matched users can evaluate the quality of the match as quickly as possible.
 
+These two goals are sometimes at odds. For example, you may know the patient's age of onset (neonatal), but do not want to match on it. Currently, you would just leave that information out, but then the owner of the matched record will not know the age of onset, which could be important.
 
-# /match request #
-```javascript
+This proposal attempt to address this by adding a separate "query" field that stores constraints that are provided by a user or a system and exist outside of the patient data. There is specific focus on the "genome" component and the queries that it supports to enable 1-sided hypothesis matchmaking.
+
+To set the stage, this is current the structure of a request:
+<pre>
 {
-  "meta": {
-      // Define the dimensions present in the data and the associated versions
-      // Each dimension has a separate specification and they can evolve separately
-      // Versions are incremented when backwards-incompatible changes are made to
-      //    that dimension's specification
-    "dimensions": [
-      // "mandatory" would behave like any other component, and validates that the
-      // necessary components are supported and present (non-null) in the matching case
-      "mandatory": {
-        "version"
-      },
-      "patient": {
-        "version"
-      },
-      "sex": {
-        "version"
-      },
-      "..."
-    ]
-  },
-
   "patient": {
-    "meta": {
-      "id",
-      "label",
-      "contact": {
-        "name",
-        "institution",
-        "href"
+    "contact": {...}
+    "sex"
+    "species"
+    "ageOfOnset"
+    "inheritanceMode"
+    "diagnoses"
+    "features"
+    "genomicFeatures"
+  }
+}
+</pre>
+
+And a response:
+<pre>
+{
+  "results": [
+    {
+      "score": {...}
+      "patient": {...}
+    }
+  ]
+}
+</pre>
+
+
+
+Three larger additions:
+1. The addition of the required query "meta" field, to hold versions of components and other query metadata
+1. The addition of the optional "query" field at the top level, to support constraints that extend beyond the match-by-example framework
+1. The addition of the optional "genome" component
+
+To support the following forms of exome/genome queries:
+1. Return patients with a rare (AF < 0.01 in ExAC) missense or nonsense (as annotated by VEP, Annovar, or Jannovar) variant in GENEX
+
+
+## Data "components" ##
+Proposal: top-level data categories become "components", with their own versioning. This will allow backwards-incompable changes in a component to only affect those services that use that component, unlike if we did a full API version increment.
+
+Proposal: the addition of a "meta" field on the query, to hold versions of components and any other query-level metadata. This seems to be the obvious place, since component versions are tied to the service not the patient data. Further, this allows specifying versions for "functional" components that impose constraints but don't match on specific data in the patient (such as the "genome" component in 1-sided matchmaking).
+
+Proposal: these versions be integer versions that are incremented when backwards imcompatible changes are made
+
+Proposed match query:
+<pre>
+{
+ <strong style="background-color: #ff9">"meta": {
+    "components": {
+      "ageOfOnset": {
+        "version": 1
       }
-    },
-
-    "sex": {
-      "value"
-    },
-
-    "species": {
-      "id"
-    },
-
-    "genes": {
-      "items": [
-        {
-          "ids": [
-            {
-              "id",
-              "label"
-            }
-          ]
-          "zygosity",
-          "consequences": [
-            {
-              "id": "ENSG......",
-              "label"
-            }
-          ]
-        }
-      ]
-    },
-
-    "features": {
-      "items": [
-        {
-          "ids": [
-            {
-              "id": "HP:.......",
-              "label"
-            }
-          ],
-          "ageOfOnset": {
-            "id",
-            "label",
-          },
-          "observed"
-        }
-      ]
-    },
-
-    "ageOfOnset": {
-      "items": [
-        {
-          "ids": [
-            {
-              "id": "HP:....",
-              "label"
-            }
-          ]
-        }
-      ]
-    }
-
-    "disorders": {
-      "items": [
-        {
-          "ids": [
-            {
-              "id": "MIM:......",
-              "label"
-            }
-          ]
-        }
-      ]
-    },
-
-    "variants": {
-      "assembly",
-      "items": [
-        {
-          "referenceName",
-          "start",
-          "end",
-          "referenceBases",
-          "alternateBases",
-          "zygosity"
-        }
-      ]
-    }
-  },
-
-  "query": {
-    // Each dimension has a separate JSON object with the handler's name as the key
-    "dimensions": {
-      "mandatory": {
-        "items": [
-          "genes"
-        ]
-      },
-
       "features": {
-        "items": [
+        "version": 3
+      }
+      ...
+    }
+  }</strong>
+  "patient": {
+    "contact"
+    "sex"
+    "species"
+    "ageOfOnset"
+    "inheritanceMode"
+    "diagnoses"
+    "features"
+    "genomicFeatures"
+  }
+}
+</pre>
+
+
+## Per-component filters/constraints and scores ##
+Proposal: the addition of the optional "query" field at the top level. This would support constraints (e.g. gene must match) that extend beyond the match-by-example framework, on a per-component basis. This is important to ensure that the results are useful for the querier and meet their expectations about what makes a match relevant.
+
+Backwards-compatibility: If a component doesn't have a query, then it should fall back to performing a `LIKE` query on the data in the patient description.
+
+Proposal: the addition of an optional per-component score field associated with each result. TODO: decide whether to keep these as raw scores, replace with bins/confidence levels, or allow both.
+
+How this would fit into the overall query:
+<pre>
+{
+  "meta": {...}
+  "patient": {...}
+  <strong style="background-color: #ff9">"query": {
+    "components": {
+      "features": {...}
+      "genomicFeatures": {...}
+    }
+  }</strong>
+}
+</pre>
+
+Each component's query object has the following reserved fields:
+* `component`:
+    * `optional` (default)
+    * `mandatory`: a compatible version of the component must be supported by the service, else no results should be returned.
+* `value`:
+    * `optional` (default)
+    * `mandatory`: the case should have data for the component in order to match. For example, if `value: mandatory` for the "genes" component, only cases with some candidate gene should be returned.
+
+A service must therefore inspect all `query.components.*` objects to ensure that mandatory components are supported.
+
+Each component may provide a numerical score (0-1) in the response:
+<pre>
+{
+  "results": [
+    {
+      "score": {
+        "patient": 0.5
+       <strong style="background-color: #ff9">"features": 0.2
+        "genomicFeatures": 0.8</strong>
+      }
+      "patient": {...}
+    }
+  ]
+}
+</pre>
+
+
+
+### Component: `genome` sequencing results ###
+
+The query for the `genome` component consists of:
+* A list of filters for selecting rare, predicted-pathogenic variants in particular genes. If multiple filters are provided, only variants that pass all filters are matched.
+* One or more possible modes of inheritance that must be consistent with the number and types of variants in the gene.
+
+Each variant is annotated with a number of attributes, including its position (`start`, `end`, etc.), consequence information (`gene`, `consequence`), and population data (`alleleFrequency`). Each annotation has a data type, which defines which filters are supported for that annotation.
+
+Annotation types:
+* integer
+    * `filter`: `EQ` (default), `NEQ`, `LT`, `LTE`, `GT`, `GTE`
+        * single value (`value`)
+* float
+    * `filter`: `LTE`, `GTE`
+        * single value (`value`)
+* nominal/categorical/ontological
+    * `filter`:
+        * single value (`term`):
+            * `EQ` (default): Match must contain the term or a descendant of the term
+        * multiple values (`terms`): `LIKE` (default), `ANY`, `ALL`
+            * `ANY`: For at least one of the terms, the term or a descendant of that term must be present in the match
+            * `ALL`: For every term, the term or a descendant of that term must be present in the match
+
+Fields:
+* `inheritanceMode`: contains a field `terms` with a list of HPO terms for modes of inheritance (e.g. AD, AR, X-linked, sporadic). Matches should have genes with variants that are consistent with at least one of the included modes of inheritance. For example, if the inheritanceMode is AR ("HP:0000007"), matching cases must have at least 2 variant alleles that pass the filters (2 het variants or 1 hom variant).
+* `filters`: a list of filters, each with one or more of the following subfields (depending on the annotation):
+    * `annotation`
+    * `source` (used by many annotations)
+    * `filter`
+    * `population` (used by `alleleFrequency` annotation)
+    * `value|term|terms` (depending on number and type of annotation)
+
+Annotations:
+* `referenceName`: nominal
+* `start`: integer
+* `end`: integer
+* `size`: integer
+* `id`: nominal; dbSNP identifier (or other)
+* `gene`: nominal; additional fields:
+    * `source`: Ensembl, RefSeq, Entrez, UCSC
+    * `terms`: list of gene terms
+* `consequence`: nominal (SO term); additional fields:
+    * `source`: VEP, ANNOVAR, Jannovar
+    * `terms`: list of SO terms
+* `alleleFrequency`: float; additional fields:
+    * `source`: 1000GP, ESP5600, ExAC, <local db name>
+    * `population`: ALL, CEU, ...
+* `score`: float; additional fields:
+    * `source`: SIFT, PolyPhen2, MutationTaster, CADD
+
+
+For example, to match against cases with 2 or more rare (AF < 0.01) harmful (missense or stopgain) variants in NGLY1 or TTN:
+<pre>
+  "query": {
+    "components": {
+      "genome": {
+        "inheritanceMode": {
+          "terms": [
+            {
+              "id": "HP:0000007",
+              "label": "Autosomal recessive inheritance"
+            }
+          ]
+        }
+        "filters": [
           {
-            "ids": [
-              {
-                "id"
-              }
-            ],
-            "weight"
-          },
+            "annotation": "gene"
+            "source": "Ensembl"
+            "filter": "ANY"
+            "terms": [
+              {"id": "ENSG...", "label": "EFTUD2"}
+              {"id": "ENSG...", "label": "TTN"}
+            ]
+          }
           {
-            "ids": [
-              {
-                "id"
-              }
-            ],
-            "ageOfOnset": {
-              "id"
-            },
-            "weight"
+            "annotation": "alleleFrequency"
+            "source": "ExAC"
+            "population": "ALL"
+            "filter": "LT"
+            "value": 0.01
+          }
+          {
+            "annotation": "consequence"
+            "source": "VEP"
+            "filter": "ANY"
+            "terms": [
+              {"id": "SO:...", "label": "Stopgain"}
+              {"id": "SO:...", "label": "Missense"}
+            ]
           }
         ]
-      },
+      }
+    }
+  }
+</pre>
 
-      "ageOfOnset": {
-        "items": [
+
+### Component: `features` ###
+
+Provides support for requiring the presence of specific phenotype terms in a matching patient.
+
+Fields:
+* `filters`: a list of one or more filters that are each required to be true for a match to be returned
+    * `terms`: A list of phenotype terms, containing one or more of the following fields:
+        * `id`: the HPO term ID; must match term or a descendant
+        * `ageOfOnset`: the age of onset as an HPO term; must match term or a descendant
+    * `filter`:
+        * `LIKE`: A fuzzy match
+        * `ALL`: For every term in `terms`, the term or a descendant of that term must be present in the match
+
+Backwards-compatibility: If `terms` is not provided, the phenotypes from `patient.features` should be used.
+
+
+Example: If the patient has any phenotypic data, they must have a facial abnormality
+
+<pre>
+  "query": {
+    "components": {
+      "features": {
+        "filters": [
           {
-            "ids": [
+            "filter": "ALL"
+            "terms": [
               {
-                "id"
+                "id": "HP:0000271"
+                "label": "Abnormality of the face"
               }
             ]
           }
         ]
-      },
+      }
+    }
+  }
+</pre>
 
-      "sex": {
-        "id"
-      },
-
-      "genes": {
-        "items": [
-          {
-            "ids": [
-              {
-                "id"
-              }
-            ],
-            "zygosity"
-          }
-        ]
-      },
-
-      "genome": {
+Example: Only return matches with facial abnormalities
+<pre>
+    "query": {
+    "components": {
+      "features": {
+       <strong style="background-color: #ff9">"component": "mandatory"
+        "value": "mandatory"</strong>
         "filters": [
           {
-            "source": "ExAC",
-            "annotation": "alleleFrequency"
-            "filter": "<",
-            "value": 0.01
+            "filter": "ALL"
+            "terms": [
+              {
+                "id": "HP:0000271"
+                "label": "Abnormality of the face"
+              }
+            ]
           }
         ]
       }
-    ]
+    }
   }
-}
-```
+</pre>
 
-# /match response #
-```javascript
-{
-  "messages": [
-    // any messages that need to be provided to the end user
-    {
-      "message"
-    }
-  ],
-  "request": {
-    "patient": {
-      // Parsed patient here
-      // Identifiers need to be converted or dropped
-      // Variants need to be lifted over or dropped
-    },
+
+Example: Match with patients with congenital facial abnormalities
+<pre>
     "query": {
-      // Parsed query here
-      // Mandatory items must fully parse,
-      // Otherwise, an error should be returned instead
+    "components": {
+      "features": {
+        "component": "mandatory"
+        "value": "mandatory"
+        "filters": [
+          {
+            "filter": "ALL"
+            "terms": [
+              {
+                "id": "HP:0000271"
+                "label": "Abnormality of the face"
+                "ageOfOnset": {
+                  "id": "HP:0003577"
+                  "label": "Congenital onset"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
-  },
-  "results": [
+  }
+</pre>
+
+
+Questions:
+* How to handle un-observed terms?
+* Do we have a use case for "ANY"?
+
+
+### Component: `genomicFeatures` ###
+This provides matching for manually selected candidate genes and/or variants.
+
+Fields:
+* `filters`: a list of one or more filters that are each required to be true for a match to be returned
+    * `terms`: A list of candidate genes or candidate variants, containing the following fields:
+        * `gene`: the `id` must be an exact match
+        * `zygosity`: must be an exact match
+        * `consequence`: match must be the term or a descendant
+        * `variant`: one or more of the following sub-fields may be provided and must match exactly
+            * `assembly`: must be an exact match
+            * `referenceName`: must be an exact match
+            * `start`: must be an exact match
+            * `end`: must be an exact match
+            * `id`: must be an exact match
+            * `referenceBases`: must be an exact match
+            * `alternateBases`: must be an exact match
+    * `filter`:
+        * `LIKE` (default): A fuzzy match
+        * `ANY`: At least one of the terms in `terms` must match
+
+Backwards-compatibility: If `terms` is not provided, the genes from `patient.genes` should be used.
+
+
+Example 1. If the case has any candidate genes, SRCAP must be included:
+<pre>
+  "query": {
+    "components": {
+      "genes": {
+        "filters": [
+          {
+            "filter": "ANY"
+            "terms": [
+              {
+                "gene": {"id": "ENSG00000080603", "label": "SRCAP"}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+</pre>
+
+
+Example 2. Find other cases with delta F508
+<pre>
+  "query": {
+    "components": {
+      "genes": {
+        "filters": [
+          {
+            "filter": "ANY"
+            "terms": [
+              {
+                "variant": {
+                  "assembly": "GRCh37.p13"
+                  "referenceName": "7"
+                  "start": 117199645
+                  "referenceBases": "CTT"
+                  "alternateBases": ""
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+</pre>
+
+
+
+
+## Service status/configuration endpoint ##
+Proposal: a machine-readable endpoint that enables:
+* verifying that a service is online
+* determining the API versions, components (and their versions), and queries (e.g. genomic annotations) supported by the endpoint
+
+Tudor Groza has been doing work on this, but at it's simplest, you could imagine it behaving something like the very simple example below:
+
+POST /status
+
+Response:
+<pre>
+{
+  "url": "https://phenomecentral.org/rest/remoteMatcher/"
+  "label": "PhenomeCentral"
+  "type": "production"
+  "disclaimer": "By using data from PhenomeCentral, you agree..."
+  "versions": [
     {
-      // Component scores, as necessary
-      "scores": {
-        "patient",
-        "sex",
-        "species",
-        "ageOfOnset",
-        "modeOfInheritance",
-        "genes",
-        "features",
-        "variants",
-        "genome"
-      },
-
-      "patient": {
-        "meta": {
-          "..."
-        },
-
-        "sex": {
-          "..."
-        },
-
-        "species": {
-          "..."
+      "api": {
+        "version": "2.0"
+      }
+      "components": {
+        "genome": {
+          "version": 1
+          "annotations": [
+            {
+              "annotation": "alleleFrequency"
+              "source": "1000GP"
+              "population": "ALL"
+              "version": "phase3"
+            }
+            {
+              "annotation": "alleleFrequency"
+              "source": "PhenomeCentral"
+              "population": "matchable"
+              "version": "2015-12-14"
+            }
+            {
+              "annotation": "score"
+              "source": "SIFT"
+              "version": "2015-01-01"
+            }
+          ]
         }
-
-        "genes": {
-          "..."
-        },
-
         "features": {
-          "..."
+          "version": 2
+          "scores": [
+            {
+              "score": "simGIC"
+              "description": "Intersection of..."
+            }
+          ]
         }
       }
     }
   ]
 }
-```
+</pre>
+
