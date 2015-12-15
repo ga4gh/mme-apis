@@ -40,11 +40,13 @@ And a response:
 
 
 Three larger additions:
+
 1. The addition of the required query "meta" field, to hold versions of components and other query metadata
 1. The addition of the optional "query" field at the top level, to support constraints that extend beyond the match-by-example framework
 1. The addition of the optional "genome" component
 
 To support the following forms of exome/genome queries:
+
 1. Return patients with a rare (AF < 0.01 in ExAC) missense or nonsense (as annotated by VEP, Annovar, or Jannovar) variant in GENEX
 
 
@@ -58,7 +60,7 @@ Proposal: these versions be integer versions that are incremented when backwards
 Proposed match query:
 <pre>
 {
- <strong style="background-color: #ff9">"meta": {
+  <strong style="background-color: #ff9">"meta": {
     "components": {
       "ageOfOnset": {
         "version": 1
@@ -121,7 +123,7 @@ Each component may provide a numerical score (0-1) in the response:
     {
       "score": {
         "patient": 0.5
-       <strong style="background-color: #ff9">"features": 0.2
+        <strong style="background-color: #ff9">"features": 0.2
         "genomicFeatures": 0.8</strong>
       }
       "patient": {...}
@@ -269,10 +271,10 @@ Example: If the patient has any phenotypic data, they must have a facial abnorma
 
 Example: Only return matches with facial abnormalities
 <pre>
-    "query": {
+  "query": {
     "components": {
       "features": {
-       <strong style="background-color: #ff9">"component": "mandatory"
+        <strong style="background-color: #ff9">"component": "mandatory"
         "value": "mandatory"</strong>
         "filters": [
           {
@@ -293,7 +295,7 @@ Example: Only return matches with facial abnormalities
 
 Example: Match with patients with congenital facial abnormalities
 <pre>
-    "query": {
+  "query": {
     "components": {
       "features": {
         "component": "mandatory"
