@@ -179,7 +179,7 @@ Annotations:
     * `source`: VEP, ANNOVAR, Jannovar
     * `terms`: list of SO terms
 * `alleleFrequency`: float; additional fields:
-    * `source`: 1000GP, ESP5600, ExAC, <local db name>
+    * `source`: 1000GP, ESP5600, ExAC, local_db_name
     * `population`: ALL, CEU, ...
 * `score`: float; additional fields:
     * `source`: SIFT, PolyPhen2, MutationTaster, CADD
