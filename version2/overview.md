@@ -144,13 +144,13 @@ Each variant is annotated with a number of attributes, including its position (`
 
 Annotation types:
 * integer
-    * `filter`: `EQ` (default), `NEQ`, `LT`, `LTE`, `GT`, `GTE`
+    * `operator`: `EQ` (default), `NEQ`, `LT`, `LTE`, `GT`, `GTE`
         * single value (`value`)
 * float
-    * `filter`: `LTE`, `GTE`
+    * `operator`: `LTE`, `GTE`
         * single value (`value`)
 * nominal/categorical/ontological
-    * `filter`:
+    * `operator`:
         * single value (`term`):
             * `EQ` (default): Match must contain the term or a descendant of the term
         * multiple values (`terms`): `LIKE` (default), `ANY`, `ALL`
@@ -162,7 +162,7 @@ Fields:
 * `filters`: a list of filters, each with one or more of the following subfields (depending on the annotation):
     * `annotation`
     * `source` (used by many annotations)
-    * `filter`
+    * `operator`
     * `population` (used by `alleleFrequency` annotation)
     * `value|term|terms` (depending on number and type of annotation)
 
@@ -202,7 +202,7 @@ For example, to match against cases with 2 or more rare (AF < 0.01) harmful (mis
           {
             "annotation": "gene"
             "source": "Ensembl"
-            "filter": "ANY"
+            "operator": "ANY"
             "terms": [
               {"id": "ENSG...", "label": "EFTUD2"}
               {"id": "ENSG...", "label": "TTN"}
@@ -212,13 +212,13 @@ For example, to match against cases with 2 or more rare (AF < 0.01) harmful (mis
             "annotation": "alleleFrequency"
             "source": "ExAC"
             "population": "ALL"
-            "filter": "LT"
+            "operator": "LT"
             "value": 0.01
           }
           {
             "annotation": "consequence"
             "source": "VEP"
-            "filter": "ANY"
+            "operator": "ANY"
             "terms": [
               {"id": "SO:...", "label": "Stopgain"}
               {"id": "SO:...", "label": "Missense"}
@@ -240,7 +240,7 @@ Fields:
     * `terms`: A list of phenotype terms, containing one or more of the following fields:
         * `id`: the HPO term ID; must match term or a descendant
         * `ageOfOnset`: the age of onset as an HPO term; must match term or a descendant
-    * `filter`:
+    * `operator`:
         * `LIKE`: A fuzzy match
         * `ALL`: For every term in `terms`, the term or a descendant of that term must be present in the match
 
@@ -255,7 +255,7 @@ Example: If the patient has any phenotypic data, they must have a facial abnorma
       "features": {
         "filters": [
           {
-            "filter": "ALL"
+            "operator": "ALL"
             "terms": [
               {
                 "id": "HP:0000271"
@@ -278,7 +278,7 @@ Example: Only return matches with facial abnormalities
         "value": "mandatory"</strong>
         "filters": [
           {
-            "filter": "ALL"
+            "operator": "ALL"
             "terms": [
               {
                 "id": "HP:0000271"
@@ -302,7 +302,7 @@ Example: Match with patients with congenital facial abnormalities
         "value": "mandatory"
         "filters": [
           {
-            "filter": "ALL"
+            "operator": "ALL"
             "terms": [
               {
                 "id": "HP:0000271"
@@ -343,7 +343,7 @@ Fields:
             * `id`: must be an exact match
             * `referenceBases`: must be an exact match
             * `alternateBases`: must be an exact match
-    * `filter`:
+    * `operator`:
         * `LIKE` (default): A fuzzy match
         * `ANY`: At least one of the terms in `terms` must match
 
@@ -357,7 +357,7 @@ Example 1. If the case has any candidate genes, SRCAP must be included:
       "genes": {
         "filters": [
           {
-            "filter": "ANY"
+            "operator": "ANY"
             "terms": [
               {
                 "gene": {"id": "ENSG00000080603", "label": "SRCAP"}
@@ -378,7 +378,7 @@ Example 2. Find other cases with delta F508
       "genes": {
         "filters": [
           {
-            "filter": "ANY"
+            "operator": "ANY"
             "terms": [
               {
                 "variant": {
