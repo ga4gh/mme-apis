@@ -112,7 +112,7 @@ Each component's query object has the following reserved fields:
     * `mandatory`: a compatible version of the component must be supported by the service, else no results should be returned.
 * `value`:
     * `optional` (default)
-    * `mandatory`: the case should have data for the component in order to match. For example, if `value: mandatory` for the "genes" component, only cases with some candidate gene should be returned.
+    * `mandatory`: the case should have data for the component in order to match. For example, if `value: mandatory` for the "genomicFeatures" component, only cases with some candidate genomic feature should be returned.
 
 A service must therefore inspect all `query.components.*` objects to ensure that mandatory components are supported.
 
@@ -347,14 +347,14 @@ Fields:
         * `LIKE` (default): A fuzzy match
         * `ANY`: At least one of the terms in `terms` must match
 
-Backwards-compatibility: If `terms` is not provided, the genes from `patient.genes` should be used.
+Backwards-compatibility: If `terms` is not provided, the genomic features from `patient.genomicFeatures` should be used.
 
 
 Example 1. If the case has any candidate genes, SRCAP must be included:
 <pre>
   "query": {
     "components": {
-      "genes": {
+      "genomicFeatures": {
         "filters": [
           {
             "operator": "ANY"
