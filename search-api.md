@@ -231,6 +231,18 @@ A synchronous `application/json` response, of the following form:
 * ***Mandatory***
 * A `patient` object of the same form as the one described above for the query.
 
+### Non-Standard Fields
+Non-standard fields can be added to requests and responses with an underscore prefix as follows:
+```
+"gene": {
+        "_ensemblGeneID": "ENSG00000133392", 
+        "_entrezGeneID": "4629", 
+        "_geneName": "MYH11", 
+        "id": "ENSG00000133392"
+    }, 
+```
+The goal is to allow implementations to add data that are useful for tracking/debugging/reference but are not part of the official specification.
+
 ### Error handling
 The remote server should use HTTP status codes to report any errors encountered processing the match request. Here are a list of status codes and their meanings with regards to this API:
 
