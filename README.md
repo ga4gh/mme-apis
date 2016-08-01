@@ -20,20 +20,7 @@ Have a question? Send us an email at api@matchmakerexchange.org or create a GitH
 * To help securely share authentication tokens, the [KEYS](KEYS) file contains GPG keys for at least one member of each MME team.
 
 ## Endpoints
-Below are a list of live implementations of the API, and the associated base URLs.
-
-| Matchmaker | description | base URL | IP Address |
-| ---------- | ----------- | -------- | ---------- |
-| DECIPHER | production | https://decipher.sanger.ac.uk/mmapi/v1 | |
-| GeneMatcher | staging | https://staging.phenodbmatcher.net/mmapi | 76.127.141.233 |
-| GeneMatcher | production | https://genematcher.org/mmapi | 128.220.229.7 |
-| Monarch | production | http://mme.monarchinitiative.org | |
-| PhenomeCentral | production | https://phenomecentral.org/rest/remoteMatcher/ | |
+The wiki contains an up-to-date list of active endpoints: [https://github.com/ga4gh/mme-apis/wiki/Endpoints](https://github.com/ga4gh/mme-apis/wiki/Endpoints)
 
 ## Open-source API implementations
-
-Here are the open-source implementations of the MME API that we are aware of:
-
-1. MME reference server: https://github.com/MatchmakerExchange/reference-server. This implementation provides a concrete but simple example of one method for performing phenotype and gene-level matchmaking using an elasticsearch index.
-1. Monarch Initiative: https://github.com/monarch-initiative/monarch-mme. This is an adapter that implements the MME API on top of existing Monarch APIs.
-1. PhenomeCentral: https://github.com/phenotips/remote-matching. This package extends [PhenoTips](http://phenotips.org) and PhenomeCentral to support the MME API. 
+The wiki contains a list of open-source implementations of the MME API: [https://github.com/ga4gh/mme-apis/wiki/Implementations](https://github.com/ga4gh/mme-apis/wiki/Implementations)
