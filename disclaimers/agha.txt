@@ -1,0 +1,12 @@
+AGHA MME DISCLAIMER
+
+The Australian Genomics Health Alliance (AGHA) provides data in good faith as a research resource, without verifying the accuracy, clinical validity or utility of the data.  AGHA makes no warranty, express or implied, nor assumes any legal liability or responsibility for any purpose for which the data are used.
+In using this resource, the user agrees that absolutely no attempt to identify individual patients will be taken.
+
+Prior to using AGHA data in a publication, the user must contact the owner of the matching dataset to validate the match, and discuss publication recognition, which may include co-authorship if their contribution warrants it.  
+AGHA must be notified of the publication, and acknowledged with the following statement: This study makes use of data shared through the Australian Genomics Health Alliance (AGHA) Matchmaker Exchange. AGHA is funded through the National Health and Medical Research (GNT1113531).
+
+Please also refer to the MME End User Agreement 
+http://www.matchmakerexchange.org/assets/files/MatchmakerExchangeEndUserAgreement.pdf
+
+MME@australiangenomics.org.au
