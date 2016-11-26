@@ -39,6 +39,10 @@ After receiving a request, the remote server can respond in one of two ways:
     "contact" : {
       "name" : "Full Name",
       "institution" : "Contact Institution",
+      "roles" : [
+        "clinician"|"researcher"|"participant",
+        …
+      ],
       "href" : <URL>
     },
 
@@ -99,8 +103,12 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Contact
 * ***Mandatory***
 * The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
-  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
-  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `name` : The human-readable name of the person or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  1. `institution` : The human-readable institution of the contact person, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `roles` : A list of roles of the contact person. These may be self-declared by the submitting user, and might not have been verified by the sending server. (*Optional*) (*since v1.1)
+    * `clinician`: The contact person is a clinician responsible for the patient's care
+    * `researcher`: The contact person is a researcher with the necessary consent to submit the patient record
+    * `participant`: The contact person is the patient or a caregiver for the patient
   1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
     * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
     * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
