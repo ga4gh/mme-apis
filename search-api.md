@@ -7,21 +7,17 @@ For example: `https://yourmatchmaker.org/match`
 
 ## Versioning
 
-Every request must specify the API version within the HTTP `Accept` header.
+Every request must specify the API version within the HTTP `Content-Type` header.
 
-`Accept: application/vnd.ga4gh.matchmaker.<version>+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.<version>+json`
 
-Where `<version>` takes the form `vX.Y`. For example:
+Where `<version>` takes the form `vX.Y`, where `X` is a major version and `Y` is a minor version. Minor versions are cross-compatible. For example:
 
-`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
-
-The remote server must provide the API version of the response in the `Content-Type` header of every response:
-
-`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.v1.0+json`
 
 After receiving a request, the remote server can respond in one of two ways:
-  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
-  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+  * If a compatible version (with the same major version `X`) is supported by the remote server, it should provide a response using this version. The response should include the version of the server in the `Content-Type` header of the response.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to potentially re-submit the request using this version of the API.
 
 
 ## Search Request
