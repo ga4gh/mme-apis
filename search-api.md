@@ -39,7 +39,8 @@ After receiving a request, the remote server can respond in one of two ways:
     "contact" : {
       "name" : "Full Name",
       "institution" : "Contact Institution",
-      "href" : <URL>
+      "href" : <URL>,
+      "email" : "full.name@institution.edu"
     },
 
     "species" : <NCBI taxon identifier>,
@@ -102,8 +103,9 @@ After receiving a request, the remote server can respond in one of two ways:
   1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
   1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
   1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
-    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
-    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
+    * An `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
+    * A `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match. It is preferred to use the `email` field for this purpose.
+  1. `email` : A (potentially-anonymized) email address for contacting the owner of the patient record to follow up with a match. (*Optional*) (*since v1.1*)
 
 #### Species
 * *Optional*
