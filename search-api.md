@@ -49,7 +49,8 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "disorders" : [
       {
-        "id" : "MIM:######"|"Orphanet:#####"|…
+        "id" : "MIM:######"|"Orphanet:#####"|…,
+        "label" : "Disease name"
       },
       …
     ],
@@ -167,7 +168,9 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifiers, can be empty
+* Is a (potentially empty) ***list of disorders*** described by:
+  * `id`: an [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifier (***mandatory***)
+  * `label` : a human readable description of the disorder (*optional*) (*since v1.1*)
 * NOTE: we may want to support other sources later.
 
 #### Features
