@@ -40,7 +40,7 @@ After receiving a request, the remote server can respond in one of two ways:
       "name" : "Full Name",
       "institution" : "Contact Institution",
       "roles" : [
-        "clinician"|"researcher"|"participant",
+        "clinician"|"researcher"|"patient",
         …
       ],
       "href" : <URL>
@@ -108,7 +108,7 @@ After receiving a request, the remote server can respond in one of two ways:
   1. `roles` : A list of roles of the contact person. These may be self-declared by the submitting user, and might not have been verified by the sending server. (*Optional*) (*since v1.1)
     * `clinician`: The contact person is a clinician responsible for the patient's care
     * `researcher`: The contact person is a researcher with the necessary consent to submit the patient record
-    * `participant`: The contact person is the patient or a caregiver for the patient
+    * `patient`: The contact person is the patient or a caregiver for the patient
   1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
     * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
     * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
