@@ -28,6 +28,8 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```
 {
+  "disclaimer" : "Disclaimer text...",
+  "terms" : : "Terms text...",
   "patient" : {
     "id" : <identifier>,
     "label" : <identifier>,
@@ -87,6 +89,14 @@ After receiving a request, the remote server can respond in one of two ways:
   }
 }
 ```
+
+#### Disclaimer
+* *Optional*
+* Disclaimer text for the service, this is optional and can be included in all requests and responses. If included it is assumed that it supersedes the disclaimer stored in the GitHub repository.
+
+#### Terms
+* *Optional*
+* Terms and condittions text for the service, this is optional and can be included in all requests and responses.
 
 #### ID
 * ***Mandatory***
