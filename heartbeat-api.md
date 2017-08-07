@@ -54,5 +54,5 @@ Possible response codes are as follows:
 | 401 | Unauthorized | invalid API key
 | 500 | Internal Server Error | default error
 
-No content will be returned if the response code is anything other than 200.
+No content or non json content may be returned if the response code is anything other than 200.
 
