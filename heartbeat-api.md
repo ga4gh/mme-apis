@@ -44,3 +44,15 @@ A synchronous `application/json` response, of the following form:
 ##### Disclaimer
 * ***Optional***
 * Optional disclaimer.
+
+### Response Codes
+Possible response codes are as follows:
+
+| HTTP Status Code | Reason Phrase | Description
+| ---------------- | -------- | -----------
+| 200 | OK | no error |
+| 401 | Unauthorized | invalid API key
+| 500 | Internal Server Error | default error
+
+No content will be returned if the response code is anything other than 200.
+
