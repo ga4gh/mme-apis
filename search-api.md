@@ -66,7 +66,7 @@ After receiving a request, the remote server can respond in one of two ways:
     "genomicFeatures" : [
       {
         "gene" : {
-          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+          "id" : <ensembl gene ID>|<entrez gene ID>|<gene symbol>
         },
         "variant" : {
           "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
