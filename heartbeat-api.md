@@ -9,6 +9,10 @@ For example: `https://yourmatchmaker.org/heartbeat`
 
 `HTTP GET` request to `<base_remote_url>/heartbeat`
 
+#### Security
+* ***Mandatory***, 
+* This is a protected resource and as such requires the [use of an API key to access](/join-protocol.md).
+
 ## Heartbeat Response
 A synchronous `application/json` response, of the following form:
 
