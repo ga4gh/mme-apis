@@ -5,6 +5,10 @@
 For example: `https://yourmatchmaker.org/match`
 
 
+## Security
+
+This is a protected resource and as such requires the [use of an API key to access](/join-protocol.md).
+
 ## Versioning
 
 Every request must specify the API version within the HTTP `Content-Type` header.
