@@ -95,7 +95,7 @@ A synchronous `application/json` response, of the following form:
 
 ##### NumberOfPotentialMatchesSent
 * ***Optional***
-* The number of potential match returned received by this node.
+* The number of potential match returned by this node as the result of all requests.
 
 ##### DateGenerated
 * ***Optional***
