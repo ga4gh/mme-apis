@@ -7,21 +7,17 @@ For example: `https://yourmatchmaker.org/match`
 
 ## Versioning
 
-Every request must specify the API version within the HTTP `Accept` header.
+Every request must specify the API version within the HTTP `Content-Type` header.
 
-`Accept: application/vnd.ga4gh.matchmaker.<version>+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.<version>+json`
 
-Where `<version>` takes the form `vX.Y`. For example:
+Where `<version>` takes the form `vX.Y`, where `X` is a major version and `Y` is a minor version. Minor versions are cross-compatible. For example:
 
-`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
-
-The remote server must provide the API version of the response in the `Content-Type` header of every response:
-
-`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.v1.0+json`
 
 After receiving a request, the remote server can respond in one of two ways:
-  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
-  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+  * If a compatible version (with the same major version `X`) is supported by the remote server, it should provide a response using this version. The response should include the version of the server in the `Content-Type` header of the response.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to potentially re-submit the request using this version of the API.
 
 
 ## Search Request
@@ -40,7 +36,11 @@ After receiving a request, the remote server can respond in one of two ways:
       "name" : "Full Name",
       "institution" : "Contact Institution",
       "href" : <URL>,
-      "email" : "full.name@institution.edu"
+      "email" : "full.name@institution.edu",
+      "roles" : [
+        "clinician"|"researcher"|"patient",
+        …
+      ]
     },
 
     "species" : <NCBI taxon identifier>,
@@ -50,13 +50,15 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "disorders" : [
       {
-        "id" : "MIM:######"|"Orphanet:#####"|…
+        "id" : "MIM:######"|"Orphanet:#####"|…,
+        "label" : "Disease name"
       },
       …
     ],
     "features" : [
       {
         "id" : <HPO code>,
+        "label" : "Feature description",
         "observed" : "yes"|"no",
         "ageOfOnset" : "…"
       },
@@ -100,8 +102,12 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Contact
 * ***Mandatory***
 * The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
-  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
-  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `name` : The human-readable name of the person or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  1. `institution` : The human-readable institution of the contact person, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  1. `roles` : A list of roles of the contact person. These may be self-declared by the submitting user, and might not have been verified by the sending server. (*Optional*) (*since v1.1)
+    * `clinician`: The contact person is a clinician responsible for the patient's care
+    * `researcher`: The contact person is a researcher with the necessary consent to submit the patient record
+    * `patient`: The contact person is the patient or a caregiver for the patient
   1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
     * An `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
     * A `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match. It is preferred to use the `email` field for this purpose.
@@ -168,13 +174,16 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifiers, can be empty
+* Is a (potentially empty) ***list of disorders*** described by:
+  * `id`: an [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifier (***mandatory***)
+  * `label` : a human readable description of the disorder (*optional*) (*since v1.1*)
 * NOTE: we may want to support other sources later.
 
 #### Features
 * It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
-  * `id`: an  HPO term identifier of the form: `HP:#######`
+  * `id`: an HPO term identifier of the form: `HP:#######` (***mandatory***)
+  * `label`: a human readable description of the phenotypic feature, such as the HPO term name (*optional*) (*since v1.1*)
   * `observed`: `"yes"`|`"no"` defines if the feature has been _explicitly observed_ (`yes`) or _explicitly not observed_ (`no`). Omission of this optional field assumes the feature has been _explicitly observed_. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
