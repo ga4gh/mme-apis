@@ -68,7 +68,7 @@ After receiving a request, the remote server can respond in one of two ways:
     "genomicFeatures" : [
       {
         "gene" : {
-          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+          "id" : <ensembl gene ID>|<entrez gene ID>|<gene symbol>
         },
         "variant" : {
           "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
@@ -203,9 +203,10 @@ After receiving a request, the remote server can respond in one of two ways:
 * Is a **list of candidate causal genes and variants** described by:
   * `gene`: (***mandatory***)
     * `id`: A gene symbol or identifier (***mandatory***):
-      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
       * `<ensembl gene ID>` OR
-      * `<entrez gene ID>`
+      * `<entrez gene ID>` OR
+      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/)
+      * The use of ensembl gene ID is ***strongly*** encouraged and will become mandatory in 2.0 
   * `variant` (*optional*): the specific variant
     * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
       * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
