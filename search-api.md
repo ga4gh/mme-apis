@@ -28,6 +28,8 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```
 {
+  "disclaimer" : "Disclaimer text...",
+  "terms" : : "Terms text...",
   "patient" : {
     "id" : <identifier>,
     "label" : <identifier>,
@@ -87,6 +89,16 @@ After receiving a request, the remote server can respond in one of two ways:
   }
 }
 ```
+
+#### Disclaimer
+* *Optional*
+* Disclaimer text for the service, this is optional and can be included in all requests and responses. If included it is assumed that it supersedes the disclaimer stored in the GitHub repository.
+* Note that the diclaimer should be shown with the returned data per item 6 of the MME service agreement.
+* [See existing disclaimers](/disclaimers/).
+
+#### Terms
+* *Optional*
+* Terms and conditions text for the service, this is optional and can be included in all requests and responses.
 
 #### ID
 * ***Mandatory***
@@ -226,6 +238,11 @@ A synchronous `application/json` response, of the following form:
   ]
 }
 ```
+
+#### Disclaimer & Terms
+* *Optional*
+* Disclaimer & terms for the data, this is symetrical to the request.
+* [See existing disclaimers](/disclaimers/).
 
 #### Results
 * ***Mandatory***, but can be empty.
