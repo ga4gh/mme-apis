@@ -236,7 +236,7 @@ A synchronous `application/json` response, of the following form:
 {
   "results" : [
     {
-	  "score" : {
+      "score" : {
         "patient" : <number>
       },
       "patient" : {…},
