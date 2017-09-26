@@ -51,7 +51,7 @@ A synchronous `application/json` response, of the following form:
 
 ##### NumberOfSubmitters
 * ***Optional***
-* The number of PIs(or data-owners) who have submitted cases that are available for matching using MME in this node.
+* The number of PIs (or data-owners) who have submitted cases that are available for matching using MME in this node.
 
 ##### NumberOfGenes
 * ***Optional***

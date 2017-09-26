@@ -234,9 +234,11 @@ A synchronous `application/json` response, of the following form:
 
 ```
 {
+  "disclaimer" : "Disclaimer text...",
+  "terms" : : "Terms text...",
   "results" : [
     {
-	  "score" : {
+      "score" : {
         "patient" : <number>
       },
       "patient" : {…},
