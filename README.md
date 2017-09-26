@@ -6,7 +6,7 @@ The Matchmaker Exchange (MME) API provides a shared language that databases can 
 
 ## Implementing the MME API
 
-Version 1.1 (latest release): 
+Version 1.2 (latest release): 
 * API specification: [search-api.md](search-api.md)
 * Publication in Human Mutation: [doi:10.1002/humu.22850](http://dx.doi.org/10.1002/humu.22850)
 
