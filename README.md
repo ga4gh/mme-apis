@@ -1,6 +1,6 @@
 # Matchmaker Exchange API
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.17235.svg)](http://dx.doi.org/10.5281/zenodo.17235)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.997379.svg)](https://doi.org/10.5281/zenodo.997379)
 
 The Matchmaker Exchange (MME) API provides a shared language that databases can use to query each other to find similar patients. The API is build around a standardized patient profile that includes both phenotype and genotype information. Implementing the API involves parsing a query profile, identifying cases in your database that are similar, and returning a list of profiles for those cases.
 
