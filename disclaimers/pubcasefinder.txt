@@ -1,0 +1,5 @@
+PubCaseFinder MME DISCLAIMER
+
+PubCaseFinder provides data in good faith as a investigative tool, but without verifying the accuracy, clinical validity or utility of the data. PubCaseFinder makes no warranty, express or implied, nor assumes any legal liability or responsibility for any purpose for which the data are used.
+
+DBCLS shall bear no liability with respect to damages incurred by the change, discontinuation or termination of the Service.
