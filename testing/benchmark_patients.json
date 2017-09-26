@@ -98,11 +98,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_004247.3(EFTUD2):c.2770C>T",
+          "end": 42929131,
+          "referenceBases": "G",
           "referenceName": "17",
-          "start": 42929131
-        }
+          "start": 42929130
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000079",
@@ -213,11 +216,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_006463.4(STAMBP):c.125A>G",
+          "end": 74058108,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 74058108
-        }
+          "start": 74058107
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -228,11 +234,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_006463.4(STAMBP):c.532C>T",
+          "end": 74074670,
+          "referenceBases": "C",
           "referenceName": "2",
-          "start": 74074670
-        }
+          "start": 74074669
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000083",
@@ -333,11 +342,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_000414.3(HSD17B4):c.1547T>C",
+          "end": 118860954,
+          "referenceBases": "T",
           "referenceName": "5",
-          "start": 118860954
-        }
+          "start": 118860953
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -348,11 +360,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_000414.3(HSD17B4):c.101C>T",
+          "end": 118792052,
+          "referenceBases": "C",
           "referenceName": "5",
-          "start": 118792052
-        }
+          "start": 118792051
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0000282",
@@ -403,26 +418,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
+          "end": 7050691,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050691
-        }
-      },
-      {
-        "gene": {
-          "id": "LAMA1"
+          "start": 7050690
         },
-        "type": {
-          "id": "SO:0001630",
-          "label": "SPLICING"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.588+2T>G",
-          "referenceName": "18",
-          "start": 7050691
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0000333",
@@ -478,11 +481,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
+          "end": 128412081,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412081
-        }
+          "start": 128412080
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -493,11 +499,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
+          "end": 128412067,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412067
-        }
+          "start": 128412066
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -508,11 +517,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
+          "end": 128396914,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 128396914
-        }
+          "start": 128396913
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001009",
@@ -563,11 +575,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.342C>G",
+          "end": 128412081,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412081
-        }
+          "start": 128412080
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -578,11 +593,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.356C>T",
+          "end": 128412067,
+          "referenceBases": "G",
           "referenceName": "2",
-          "start": 128412067
-        }
+          "start": 128412066
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -593,11 +611,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_001136037.2(LIMS2):c.1034T>C",
+          "end": 128396914,
+          "referenceBases": "A",
           "referenceName": "2",
-          "start": 128396914
-        }
+          "start": 128396913
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001010",
@@ -638,26 +659,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14794076,
+          "referenceBases": "C",
           "referenceName": "12",
-          "start": 14794076
-        }
-      },
-      {
-        "gene": {
-          "id": "GUCY2C"
+          "start": 14794075
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
-          "referenceName": "12",
-          "start": 14794076
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001011",
@@ -698,11 +707,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14794076,
+          "referenceBases": "C",
           "referenceName": "12",
-          "start": 14794076
-        }
+          "start": 14794075
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -713,11 +725,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_004963.3(GUCY2C):c.2008G>A",
+          "end": 14772238,
+          "referenceBases": "A",
           "referenceName": "12",
-          "start": 14794076
-        }
+          "start": 14772237
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001012",
@@ -798,11 +813,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1312C>T",
+          "end": 75665092,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 75665092
-        }
+          "start": 75665091
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -813,11 +831,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1573G>A",
+          "end": 75662589,
+          "referenceBases": "C",
           "referenceName": "16",
-          "start": 75662589
-        }
+          "start": 75662588
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001013",
@@ -883,11 +904,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1312C>T",
+          "end": 75665092,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 75665092
-        }
+          "start": 75665091
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -898,11 +922,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005548.2(KARS):c.1573G>A",
+          "end": 75662589,
+          "referenceBases": "C",
           "referenceName": "16",
-          "start": 75662589
-        }
+          "start": 75662588
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001014",
@@ -968,26 +995,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
+          "end": 34072338,
+          "referenceBases": "G",
           "referenceName": "21",
-          "start": 34072338
-        }
-      },
-      {
-        "gene": {
-          "id": "SYNJ1"
+          "start": 34072337
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_003895.3(SYNJ1):c.406C>T",
-          "referenceName": "21",
-          "start": 34072338
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001015",
@@ -1078,26 +1093,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_018060.3(IARS2):c.2726C>T",
+          "end": 220316451,
+          "referenceBases": "C",
           "referenceName": "1",
-          "start": 220316451
-        }
-      },
-      {
-        "gene": {
-          "id": "IARS2"
+          "start": 220316450
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018060.3(IARS2):c.2726C>T",
-          "referenceName": "1",
-          "start": 220316451
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001016",
@@ -1203,11 +1206,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.6345+3G>C",
+          "end": 6977723,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 6977723
-        }
+          "start": 6977722
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1219,10 +1225,9 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.exon4-11del",
-          "referenceName": "18",
-          "start": 7038809
-        }
+          "referenceName": "18"
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001017",
@@ -1304,10 +1309,9 @@
         },
         "variant": {
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.7965-15_7965-3del",
-          "referenceName": "18",
-          "start": 6956767
-        }
+          "referenceName": "18"
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1318,11 +1322,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2988_2989delA",
+          "end": 7016493,
+          "referenceBases": "GT",
           "referenceName": "18",
-          "start": 7016490
-        }
+          "start": 7016491
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001018",
@@ -1438,11 +1445,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "AGGG",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.6701delC",
+          "end": 6973132,
+          "referenceBases": "AGGGG",
           "referenceName": "18",
-          "start": 6973129
-        }
+          "start": 6973127
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1453,11 +1463,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.8557-1G>C",
+          "end": 6948556,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 6948556
-        }
+          "start": 6948555
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1468,11 +1481,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.768+1G>A",
+          "end": 7049076,
+          "referenceBases": "C",
           "referenceName": "18",
-          "start": 7049076
-        }
+          "start": 7049075
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001019",
@@ -1553,11 +1569,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
+          "end": 7016663,
+          "referenceBases": "AAT",
           "referenceName": "18",
-          "start": 7016662
-        }
+          "start": 7016660
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1568,11 +1587,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.555T>G",
+          "end": 7050726,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050726
-        }
+          "start": 7050725
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001022",
@@ -1663,11 +1685,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.2816_2817delAT",
+          "end": 7016663,
+          "referenceBases": "AAT",
           "referenceName": "18",
-          "start": 7016662
-        }
+          "start": 7016660
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -1678,11 +1703,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_005559.3(LAMA1):c.555T>G",
+          "end": 7050726,
+          "referenceBases": "A",
           "referenceName": "18",
-          "start": 7050726
-        }
+          "start": 7050725
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001023",
@@ -1723,11 +1751,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001024",
@@ -1788,11 +1819,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001025",
@@ -1868,11 +1902,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001026",
@@ -1948,11 +1985,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+406C>A",
+          "end": 2447847,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2447847
-        }
+          "start": 2447846
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001027",
@@ -2028,11 +2068,14 @@
           "label": "3'UTR"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.-72G>A",
+          "end": 2451408,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2451408
-        }
+          "start": 2451407
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001029",
@@ -2078,11 +2121,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001030",
@@ -2143,11 +2189,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001049",
@@ -2208,11 +2257,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001052",
@@ -2283,11 +2335,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001053",
@@ -2353,11 +2408,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+301G>C",
+          "end": 2447952,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447952
-        }
+          "start": 2447951
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001054",
@@ -2433,11 +2491,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+300G>C",
+          "end": 2447953,
+          "referenceBases": "C",
           "referenceName": "20",
-          "start": 2447953
-        }
+          "start": 2447952
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001055",
@@ -2503,11 +2564,14 @@
           "label": "INTRONIC"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003091.3(SNRPB):c.155+407C>T",
+          "end": 2447846,
+          "referenceBases": "G",
           "referenceName": "20",
-          "start": 2447846
-        }
+          "start": 2447845
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001056",
@@ -2588,11 +2652,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001134407.1(GRIN2A):c.2449A>G",
+          "end": 9862854,
+          "referenceBases": "T",
           "referenceName": "16",
-          "start": 9862854
-        }
+          "start": 9862853
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001057",
@@ -2693,11 +2760,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.587+5G>A",
+          "end": 1105813,
+          "referenceBases": "G",
           "referenceName": "19",
-          "start": 1105813
-        }
+          "start": 1105812
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -2708,11 +2778,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.588-8_588-4del",
+          "end": 1106237,
+          "referenceBases": "CTTTTC",
           "referenceName": "19",
-          "start": 1106233
-        }
+          "start": 1106231
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001058",
@@ -2818,26 +2891,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.381C>A",
+          "end": 1105455,
+          "referenceBases": "C",
           "referenceName": "19",
-          "start": 1105455
-        }
-      },
-      {
-        "gene": {
-          "id": "GPX4"
+          "start": 1105454
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001039848.1(GPX4):c.381C>A",
-          "referenceName": "19",
-          "start": 1105455
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001059",
@@ -2898,11 +2959,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_002047.2(GARS):c.1904C>T",
+          "end": 30671863,
+          "referenceBases": "C",
           "referenceName": "7",
-          "start": 30671863
-        }
+          "start": 30671862
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -2913,11 +2977,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_002047.2(GARS):c.1787G>A",
+          "end": 30668263,
+          "referenceBases": "G",
           "referenceName": "7",
-          "start": 30668263
-        }
+          "start": 30668262
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001060",
@@ -3043,11 +3110,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "TGG",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1891delC",
+          "end": 25761027,
+          "referenceBases": "TGGG",
           "referenceName": "3",
-          "start": 25761025
-        }
+          "start": 25761023
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -3058,11 +3128,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
+          "start": 25775421
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001069",
@@ -3163,26 +3236,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "TCCCCCC",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
+          "end": 25773869,
+          "referenceBases": "TCCCCC",
           "referenceName": "3",
-          "start": 25773865
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25773863
         },
-        "type": {
-          "id": "SO:0001589",
-          "label": "FRAMESHIFT"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1370dupG",
-          "referenceName": "3",
-          "start": 25773865
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001070",
@@ -3333,26 +3394,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001071",
@@ -3513,26 +3562,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001076",
@@ -3618,26 +3655,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001078",
@@ -3768,26 +3793,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001079",
@@ -3923,26 +3936,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
+          "end": 25775422,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 25775422
-        }
-      },
-      {
-        "gene": {
-          "id": "NGLY1"
+          "start": 25775421
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1201A>T",
-          "referenceName": "3",
-          "start": 25775422
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001080",
@@ -3993,26 +3994,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "CTTTT",
           "assembly": "GRCh37",
-          "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
+          "end": 36579992,
+          "referenceBases": "CTTT",
           "referenceName": "19",
-          "start": 36579992
-        }
-      },
-      {
-        "gene": {
-          "id": "WDR62"
+          "start": 36579988
         },
-        "type": {
-          "id": "SO:0001589",
-          "label": "FRAMESHIFT"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001083961.1(WDR62):c.1821dupT",
-          "referenceName": "19",
-          "start": 36579992
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001081",
@@ -4093,11 +4082,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_152296(ATP1A3):c.2452G>A",
+          "end": 42474427,
+          "referenceBases": "C",
           "referenceName": "19",
-          "start": 42474427
-        }
+          "start": 42474426
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001084",
@@ -4263,11 +4255,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_003036.3(SKI):c.347G>A",
+          "end": 2160552,
+          "referenceBases": "G",
           "referenceName": "1",
-          "start": 2160552
-        }
+          "start": 2160551
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001085",
@@ -4418,11 +4413,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_005589(ALDH6A1):c.514T>C",
+          "end": 74538114,
+          "referenceBases": "A",
           "referenceName": "14",
-          "start": 74538114
-        }
+          "start": 74538113
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -4433,11 +4431,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_005589(ALDH6A1):c.1603C>T",
+          "end": 74527350,
+          "referenceBases": "G",
           "referenceName": "14",
-          "start": 74527350
-        }
+          "start": 74527349
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001086",
@@ -4508,11 +4509,14 @@
           "label": "FRAMESHIFT"
         },
         "variant": {
+          "alternateBases": "AC",
           "assembly": "GRCh37",
-          "hgvs": "NM_181523.2(PIK3R1):c.1906_1907insC",
+          "end": 67592090,
+          "referenceBases": "A",
           "referenceName": "5",
-          "start": 67592090
-        }
+          "start": 67592089
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001091",
@@ -4623,26 +4627,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_024339.3(THOC6):c.136G>A",
+          "end": 3075805,
+          "referenceBases": "G",
           "referenceName": "16",
-          "start": 3075805
-        }
-      },
-      {
-        "gene": {
-          "id": "THOC6"
+          "start": 3075804
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_024339.3(THOC6):c.136G>A",
-          "referenceName": "16",
-          "start": 3075805
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001105",
@@ -4723,26 +4715,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_138387.3(G6PC3):c.829C>T",
+          "end": 42153199,
+          "referenceBases": "C",
           "referenceName": "17",
-          "start": 42153199
-        }
-      },
-      {
-        "gene": {
-          "id": "G6PC3"
+          "start": 42153198
         },
-        "type": {
-          "id": "SO:0001587",
-          "label": "STOPGAIN"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_138387.3(G6PC3):c.829C>T",
-          "referenceName": "17",
-          "start": 42153199
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001106",
@@ -4788,26 +4768,14 @@
           "label": "SPLICING"
         },
         "variant": {
+          "alternateBases": "T",
           "assembly": "GRCh37",
-          "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
+          "end": 47221659,
+          "referenceBases": "TAAGT",
           "referenceName": "2",
-          "start": 47221656
-        }
-      },
-      {
-        "gene": {
-          "id": "TTC7A"
+          "start": 47221654
         },
-        "type": {
-          "id": "SO:0001630",
-          "label": "SPLICING"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_020458.2(TTC7A):c.1001+3_1001+6del",
-          "referenceName": "2",
-          "start": 47221656
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001107",
@@ -4853,26 +4821,14 @@
           "label": "MISSENSE"
         },
         "variant": {
+          "alternateBases": "C",
           "assembly": "GRCh37",
-          "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
+          "end": 20225453,
+          "referenceBases": "T",
           "referenceName": "3",
-          "start": 20225453
-        }
-      },
-      {
-        "gene": {
-          "id": "SGOL1"
+          "start": 20225452
         },
-        "type": {
-          "id": "SO:0001583",
-          "label": "MISSENSE"
-        },
-        "variant": {
-          "assembly": "GRCh37",
-          "hgvs": "NM_001012410.3(SGOL1):c.67A>G",
-          "referenceName": "3",
-          "start": 20225453
-        }
+        "zygosity": 2
       }
     ],
     "id": "P0001108",
@@ -5008,11 +4964,14 @@
           "label": "INFRAME-DELETION"
         },
         "variant": {
+          "alternateBases": "G",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1205_1207del",
+          "end": 25775418,
+          "referenceBases": "GTTC",
           "referenceName": "3",
-          "start": 25775416
-        }
+          "start": 25775414
+        },
+        "zygosity": 1
       },
       {
         "gene": {
@@ -5023,11 +4982,14 @@
           "label": "STOPGAIN"
         },
         "variant": {
+          "alternateBases": "A",
           "assembly": "GRCh37",
-          "hgvs": "NM_018297.3(NGLY1):c.1570C>T",
+          "end": 25761670,
+          "referenceBases": "G",
           "referenceName": "3",
-          "start": 25770665
-        }
+          "start": 25761669
+        },
+        "zygosity": 1
       }
     ],
     "id": "P0001135",

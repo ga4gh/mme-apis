@@ -5,23 +5,23 @@
 For example: `https://yourmatchmaker.org/match`
 
 
+## Security
+
+This is a protected resource and as such requires the [use of an API key to access](/join-protocol.md).
+
 ## Versioning
 
-Every request must specify the API version within the HTTP `Accept` header.
+Every request must specify the API version within the HTTP `Content-Type` header.
 
-`Accept: application/vnd.ga4gh.matchmaker.<version>+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.<version>+json`
 
-Where `<version>` takes the form `vX.Y`. For example:
+Where `<version>` takes the form `vX.Y`, where `X` is a major version and `Y` is a minor version. Minor versions are cross-compatible. For example:
 
-`Accept: application/vnd.ga4gh.matchmaker.v0.1+json`
-
-The remote server must provide the API version of the response in the `Content-Type` header of every response:
-
-`Content-Type: application/vnd.ga4gh.matchmaker.v0.7+json`
+`Content-Type: application/vnd.ga4gh.matchmaker.v1.0+json`
 
 After receiving a request, the remote server can respond in one of two ways:
-  * If a compatible version (`vX.Z` where `Z>=Y`) is supported by the remote server, it should provide a response using this version.
-  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to re-submit the request using this version of the API.
+  * If a compatible version (with the same major version `X`) is supported by the remote server, it should provide a response using this version. The response should include the version of the server in the `Content-Type` header of the response.
+  * If no appropriate version is supported by the remote server, it should respond with `Not Acceptable (406)`, containing a JSON body with a description of the error. The response should contain a `Content-Type` header with the latest API version supported by the server. This will enable the user to potentially re-submit the request using this version of the API.
 
 
 ## Search Request
@@ -32,6 +32,8 @@ After receiving a request, the remote server can respond in one of two ways:
 
 ```
 {
+  "disclaimer" : "Disclaimer text...",
+  "terms" : : "Terms text...",
   "patient" : {
     "id" : <identifier>,
     "label" : <identifier>,
@@ -39,7 +41,12 @@ After receiving a request, the remote server can respond in one of two ways:
     "contact" : {
       "name" : "Full Name",
       "institution" : "Contact Institution",
-      "href" : <URL>
+      "href" : <URL>,
+      "email" : "full.name@institution.edu",
+      "roles" : [
+        "clinician"|"researcher"|"patient",
+        …
+      ]
     },
 
     "species" : <NCBI taxon identifier>,
@@ -49,13 +56,15 @@ After receiving a request, the remote server can respond in one of two ways:
 
     "disorders" : [
       {
-        "id" : "MIM:######"|"Orphanet:#####"|…
+        "id" : "MIM:######"|"Orphanet:#####"|…,
+        "label" : "Disease name"
       },
       …
     ],
     "features" : [
       {
         "id" : <HPO code>,
+        "label" : "Feature description",
         "observed" : "yes"|"no",
         "ageOfOnset" : "…"
       },
@@ -64,7 +73,7 @@ After receiving a request, the remote server can respond in one of two ways:
     "genomicFeatures" : [
       {
         "gene" : {
-          "id" : <gene symbol>|<ensembl gene ID>|<entrez gene ID>
+          "id" : <ensembl gene ID>|<entrez gene ID>|<gene symbol>
         },
         "variant" : {
           "assembly" : "NCBI36"|"GRCh37.p13"|"GRCh38.p1"|…,
@@ -86,6 +95,16 @@ After receiving a request, the remote server can respond in one of two ways:
 }
 ```
 
+#### Disclaimer
+* *Optional*
+* Disclaimer text for the service, this is optional and can be included in all requests and responses. If included it is assumed that it supersedes the disclaimer stored in the GitHub repository.
+* Note that the diclaimer should be shown with the returned data per item 6 of the MME service agreement.
+* [See existing disclaimers](/disclaimers/).
+
+#### Terms
+* *Optional*
+* Terms and conditions text for the service, this is optional and can be included in all requests and responses.
+
 #### ID
 * ***Mandatory***
 * An identifier for the patient record, unique within the matchmaker where the patient data is stored. This identifier should be unchanged by modifications to the patient record over time (e.g. adding phenotypes). It may become invalid (e.g. if the record is deleted), but it should never be "replaced" and refer to a different patient.
@@ -99,11 +118,16 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Contact
 * ***Mandatory***
 * The contact information describes how the eventual recipient of the match response can contact the owner of the matched patient record to follow-up on the match.
-  1. `name` : The human-readable name of the clinician or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
-  1. `institution` : The human-readable institution of the clinician, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
-  1. `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
-    * an `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
-    * a `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match.
+  * `name` : The human-readable name of the person or organization that the user is contacting with the provided URL. A transparent string, limited to 255 characters in utf-8. (***Mandatory***)
+  * `institution` : The human-readable institution of the contact person, if available. A transparent string, limited to 255 characters in utf-8. (*Optional*)
+  * `roles` : A list of roles of the contact person. These may be self-declared by the submitting user, and might not have been verified by the sending server. (*Optional*) (*since v1.1)
+    * `clinician`: The contact person is a clinician responsible for the patient's care
+    * `researcher`: The contact person is a researcher with the necessary consent to submit the patient record
+    * `patient`: The contact person is the patient or a caregiver for the patient
+  * `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
+    * An `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
+    * A `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match. It is preferred to use the `email` field for this purpose.
+  * `email` : A (potentially-anonymized) email address for contacting the owner of the patient record to follow up with a match. (*Optional*) (*since v1.1*)
 
 #### Species
 * *Optional*
@@ -166,13 +190,16 @@ After receiving a request, the remote server can respond in one of two ways:
 
 #### Disorders
 * *Optional*
-* Is a list of [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifiers, can be empty
+* Is a (potentially empty) ***list of disorders*** described by:
+  * `id`: an [OMIM](http://omim.org/) (`MIM:######`) or [OrphaNet](http://www.orphadata.org/) (`Orphanet:#####`) identifier (***mandatory***)
+  * `label` : a human readable description of the disorder (*optional*) (*since v1.1*)
 * NOTE: we may want to support other sources later.
 
 #### Features
 * It is ***mandatory*** to have at least one of these two: `features`, `genomicFeatures` (having both is preferred)
 * Is a **list of features** described by:
-  * `id`: an  HPO term identifier of the form: `HP:#######`
+  * `id`: an HPO term identifier of the form: `HP:#######` (***mandatory***)
+  * `label`: a human readable description of the phenotypic feature, such as the HPO term name (*optional*) (*since v1.1*)
   * `observed`: `"yes"`|`"no"` defines if the feature has been _explicitly observed_ (`yes`) or _explicitly not observed_ (`no`). Omission of this optional field assumes the feature has been _explicitly observed_. (*optional*)
   * `ageOfOnset`: same as the global age of onset described above (*optional*; system which do not support this type of information per symptom should ignore it)
 * More metadata can be later added to each feature if necessary.
@@ -182,9 +209,10 @@ After receiving a request, the remote server can respond in one of two ways:
 * Is a **list of candidate causal genes and variants** described by:
   * `gene`: (***mandatory***)
     * `id`: A gene symbol or identifier (***mandatory***):
-      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/) OR
       * `<ensembl gene ID>` OR
-      * `<entrez gene ID>`
+      * `<entrez gene ID>` OR
+      * `<gene symbol>` from the [HGNC database](http://www.genenames.org/)
+      * The use of ensembl gene ID is ***strongly*** encouraged and will become mandatory in 2.0 
   * `variant` (*optional*): the specific variant
     * `assembly`: reference assembly identifier, including patch number if relevant, of the form: `<assembly>[.<patch>]` (***mandatory*** if `variant` is provided)
       * example valid values: `"NCBI36"`, `"GRCh37"`, `"GRCh37.p13"`, `"GRCh38"`, `"GRCh38.p1"`
@@ -206,9 +234,11 @@ A synchronous `application/json` response, of the following form:
 
 ```
 {
+  "disclaimer" : "Disclaimer text...",
+  "terms" : : "Terms text...",
   "results" : [
     {
-	  "score" : {
+      "score" : {
         "patient" : <number>
       },
       "patient" : {…},
@@ -217,6 +247,11 @@ A synchronous `application/json` response, of the following form:
   ]
 }
 ```
+
+#### Disclaimer & Terms
+* *Optional*
+* Disclaimer & terms for the data, this is symetrical to the request.
+* [See existing disclaimers](/disclaimers/).
 
 #### Results
 * ***Mandatory***, but can be empty.
