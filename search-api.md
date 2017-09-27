@@ -42,7 +42,7 @@ After receiving a request, the remote server can respond in one of two ways:
       "name" : "Full Name",
       "institution" : "Contact Institution",
       "href" : <URL>,
-      "email" : "full.name@institution.edu",
+      "email" : "full.name@institution.edu"|["full.name1@institution.edu", "full.name2@institution.edu"],
       "roles" : [
         "clinician"|"researcher"|"patient",
         …
@@ -126,8 +126,8 @@ After receiving a request, the remote server can respond in one of two ways:
     * `patient`: The contact person is the patient or a caregiver for the patient
   * `href` : A public (no login required) URL for contacting the owner of the patient record to follow up with a match. This must be a valid URL (of the form `<scheme>:<address>`), and could take a number of forms: (***Mandatory***)
     * An `HTTP` URL: in this case, the URL could be a contact form which would allow the user to contact the owner of the matched patient.
-    * A `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match. It is preferred to use the `email` field for this purpose.
-  * `email` : A (potentially-anonymized) email address for contacting the owner of the patient record to follow up with a match. (*Optional*) (*since v1.1*)
+    * A `mailto` URL: in this case, the URL could be a (potentially-anonymized) email address to contact regarding the patient match. It is preferred to use the `email` field for this purpose. The `mailto` RFC (https://tools.ietf.org/html/rfc6068) allows multiple comma-delimited email addresses which should be supported.
+  * `email` : Either an (potentially-anonymized) email address for contacting the owner of the patient record to follow up with a match (*since v1.1*), or an array of (potentially-anonymized) email addresses if there is more than one (*since v1.2*). (*Optional*) 
 
 #### Species
 * *Optional*
