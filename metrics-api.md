@@ -37,7 +37,8 @@ A synchronous `application/json` response, of the following form:
         "dateGenerated": "2017-08-24",
         
     },
-    "disclaimer": "...", 
+    "disclaimer": "Disclaimer text...", 
+    "terms": "Terms text..."
 }
 ```
 
@@ -103,7 +104,11 @@ A synchronous `application/json` response, of the following form:
 
 ##### Disclaimer
 * ***Optional***
-* Optional disclaimer.
+* [Optional disclaimer](/search-api.md).
+
+##### Terms
+* ***Optional***
+* [Optional terms](/search-api.md).
 
 ### Response Codes
 Possible response codes are as follows:
