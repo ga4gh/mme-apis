@@ -104,6 +104,7 @@ After receiving a request, the remote server can respond in one of two ways:
 #### Terms
 * *Optional*
 * Terms and conditions text for the service, this is optional and can be included in all requests and responses.
+* Note that the diclaimer should be shown with the returned data per item 6 of the MME service agreement.
 
 #### ID
 * ***Mandatory***
