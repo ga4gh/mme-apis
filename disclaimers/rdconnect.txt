@@ -1,0 +1,7 @@
+RD-Connect provides data in good faith as a research tool, but without verifying the accuracy, clinical validity or utility of the data. RD-Connect makes no warranty, express or implied, nor assumes any legal liability or responsibility for any purpose for which the data are used.
+
+The user certifies that no attempt to identify individual patients will be undertaken.
+
+Prior to using RD-Connect data in a publication, the user will contact the researcher responsible for the matching dataset to assess the integrity of the match and, if validated, will offer appropriate agreed recognition of their contribution, which may include co-authorship, if the magnitude of the contribution warrants it, to at least one representative from the project/participating centre (possibly the member who submitted the patient data). All validated matches, whether published or not, must be reported back to [platform@rd-connect.eu|mailto:platform@rd-connect.eu]. RD-Connect keeps a log of initiated matches.
+
+If RD-Connect enables a research publication, the authors must acknowledge RD-Connect using the following wording: “This study makes use of data shared through the RD-Connect Genome-Phenome Analysis Platform, funded under grant agreement n° 305444 of the European Community (FP7/2007–2013)”
