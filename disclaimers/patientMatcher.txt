@@ -1,0 +1,7 @@
+PatientMatcher provides data in good faith as a research tool.
+
+PatientMatcher makes no warranty nor assumes any legal responsibility for any purpose for which the data are used.
+
+Users should not attempt in any case to identify patients whose data is returned by the service.
+
+Users who intend to publish papers using this software should acknowledge patientMatcher(https://github.com/Clinical-Genomics/patientMatcher) and its developers: https://www.scilifelab.se/facilities/clinical-genomics-stockholm/
