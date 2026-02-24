@@ -49,6 +49,17 @@ After receiving a request, the remote server can respond in one of two ways:
       ]
     },
 
+    "additionalContacts": [
+      {
+        "name": "Full Name 1",
+        "institution": "Contact Institution 1",
+        "href": "<URL>",
+        "email": "full.name1@institution.edu",
+        "roles": ["clinician"|"researcher"|"patient", …]
+      },
+      ...
+    ],
+
     "species" : <NCBI taxon identifier>,
     "sex" : "FEMALE"|"MALE"|"OTHER"|"MIXED_SAMPLE"|"NOT_APPLICABLE",
     "ageOfOnset" : <HPO code>,
